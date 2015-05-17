@@ -1,0 +1,207 @@
+<?import javafx.scene.image.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.*?>
+
+<AnchorPane
+    maxHeight="-Infinity"
+    maxWidth="-Infinity"
+    minHeight="-Infinity"
+    minWidth="-Infinity"
+    prefHeight="500.0"
+    prefWidth="600.0"
+    xmlns="http://javafx.com/javafx/8"
+    xmlns:fx="http://javafx.com/fxml/1">
+    <children>
+        <BorderPane
+            fx:id="border_pane"
+            prefHeight="500.0"
+            prefWidth="600.0"
+            AnchorPane.bottomAnchor="0.0"
+            AnchorPane.leftAnchor="0.0"
+            AnchorPane.rightAnchor="0.0"
+            AnchorPane.topAnchor="0.0">
+            <center>
+                <ScrollPane
+                    hbarPolicy="NEVER"
+                    prefHeight="290.0"
+                    prefWidth="350.0"
+                    vbarPolicy="ALWAYS"
+                    BorderPane.alignment="CENTER">
+                    <BorderPane.margin>
+                        <Insets bottom="10.0" />
+                    </BorderPane.margin>
+                </ScrollPane>
+            </center>
+            <top>
+                <HBox
+                    fillHeight="false"
+                    prefHeight="40.0"
+                    prefWidth="600.0"
+                    BorderPane.alignment="CENTER">
+                    <children>
+                        <TextField
+                                fx:id="textfield_search"
+                                layoutX="50.0"
+                                prefHeight="25.0"
+                                prefWidth="495.0"
+                                promptText="Suchbegriff eingeben">
+                            <HBox.margin>
+                                <Insets top="5.0" />
+                            </HBox.margin></TextField>
+                        <Button
+                                fx:id="button_search"
+                                alignment="CENTER"
+                                contentDisplay="CENTER"
+                                layoutX="89.0"
+                                mnemonicParsing="false"
+                                prefHeight="25.0"
+                                prefWidth="72.0"
+                                text="Suche">
+                            <HBox.margin>
+                                <Insets
+                                        left="10.0"
+                                        top="5.0" />
+                            </HBox.margin>
+                        </Button>
+                    </children>
+                </HBox>
+            </top>
+            <bottom>
+                <HBox
+                    prefHeight="100.0"
+                    prefWidth="600.0"
+                    BorderPane.alignment="CENTER">
+                    <children>
+                        <VBox>
+                            <children>
+                                <Label
+                                    alignment="TOP_LEFT"
+                                    graphicTextGap="5.0"
+                                    prefHeight="100.0"
+                                    prefWidth="280.0"
+                                    text="Beschreibung der Bar">
+                                    <VBox.margin>
+                                        <Insets
+                                            bottom="5.0"
+                                            left="5.0"
+                                            right="5.0"
+                                            top="5.0" />
+                                    </VBox.margin>
+                                </Label>
+                                <Label
+                                    prefHeight="20.0"
+                                    prefWidth="240.0"
+                                    text="www.exampleurl.com"
+                                    textFill="#3b2d75" />
+                            </children>
+                        </VBox>
+                        <Label
+                            alignment="TOP_LEFT"
+                            prefHeight="100.0"
+                            prefWidth="180.0"
+                            text="Adresse der Bar">
+                            <HBox.margin>
+                                <Insets
+                                    bottom="5.0"
+                                    left="5.0"
+                                    right="5.0"
+                                    top="5.0" />
+                            </HBox.margin>
+                        </Label>
+                        <ImageView
+                            fitHeight="90.0"
+                            fitWidth="160.0"
+                            pickOnBounds="true"
+                            preserveRatio="true">
+                            <HBox.margin>
+                                <Insets
+                                    top="5.0" />
+                            </HBox.margin>
+                        </ImageView>
+                    </children>
+                </HBox>
+            </bottom>
+            <left>
+                <VBox
+                    prefHeight="300.0"
+                    prefWidth="100.0"
+                    BorderPane.alignment="CENTER">
+                    <children>
+                        <Label
+                            mouseTransparent="true"
+                            prefHeight="30.0"
+                            prefWidth="100.0"
+                            text="Filter">
+                            <VBox.margin>
+                                <Insets bottom="10.0" left="5.0" />
+                            </VBox.margin>
+                        </Label>
+                        <ChoiceBox
+                            prefHeight="30.0"
+                            prefWidth="100.0">
+                            <VBox.margin>
+                                <Insets
+                                    bottom="10.0" />
+                            </VBox.margin>
+                        </ChoiceBox>
+                        <ChoiceBox
+                            prefHeight="30.0"
+                            prefWidth="100.0">
+                            <VBox.margin>
+                                <Insets
+                                    bottom="10.0" />
+                            </VBox.margin>
+                        </ChoiceBox>
+                        <ChoiceBox
+                            prefHeight="30.0"
+                            prefWidth="100.0">
+                            <VBox.margin>
+                                <Insets
+                                    bottom="10.0" />
+                            </VBox.margin></ChoiceBox>
+                        <ChoiceBox
+                            prefHeight="30.0"
+                            prefWidth="100.0">
+                            <VBox.margin>
+                                <Insets
+                                        bottom="10.0" />
+                            </VBox.margin>
+                        </ChoiceBox>
+                    </children>
+                    <BorderPane.margin>
+                        <Insets
+                            bottom="10.0"
+                            right="10.0" />
+                    </BorderPane.margin>
+                </VBox>
+            </left>
+            <right>
+                <ListView
+                    maxWidth="-Infinity"
+                    minHeight="-Infinity"
+                    minWidth="-Infinity"
+                    prefHeight="200.0"
+                    prefWidth="100.0"
+                    BorderPane.alignment="CENTER">
+                    <BorderPane.margin>
+                        <Insets bottom="10.0" left="10.0" />
+                    </BorderPane.margin>
+                </ListView>
+            </right>
+            <padding>
+                <Insets
+                    bottom="10.0"
+                    left="10.0"
+                    right="10.0"
+                    top="5.0" />
+            </padding>
+        </BorderPane>
+        <ProgressIndicator
+            AnchorPane.bottomAnchor="230.0"
+            AnchorPane.leftAnchor="270.0"
+            AnchorPane.rightAnchor="270.0"
+            AnchorPane.topAnchor="180.0" />
+    </children>
+</AnchorPane>
