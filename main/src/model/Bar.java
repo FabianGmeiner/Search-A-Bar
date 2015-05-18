@@ -3,7 +3,7 @@ package model;
 import org.json.simple.JSONObject;
 
 /**
- * Created by fabian on 18.05.15.
+ * Created by Fabian on 18.05.15.
  */
 
 public class Bar extends dataElement{
@@ -34,21 +34,21 @@ public class Bar extends dataElement{
     }
 
     // all the getter methods
-    public long getmId() {return mId;}
-    public String getmName() {return mName;}
-    public String getmDescription() {return mDescription;}
-    public int getmCategory() {return mCategory;}
-    public double getmGpsLongitude() {return mGpsLongitude;}
-    public double getmGpsLatitude() {return mGpsLatitude;}
-    public double getmPrice() {return mPrice;}
-    public int getmAgeRestriction() {return mAgeRestriction;}
-    public int getmAverageAge() {return mAverageAge;}
-    public int getmRating() {return mRating;}
+    protected long getmId() {return mId;}
+    protected String getmName() {return mName;}
+    protected String getmDescription() {return mDescription;}
+    protected int getmCategory() {return mCategory;}
+    protected double getmGpsLongitude() {return mGpsLongitude;}
+    protected double getmGpsLatitude() {return mGpsLatitude;}
+    protected double getmPrice() {return mPrice;}
+    protected int getmAgeRestriction() {return mAgeRestriction;}
+    protected int getmAverageAge() {return mAverageAge;}
+    protected int getmRating() {return mRating;}
     // all the setter methods
-    public void setmPrice(double mPrice) {this.mPrice = mPrice;}
-    public void setmAgeRestriction(int mAgeRestriction) {this.mAgeRestriction = mAgeRestriction;}
-    public void setmAverageAge(int mAverageAge) {this.mAverageAge = mAverageAge;}
-    public void setmRating(int mRating) {this.mRating = mRating;}
+    protected void setmPrice(double mPrice) {this.mPrice = mPrice;}
+    protected void setmAgeRestriction(int mAgeRestriction) {this.mAgeRestriction = mAgeRestriction;}
+    protected void setmAverageAge(int mAverageAge) {this.mAverageAge = mAverageAge;}
+    protected void setmRating(int mRating) {this.mRating = mRating;}
 
     @Override
     public String toString(){
