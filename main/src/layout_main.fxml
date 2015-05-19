@@ -11,6 +11,7 @@
     minWidth="-Infinity"
     prefHeight="500.0"
     prefWidth="600.0"
+    fx:controller="controller.Controller"
     xmlns="http://javafx.com/javafx/8"
     xmlns:fx="http://javafx.com/fxml/1">
     <children>
@@ -24,6 +25,7 @@
             AnchorPane.topAnchor="0.0">
             <center>
                 <ScrollPane
+                    fx:id="mScrollPane"
                     hbarPolicy="NEVER"
                     prefHeight="290.0"
                     prefWidth="350.0"
@@ -42,7 +44,7 @@
                     BorderPane.alignment="CENTER">
                     <children>
                         <TextField
-                                fx:id="textfield_search"
+                                fx:id="mTextFieldSearch"
                                 layoutX="50.0"
                                 prefHeight="25.0"
                                 prefWidth="495.0"
@@ -77,6 +79,7 @@
                         <VBox>
                             <children>
                                 <Label
+                                        fx:id="mDescription"
                                     alignment="TOP_LEFT"
                                     graphicTextGap="5.0"
                                     prefHeight="100.0"
@@ -91,6 +94,7 @@
                                     </VBox.margin>
                                 </Label>
                                 <Label
+                                        fx:id="mUrl"
                                     prefHeight="20.0"
                                     prefWidth="240.0"
                                     text="www.exampleurl.com"
@@ -98,6 +102,7 @@
                             </children>
                         </VBox>
                         <Label
+                                fx:id="mAdress"
                             alignment="TOP_LEFT"
                             prefHeight="100.0"
                             prefWidth="180.0"
@@ -111,6 +116,7 @@
                             </HBox.margin>
                         </Label>
                         <ImageView
+                                fx:id="mImageView"
                             fitHeight="90.0"
                             fitWidth="160.0"
                             pickOnBounds="true"
@@ -139,6 +145,7 @@
                             </VBox.margin>
                         </Label>
                         <ChoiceBox
+                                fx:id="mFilter1"
                             prefHeight="30.0"
                             prefWidth="100.0">
                             <VBox.margin>
@@ -147,6 +154,7 @@
                             </VBox.margin>
                         </ChoiceBox>
                         <ChoiceBox
+                                fx:id="mFilter2"
                             prefHeight="30.0"
                             prefWidth="100.0">
                             <VBox.margin>
@@ -155,13 +163,16 @@
                             </VBox.margin>
                         </ChoiceBox>
                         <ChoiceBox
+                                fx:id="mFilter3"
                             prefHeight="30.0"
                             prefWidth="100.0">
                             <VBox.margin>
                                 <Insets
                                     bottom="10.0" />
-                            </VBox.margin></ChoiceBox>
+                            </VBox.margin>
+                        </ChoiceBox>
                         <ChoiceBox
+                                fx:id="mFilter4"
                             prefHeight="30.0"
                             prefWidth="100.0">
                             <VBox.margin>
@@ -179,6 +190,7 @@
             </left>
             <right>
                 <ListView
+                        fx:id="mListView"
                     maxWidth="-Infinity"
                     minHeight="-Infinity"
                     minWidth="-Infinity"
@@ -198,10 +210,5 @@
                     top="5.0" />
             </padding>
         </BorderPane>
-        <ProgressIndicator
-            AnchorPane.bottomAnchor="230.0"
-            AnchorPane.leftAnchor="270.0"
-            AnchorPane.rightAnchor="270.0"
-            AnchorPane.topAnchor="180.0" />
     </children>
 </AnchorPane>
