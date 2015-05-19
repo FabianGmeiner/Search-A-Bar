@@ -11,7 +11,7 @@
     minWidth="-Infinity"
     prefHeight="500.0"
     prefWidth="600.0"
-    fx:controller="controller.Controller"
+    fx:controller="Controller"
     xmlns="http://javafx.com/javafx/8"
     xmlns:fx="http://javafx.com/fxml/1">
     <children>

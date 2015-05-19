@@ -1,12 +1,11 @@
-package model;
-
 import org.json.simple.JSONObject;
+import org.json.simple.parser.JSONParser;
 
 /**
  * Created by Fabian on 18.05.15.
  */
 
-public class Bar extends dataElement{
+public class Bar extends dataElement {
     private long mId;               // unique ID, systems timestamp
     private String mName;           // the name of the bar
     private String mDescription;    // short description
