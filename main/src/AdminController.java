@@ -1,14 +1,11 @@
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
-
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-/**
- * Created by Fabian on 20.05.15.
- */
+
 public class AdminController implements Initializable{
 
     // the FXML-Annotation allows JavaFX to inject the views based on their fx:id

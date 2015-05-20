@@ -1,16 +1,15 @@
+//Created by Fabian on 20.05.15.
+
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
-
 import java.net.URL;
 import java.util.ResourceBundle;
 
-/**
- * Created by Fabian on 20.05.15.
- */
+
 public class DialogController implements Initializable {
 
     // the FXML-Annotation allows JavaFX to inject the views based on their fx:id
