@@ -20,6 +20,6 @@ public class GPSService {
         double c = 2 * Math.atan2(Math.sqrt(a),Math.sqrt(1-a));
         double d = mEarthRadius * c;
 
-        return (Math.round((d/1000)*10))/10;
+        return (Math.round(d));
     }
 }

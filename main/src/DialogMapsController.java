@@ -16,6 +16,7 @@ public class DialogMapsController implements Initializable{
     @FXML private Label mDialogResultLabel;
     @FXML private Button mDialogResultButtonCancel;
     @FXML private Button mDialogResultButtonOK;
+    @FXML private Label mDialogResultScaleLabel;
 
     private Bar mBar;
     private Bar mDestination = null;
@@ -37,8 +38,16 @@ public class DialogMapsController implements Initializable{
     public void setDestination(Bar bar){
         mDestination = bar;
         if(mBar != null && mDestination != null){
-            mDialogResultLabel.setText(GPSService.getDistanceFromGPS(
-                    mBar.getmGpsLatitude(),mBar.getmGpsLongitude(), mDestination.getmGpsLatitude(),mDestination.getmGpsLongitude())+"");
+            double distance = GPSService.getDistanceFromGPS(
+                    mBar.getmGpsLatitude(), mBar.getmGpsLongitude(), mDestination.getmGpsLatitude(), mDestination.getmGpsLongitude());
+            if(distance > 1000.0){
+                mDialogResultLabel.setText((Math.round(distance/1000))+"");
+                mDialogResultScaleLabel.setText("km");
+            }
+            else{
+                mDialogResultLabel.setText(Math.round(distance/10)*10+"");
+                mDialogResultScaleLabel.setText("m");
+            }
         }
     }
 
