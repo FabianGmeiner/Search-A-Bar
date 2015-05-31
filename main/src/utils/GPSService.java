@@ -7,7 +7,7 @@ public class GPSService {
 
     // Method to use in the Graph to calculate the direct distance
     // between two points based on their GPS-data.
-    // Formula used: the so-called 'haversine'-formula
+    // Formula used: the so-called Haversine-formula
     public static double getDistanceFromGPS(double lat1, double long1, double lat2, double long2){
         double alpha1 = Math.toRadians(lat1);
         double alpha2 = Math.toRadians(lat2);

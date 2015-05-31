@@ -17,8 +17,6 @@ import java.util.Vector;
 public class AdminController implements Initializable{
 
     // the FXML-Annotation allows JavaFX to inject the views based on their fx:id
-    @FXML private Button mAdminButtonLogout;
-    @FXML private Button mAdminButtonNew;
     @FXML private Button mAdminButtonEdit;
     @FXML private Button mAdminButtonDelete;
     @FXML public ListView mAdminListView;
@@ -40,7 +38,7 @@ public class AdminController implements Initializable{
     }
     @FXML
     private void handleButtonNew() throws IOException {
-        mMain.showDialog(mSelectedBar, Statics.DIALOG_CODE_NEW);
+        mMain.showDialog(null, Statics.DIALOG_CODE_NEW);
     }
     @FXML
     private void handleButtonEdit() throws IOException {

@@ -1,8 +1,10 @@
 //Created by Fabian on 20.05.15.
 
+import javafx.beans.value.ObservableValue;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
-import javafx.scene.control.Button;
 import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
@@ -21,8 +23,6 @@ import java.util.ResourceBundle;
 public class DialogController implements Initializable {
 
     // the FXML-Annotation allows JavaFX to inject the views based on their fx:id
-    @FXML private Button mDialogButtonCancel;
-    @FXML private Button mDialogButtonSave;
     @FXML private TextField mDialogTextFieldName;
     @FXML private TextArea mDialogTextFieldDescription;
     @FXML private TextField mDialogTextFieldUrl;
@@ -39,9 +39,23 @@ public class DialogController implements Initializable {
     private Stage mDialogStage;
     private Bar bar = null;
     private int requestCode;
+    private ObservableList list = FXCollections.observableArrayList();
 
     @Override
-    public void initialize(URL location, ResourceBundle resources) {}
+    public void initialize(URL location, ResourceBundle resources) {
+        list.addAll(Statics.CATEGORYS);
+        mDialogChoiceBoxCategory.setItems(list);
+        mDialogChoiceBoxCategory.getSelectionModel().selectFirst();
+        mDialogChoiceBoxCategory.getSelectionModel().selectedItemProperty().addListener(
+                (ObservableValue observable, Object oldValue, Object newValue) -> changeCategory(newValue));
+    }
+
+    //TODO: null-pointer !
+    private void changeCategory(Object newValue) {
+        int index = list.indexOf(newValue);
+        bar.setCategory(index);
+    }
+
     public void setMainApp(Main main) {
         this.mMain = main;
     }
@@ -57,6 +71,7 @@ public class DialogController implements Initializable {
             mDialogTextFieldAvg.setText(bar.getmAverageAge() + "");
             mDialogTextFieldLat.setText(bar.getmGpsLatitude() + "");
             mDialogTextFieldLong.setText(bar.getmGpsLongitude() + "");
+            mDialogChoiceBoxCategory.getSelectionModel().select(bar.getmCategory());
         }
     }
     public void setDialogStage(Stage dialogStage) {
@@ -73,7 +88,6 @@ public class DialogController implements Initializable {
     @FXML //TODO: add savety !
     private void handleButtonSave() throws IOException {
         if(requestCode == Statics.DIALOG_CODE_EDIT) {
-            int index = Main.mGraph.indexOf(new Node(bar));
             bar.setName(mDialogTextFieldName.getText());
             bar.setDescription(mDialogTextFieldDescription.getText());
             bar.setUrl(mDialogTextFieldUrl.getText());
@@ -105,7 +119,6 @@ public class DialogController implements Initializable {
             Main.mGraph.addNode(new Node(bar));
             int index = Main.mGraph.indexOf(new Node(bar));
             double distance = Integer.MAX_VALUE;
-            Bar nearest = null;
             int indexNearest = -1;
             for(int i = 0; i < Main.mGraph.mNodes.size() ; i++){
                 if(i != Main.mGraph.indexOf(new Node(bar))) {
@@ -115,14 +128,13 @@ public class DialogController implements Initializable {
                             ((Bar)Main.mGraph.mNodes.elementAt(i).getContent()).getmGpsLatitude(),
                             ((Bar)Main.mGraph.mNodes.elementAt(i).getContent()).getmGpsLongitude());
                     if(distanceBars < distance){
-                        nearest = (Bar) Main.mGraph.mNodes.elementAt(i).getContent();
                         indexNearest = i;
                     }
                 }
             }
             Main.mGraph.addEdge(new Edge(
-                    (Node)Main.mGraph.mNodes.elementAt(index),
-                    (Node)Main.mGraph.mNodes.elementAt(indexNearest),
+                    Main.mGraph.mNodes.elementAt(index),
+                    Main.mGraph.mNodes.elementAt(indexNearest),
                     distance
             ));
 
