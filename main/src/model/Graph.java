@@ -12,6 +12,7 @@ public class Graph {
     public int mSortMode = Statics.SORT_CODE_ALPHABETICAL;
     public void setSortMode(int sortCode){mSortMode = sortCode;}
 
+    @SuppressWarnings("unused")
     public double[][] getAdjacencyMatrix() {
         double[][] adjMatrix = new double[mNodes.size()][mNodes.size()];
 
@@ -150,7 +151,7 @@ public class Graph {
         return result;
     }
     public Vector<Bar> sortListBy(Vector<Bar> list){
-        Bar buffer = null;
+        Bar buffer;
         Vector<Bar> result = new Vector<>();
         if(mSortMode == Statics.SORT_CODE_ALPHABETICAL) {
             while(!(list.isEmpty())){

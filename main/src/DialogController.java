@@ -20,6 +20,7 @@ import java.net.URL;
 import java.util.ResourceBundle;
 
 
+@SuppressWarnings("unchecked")
 public class DialogController implements Initializable {
 
     // the FXML-Annotation allows JavaFX to inject the views based on their fx:id
@@ -35,7 +36,6 @@ public class DialogController implements Initializable {
     @FXML private ChoiceBox mDialogChoiceBoxCategory;
 
     private Main mMain;
-    private AdminController mAdmin = Main.mAdminController;
     private Stage mDialogStage;
     private Bar bar = null;
     private int requestCode;

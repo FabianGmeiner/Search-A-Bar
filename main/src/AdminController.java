@@ -14,6 +14,7 @@ import java.util.ResourceBundle;
 import java.util.Vector;
 
 
+@SuppressWarnings("unchecked")
 public class AdminController implements Initializable{
 
     // the FXML-Annotation allows JavaFX to inject the views based on their fx:id
@@ -56,9 +57,7 @@ public class AdminController implements Initializable{
         if(items == null) {
             mAdminListView.setItems(bars);
             mAdminListView.getSelectionModel().selectedItemProperty().addListener(
-                    (ObservableValue observable, Object oldValue, Object newValue) -> {
-                        handleItemSelected(newValue);
-                    });
+                    (ObservableValue observable, Object oldValue, Object newValue) -> handleItemSelected(newValue));
         }
         else {
             for (int i = 0; i < items.size(); i++) {
@@ -66,9 +65,7 @@ public class AdminController implements Initializable{
             }
             mAdminListView.setItems(bars);
             mAdminListView.getSelectionModel().selectedItemProperty().addListener(
-                    (ObservableValue observable, Object oldValue, Object newValue) -> {
-                        handleItemSelected(newValue);
-                    });
+                    (ObservableValue observable, Object oldValue, Object newValue) -> handleItemSelected(newValue));
         }
     }
 

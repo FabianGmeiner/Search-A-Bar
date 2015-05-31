@@ -2,7 +2,6 @@
 
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
-import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.stage.Stage;
 import model.Bar;
@@ -14,8 +13,6 @@ import java.util.ResourceBundle;
 public class DialogMapsController implements Initializable{
 
     @FXML private Label mDialogResultLabel;
-    @FXML private Button mDialogResultButtonCancel;
-    @FXML private Button mDialogResultButtonOK;
     @FXML private Label mDialogResultScaleLabel;
 
     private Bar mBar;

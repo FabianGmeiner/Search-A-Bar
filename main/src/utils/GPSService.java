@@ -3,8 +3,6 @@ package utils;
 
 public class GPSService {
 
-    private static int mEarthRadius = 6371000; // metres
-
     // Method to use in the Graph to calculate the direct distance
     // between two points based on their GPS-data.
     // Formula used: the so-called Haversine-formula
@@ -18,7 +16,8 @@ public class GPSService {
                 Math.cos(alpha1) * Math.cos(alpha2) *
                 Math.sin(deltaBeta/2) * Math.sin(deltaBeta/2);
         double c = 2 * Math.atan2(Math.sqrt(a),Math.sqrt(1-a));
-        double d = mEarthRadius * c;
+        int earthRadius = 6371000;
+        double d = earthRadius * c;
 
         return (Math.round(d));
     }

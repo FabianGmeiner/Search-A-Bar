@@ -14,6 +14,7 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
+@SuppressWarnings("unchecked")
 public class DialogRouteController implements Initializable{
 
     @FXML private ListView mDialogRouteList;
