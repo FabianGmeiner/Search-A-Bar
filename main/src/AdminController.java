@@ -15,12 +15,15 @@ import java.util.Vector;
 
 
 @SuppressWarnings("unchecked")
-public class AdminController implements Initializable{
+public class AdminController implements Initializable {
 
     // the FXML-Annotation allows JavaFX to inject the views based on their fx:id
-    @FXML private Button mAdminButtonEdit;
-    @FXML private Button mAdminButtonDelete;
-    @FXML public ListView mAdminListView;
+    @FXML
+    private Button mAdminButtonEdit;
+    @FXML
+    private Button mAdminButtonDelete;
+    @FXML
+    public ListView mAdminListView;
 
     private Main mMain;
     private Bar mSelectedBar = null;
@@ -29,6 +32,7 @@ public class AdminController implements Initializable{
     public void initialize(URL location, ResourceBundle resources) {
         setListItems();
     }
+
     public void setMainApp(Main main) {
         this.mMain = main;
     }
@@ -37,29 +41,32 @@ public class AdminController implements Initializable{
     private void handleButtonLogout() throws IOException {
         mMain.showMainPage();
     }
+
     @FXML
     private void handleButtonNew() throws IOException {
         mMain.showDialog(null, Statics.DIALOG_CODE_NEW);
     }
+
     @FXML
     private void handleButtonEdit() throws IOException {
         mMain.showDialog(mSelectedBar, Statics.DIALOG_CODE_EDIT);
     }
+
     @FXML
     private void handleButtonDelete() throws IOException {
         Main.mGraph.removeNode(mSelectedBar);
         setListItems();
         printGraphContent();
     }
-    public void setListItems(){
+
+    public void setListItems() {
         Vector<Bar> items = Main.mGraph.getAllBars();
         ObservableList<Bar> bars = FXCollections.observableArrayList();
-        if(items == null) {
+        if (items == null) {
             mAdminListView.setItems(bars);
             mAdminListView.getSelectionModel().selectedItemProperty().addListener(
                     (ObservableValue observable, Object oldValue, Object newValue) -> handleItemSelected(newValue));
-        }
-        else {
+        } else {
             for (int i = 0; i < items.size(); i++) {
                 bars.add(items.elementAt(i));
             }
@@ -74,7 +81,8 @@ public class AdminController implements Initializable{
         mAdminButtonEdit.setDisable(false);
         mSelectedBar = (Bar) newValue;
     }
-    private void printGraphContent(){
+
+    private void printGraphContent() {
         System.out.println(Main.mGraph.mNodes);
         System.out.println(Main.mGraph.mEdges);
     }

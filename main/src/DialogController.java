@@ -24,16 +24,26 @@ import java.util.ResourceBundle;
 public class DialogController implements Initializable {
 
     // the FXML-Annotation allows JavaFX to inject the views based on their fx:id
-    @FXML private TextField mDialogTextFieldName;
-    @FXML private TextArea mDialogTextFieldDescription;
-    @FXML private TextField mDialogTextFieldUrl;
-    @FXML private TextArea mDialogTextFieldAdress;
-    @FXML private TextField mDialogTextFieldPrice;
-    @FXML private TextField mDialogTextFieldRestriction;
-    @FXML private TextField mDialogTextFieldAvg;
-    @FXML private TextField mDialogTextFieldLat;
-    @FXML private TextField mDialogTextFieldLong;
-    @FXML private ChoiceBox mDialogChoiceBoxCategory;
+    @FXML
+    private TextField mDialogTextFieldName;
+    @FXML
+    private TextArea mDialogTextFieldDescription;
+    @FXML
+    private TextField mDialogTextFieldUrl;
+    @FXML
+    private TextArea mDialogTextFieldAdress;
+    @FXML
+    private TextField mDialogTextFieldPrice;
+    @FXML
+    private TextField mDialogTextFieldRestriction;
+    @FXML
+    private TextField mDialogTextFieldAvg;
+    @FXML
+    private TextField mDialogTextFieldLat;
+    @FXML
+    private TextField mDialogTextFieldLong;
+    @FXML
+    private ChoiceBox mDialogChoiceBoxCategory;
 
     private Main mMain;
     private Stage mDialogStage;
@@ -58,8 +68,9 @@ public class DialogController implements Initializable {
     public void setMainApp(Main main) {
         this.mMain = main;
     }
-    public void fillDialog(Bar bar){
-        if(bar != null) {
+
+    public void fillDialog(Bar bar) {
+        if (bar != null) {
             this.bar = bar;
             mDialogTextFieldName.setText(bar.getmName());
             mDialogTextFieldDescription.setText(bar.getmDescription());
@@ -73,20 +84,23 @@ public class DialogController implements Initializable {
             mDialogChoiceBoxCategory.getSelectionModel().select(bar.getmCategory());
         }
     }
+
     public void setDialogStage(Stage dialogStage) {
         this.mDialogStage = dialogStage;
     }
+
     public void setRequestCode(int requestCode) {
         this.requestCode = requestCode;
     }
 
     @FXML
-    private void handleButtonCancel(){
+    private void handleButtonCancel() {
         mDialogStage.close();
     }
+
     @FXML
     private void handleButtonSave() throws IOException {
-        if(requestCode == Statics.DIALOG_CODE_EDIT) {
+        if (requestCode == Statics.DIALOG_CODE_EDIT) {
             bar.setName(mDialogTextFieldName.getText());
             bar.setDescription(mDialogTextFieldDescription.getText());
             bar.setUrl(mDialogTextFieldUrl.getText());
@@ -101,8 +115,7 @@ public class DialogController implements Initializable {
 
             mMain.showAdminPage();
             mDialogStage.close();
-        }
-        else if (requestCode == Statics.DIALOG_CODE_NEW){
+        } else if (requestCode == Statics.DIALOG_CODE_NEW) {
             bar = new Bar(
                     mDialogTextFieldName.getText(),
                     mDialogTextFieldDescription.getText(),
@@ -119,14 +132,14 @@ public class DialogController implements Initializable {
             int index = Main.mGraph.indexOf(new Node(bar));
             double distance = Integer.MAX_VALUE;
             int indexNearest = -1;
-            for(int i = 0; i < Main.mGraph.mNodes.size() ; i++){
-                if(i != Main.mGraph.indexOf(new Node(bar))) {
+            for (int i = 0; i < Main.mGraph.mNodes.size(); i++) {
+                if (i != Main.mGraph.indexOf(new Node(bar))) {
                     double distanceBars = GPSService.getDistanceFromGPS(
                             bar.getmGpsLatitude(),
                             bar.getmGpsLongitude(),
-                            ((Bar)Main.mGraph.mNodes.elementAt(i).getContent()).getmGpsLatitude(),
-                            ((Bar)Main.mGraph.mNodes.elementAt(i).getContent()).getmGpsLongitude());
-                    if(distanceBars < distance){
+                            ((Bar) Main.mGraph.mNodes.elementAt(i).getContent()).getmGpsLatitude(),
+                            ((Bar) Main.mGraph.mNodes.elementAt(i).getContent()).getmGpsLongitude());
+                    if (distanceBars < distance) {
                         indexNearest = i;
                     }
                 }
@@ -143,7 +156,8 @@ public class DialogController implements Initializable {
             mDialogStage.close();
         }
     }
-    private void printGraphContent(){
+
+    private void printGraphContent() {
         System.out.println(Main.mGraph.mNodes);
         System.out.println(Main.mGraph.mEdges);
     }
