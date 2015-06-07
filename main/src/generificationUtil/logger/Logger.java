@@ -1,6 +1,6 @@
 package generificationUtil.logger;
 
-import stats.*;
+import statics.*;
 
 import java.io.FileOutputStream;
 import java.io.IOException;
@@ -83,5 +83,24 @@ public class Logger
 		}
 
 		return;
+	}
+	public static void clearFiles()
+	{
+		try
+		{
+			String errFile=PathFinder.getPrettyName(_errFile);
+			String warnFile=PathFinder.getPrettyName(_warnFile);
+			String msgFile=PathFinder.getPrettyName(_msgFile);
+			String debugFile=PathFinder.getPrettyName(_debugFile);
+			new FileOutputStream(errFile).getChannel().truncate(0).close();
+			new FileOutputStream(warnFile).getChannel().truncate(0).close();
+			new FileOutputStream(msgFile).getChannel().truncate(0).close();
+			new FileOutputStream(debugFile).getChannel().truncate(0).close();
+		}
+		catch (IOException e)
+		{
+			System.err.println(e.toString());
+		}
+
 	}
 }

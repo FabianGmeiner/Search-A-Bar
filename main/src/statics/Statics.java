@@ -8,6 +8,9 @@ public class Statics {
     // all statics are stored here
     public static final String ADMIN_CODE = "#Admin#";
 
+    /* edit by Daniel Knuettel: added __DEBUG*/
+    public static final boolean __DEBUG=true;
+
     public static final int DIALOG_CODE_EDIT = 0;
     public static final int DIALOG_CODE_NEW = 1;
 

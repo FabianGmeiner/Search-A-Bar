@@ -32,9 +32,9 @@ public class PathFinder
 			builder.append("\\");// must the backslash be escaped?
 			builder.append(stdpathDOS);
 			homepath=builder.toString();
-			if (Statics.DEBUG)
+			if (Statics.__DEBUG)
 			{
-				System.out.printf("homepath='%s'\n",homepath);
+				//System.out.printf("homepath='%s'\n",homepath);
 			}
 		}
 		if(os.compareTo(OsDetector.UNIX)==0)
@@ -42,9 +42,9 @@ public class PathFinder
 			builder.append("/");
 			builder.append(stdpathUnix);
 			homepath=builder.toString();
-			if (Statics.DEBUG)
+			if (Statics.__DEBUG)
 			{
-				System.out.printf("homepath='%s'\n",homepath);
+				//System.out.printf("homepath='%s'\n",homepath);
 			}
 		}
 		/* create the path,if it is not there yet */

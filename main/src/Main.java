@@ -9,10 +9,10 @@ import javafx.stage.Modality;
 import javafx.stage.Stage;
 import model.Bar;
 import model.Graph;
-import statics.Statics;
+import statics.*;
 
 /**Logger added by Daniel Knuettel */
-import genUtil.logger.*;
+import generificationUtil.logger.*;
 
 import java.io.IOException;
 
@@ -31,7 +31,11 @@ public class Main extends Application {
 
     @Override
     public void start(Stage primaryStage) throws Exception {
+	/*logging added by Daniel Knuettel */
+	Logger.clearFiles();
 	Logger.log(Logger.MSG,"Main: starting\n");
+
+
         this.primaryStage = primaryStage;
         this.primaryStage.setTitle("Search-A-Bar");
 
@@ -59,6 +63,11 @@ public class Main extends Application {
 
 
     private void initialiseRootLayout() throws IOException {
+	
+	if(Statics.__DEBUG)
+	{
+		Logger.log(Logger.DEBUG,"Main:initializing Root Layout\n");
+	}
         FXMLLoader loader = new FXMLLoader();
         loader.setLocation(Main.class.getResource("view/LayoutRoot.fxml"));
         rootLayout = loader.load();
@@ -75,6 +84,11 @@ public class Main extends Application {
 
     public void showMainPage() throws IOException {
         FXMLLoader loader = new FXMLLoader();
+	if(Statics.__DEBUG)
+	{
+		Logger.log(Logger.DEBUG,"Main:showMainPage(): using view/LayoutMain.fxml\n");
+
+	}
         loader.setLocation(Main.class.getResource("view/LayoutMain.fxml"));
         AnchorPane mainPage = loader.load();
 
