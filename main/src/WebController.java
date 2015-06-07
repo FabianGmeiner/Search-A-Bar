@@ -12,19 +12,20 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-public class WebController implements Initializable{
+public class WebController implements Initializable {
 
     private WebView mWebView;
     private Main mMain;
 
     @Override
-    public void initialize(URL location, ResourceBundle resources) {}
+    public void initialize(URL location, ResourceBundle resources) {
+    }
 
-    public void setMainApp(Main main){
+    public void setMainApp(Main main) {
         this.mMain = main;
     }
 
-    public void openLink(String url){
+    public void openLink(String url) {
         FXMLLoader loader = new FXMLLoader();
         loader.setLocation(Main.class.getResource("view/LayoutWeb.fxml"));
         try {
