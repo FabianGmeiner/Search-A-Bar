@@ -21,9 +21,9 @@ generificationUtil/serializer:generificationUtil/logger
 
 testSer:
 	$(com) -cp $(CLPATH) main/src/tests/TestSerializer.java;\
-	cd main/src/tests/;\
-	java TestSerializer;\
-	cd ../../..;
+#	cd main/src/tests/;\
+#	java TestSerializer;\
+#	cd ../../..;
 
 main:generificationUtil/logger
 	$(com) -cp $(CLPATH) main/src/Main.java

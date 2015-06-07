@@ -1,10 +1,11 @@
+package tests;
 import generificationUtil.serializer.*;
 import generificationUtil.list.*;
 
 
 public class TestSerializer
 {
-	public static void main(String [] args)
+	public static void dosth()
 	{
 		Serializer ser=new Serializer("TestSerializer.ser");
 		ListStore store=new ListStore("TestSerializer");
