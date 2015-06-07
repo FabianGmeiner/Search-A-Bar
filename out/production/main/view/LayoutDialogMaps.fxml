@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+
+<AnchorPane
+     fx:controller="DialogMapsController"
+     maxHeight="-Infinity"
+     maxWidth="-Infinity"
+     minHeight="-Infinity"
+     minWidth="-Infinity"
+     prefHeight="100.0"
+     prefWidth="360.0"
+     xmlns="http://javafx.com/javafx/8"
+     xmlns:fx="http://javafx.com/fxml/1">
+      <VBox
+           layoutX="100.0"
+           layoutY="-41.0"
+           prefHeight="200.0"
+           prefWidth="100.0"
+           AnchorPane.bottomAnchor="0.0"
+           AnchorPane.leftAnchor="0.0"
+           AnchorPane.rightAnchor="0.0"
+           AnchorPane.topAnchor="0.0">
+            <HBox
+                 prefHeight="30.0">
+                  <Label
+                       prefHeight="30.0"
+                       prefWidth="270.0"
+                       text="Die Entfernung zu Ihrem Ziel beträgt :">
+                     <VBox.margin>
+                        <Insets
+                             left="10.0"
+                             top="5.0" />
+                     </VBox.margin>
+                     <HBox.margin>
+                        <Insets
+                             left="10.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font
+                             size="14.0" />
+                     </font>
+                  </Label>
+                  <Label
+                       fx:id="mDialogResultLabel"
+                       alignment="CENTER_RIGHT"
+                       contentDisplay="RIGHT"
+                       prefHeight="30.0"
+                       prefWidth="100.0"
+                       text="0.0"
+                       textFill="#200580">
+                     <font>
+                        <Font
+                             size="14.0" />
+                     </font>
+                  </Label>
+                  <Label
+                       fx:id="mDialogResultScaleLabel"
+                       prefHeight="30.0"
+                       prefWidth="60.0"
+                       text="km">
+                     <HBox.margin>
+                        <Insets
+                             left="5.0" />
+                     </HBox.margin>
+                     <font>
+                        <Font
+                             size="14.0" />
+                     </font>
+                  </Label>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <VBox.margin>
+                  <Insets
+                       bottom="10.0"
+                       top="5.0" />
+               </VBox.margin>
+            </HBox>
+            <HBox
+                 alignment="CENTER"
+                 prefHeight="50.0">
+                  <Button
+                       mnemonicParsing="false"
+                       onAction="#handleButtonCancel"
+                       prefHeight="30.0"
+                       prefWidth="130.0"
+                       text="Abbruch" />
+                  <Button
+                       defaultButton="true"
+                       mnemonicParsing="false"
+                       onAction="#handleButtonOK"
+                       prefHeight="30.0"
+                       prefWidth="130.0"
+                       text="Route berechnen">
+                     <HBox.margin>
+                        <Insets
+                             left="10.0" />
+                     </HBox.margin>
+                  </Button>
+            </HBox>
+        </VBox>
+</AnchorPane>
