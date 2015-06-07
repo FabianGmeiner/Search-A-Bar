@@ -8,10 +8,14 @@ stats:
 	$(com) -cp $(CLPATH) main/src/statics/*.java
 generificationUtil/list:stats generificationUtil/logger
 	$(com) -cp $(CLPATH) main/src/generificationUtil/list/*.java
-generificationUtil/logger:stats
+generificationUtil/logger:stats generificationUtil/PathFinder
 	$(com) -cp $(CLPATH) main/src/generificationUtil/logger/*.java
 generificationUtil/stack:generificationUtil/list
 	$(com) -cp $(CLPATH) main/src/generificationUtil/stack/*.java
+generificationUtil/PathFinder:stats generificationUtil/OsDetector
+	$(com) -cp $(CLPATH) main/src/generificationUtil/PathFinder.java
+generificationUtil/OsDetector:
+	$(com) -cp $(CLPATH) main/src/generificationUtil/OsDetector.java
 
 main:generificationUtil/logger
 	$(com) -cp $(CLPATH) main/src/Main.java
