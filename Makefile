@@ -14,10 +14,10 @@ genUtil/stack:genUtil/list
 	 $(com) -cp $(CLPATH) lib/genUtil/stack/*.java
 	
 downloadScheduler:genUtil/list ftpUtil
-	echo "warning: downloadScheduler is nether tested nor used";\
+	echo "warning: downloadScheduler is neither tested nor used";\
 	$(com) -cp $(CLPATH) lib/downloadScheduler/*.java
 ftpUtil:genUtil/list
-	echo "warning: ftpUtil is nether tested nor used";\
+	echo "warning: ftpUtil is neither tested nor used";\
 	$(com) -cp $(CLPATH) lib/ftpUtil/*.java
 
 
