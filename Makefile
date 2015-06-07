@@ -19,6 +19,12 @@ generificationUtil/OsDetector:
 generificationUtil/serializer:generificationUtil/logger
 	$(com) -cp $(CLPATH) main/src/generificationUtil/serializer/*.java
 
+testSer:
+	$(com) -cp $(CLPATH) main/src/tests/TestSerializer.java;\
+	cd main/src/tests/;\
+	java TestSerializer;\
+	cd ../../..;
+
 main:generificationUtil/logger
 	$(com) -cp $(CLPATH) main/src/Main.java
 exeMain:main
