@@ -1,7 +1,5 @@
 package generificationUtil.logger;
 
-import stats.*;
-
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.PrintStream;
@@ -9,6 +7,8 @@ import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
+
+import static statics.PathFinder.getPrettyName;
 
 /**
   A completly static class for logging
@@ -30,10 +30,10 @@ public class Logger
 	public static void log ( int logType, String _msg)
 	{
 		FileOutputStream logfile;
-		String errFile=PathFinder.getPrettyName(_errFile);
-		String warnFile=PathFinder.getPrettyName(_warnFile);
-		String msgFile=PathFinder.getPrettyName(_msgFile);
-		String debugFile=PathFinder.getPrettyName(_debugFile);
+		String errFile = getPrettyName(_errFile);
+		String warnFile = getPrettyName(_warnFile);
+		String msgFile = getPrettyName(_msgFile);
+		String debugFile = getPrettyName(_debugFile);
 
 
 		try

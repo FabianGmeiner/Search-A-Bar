@@ -1,8 +1,9 @@
 package generificationUtil.serializer;
 
-import projekt.genUtil.list.*;
-import projekt.genUtil.logger.*;
-import projekt.genUtil.stack.*;
+import generificationUtil.list.List;
+import generificationUtil.list.OneList;
+import generificationUtil.logger.Logger;
+import generificationUtil.stack.Stack;
 
 import java.io.FileOutputStream;
 import java.io.IOException;
