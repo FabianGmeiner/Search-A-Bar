@@ -16,6 +16,8 @@ generificationUtil/PathFinder:stats generificationUtil/OsDetector
 	$(com) -cp $(CLPATH) main/src/generificationUtil/PathFinder.java
 generificationUtil/OsDetector:
 	$(com) -cp $(CLPATH) main/src/generificationUtil/OsDetector.java
+generificationUtil/serializer:generificationUtil/logger
+	$(com) -cp $(CLPATH) main/src/generificationUtil/serializer/*.java
 
 main:generificationUtil/logger
 	$(com) -cp $(CLPATH) main/src/Main.java
