@@ -4,10 +4,13 @@ package statics;
 import model.Bar;
 import model.Node;
 
+import generificationUtil.PathFinder;
+import java.io.*;
+
 public class Statics {
     // all statics are stored here
     public static final String ADMIN_CODE = "#Admin#";
-
+    public static final String defaultSave="GraphDefault.ser";
     /* edit by Daniel Knuettel: added __DEBUG*/
     public static final boolean __DEBUG = true;
 
@@ -85,5 +88,18 @@ public class Statics {
         return node7;
     }
 
+    /**Added by Daniel Knuettel*/
+    public static boolean isGraphSafed()
+    {
+	try
+	{
+		FileInputStream file=new FileInputStream(PathFinder.getPrettyName(Statics.defaultSave));
+	}
+	catch (IOException e)
+	{
+		return false;
+	}
+	return true;
+    }
 
 }

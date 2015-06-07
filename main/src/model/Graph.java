@@ -5,8 +5,11 @@ import statics.Statics;
 import utils.GPSService;
 
 import java.util.Vector;
+import java.io.*;
 
-public class Graph {
+public class Graph 
+implements Serializable
+{
 
     public Vector<Node> mNodes = new Vector<>();
     public Vector<Edge> mEdges = new Vector<>();

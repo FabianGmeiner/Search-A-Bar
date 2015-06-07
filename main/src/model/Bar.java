@@ -1,8 +1,11 @@
 //Created by Fabian on 18.05.15.
 package model;
+import java.io.*;
 
 @SuppressWarnings("unused")
-public class Bar {
+public class Bar 
+implements Serializable
+{
     private String mName;           // the name of the bar
     private String mDescription;    // short description
     private String mUrl;
