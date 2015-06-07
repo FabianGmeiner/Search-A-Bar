@@ -1,5 +1,5 @@
-import projekt.stats.*;
-import projekt.genUtil.logger.*;
+import stats.*;
+import genUtil.logger.*;
 
 class Test
 {

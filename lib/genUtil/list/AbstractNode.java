@@ -1,4 +1,4 @@
-package projekt.genUtil.list;
+package genUtil.list;
 import java.io.*;
 
 /* The abstract container for Composite Pattern

@@ -1,4 +1,4 @@
-package projekt.ftpUtil;
+package ftpUtil;
 
 public class FtpData
 {

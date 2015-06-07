@@ -1,13 +1,13 @@
-package projekt.downloadScheduler;
+package downloadScheduler;
 
-import projekt.downloadScheduler.Worker;
+import downloadScheduler.Worker;
 
 
 import org.apache.commons.net.ftp.*;
 import java.io.*;
-import projekt.ftpUtil.*;
+import ftpUtil.*;
 
-import projekt.stats.Stats;
+import stats.Stats;
 
 /*
    Worker to fetch files from a ftp server

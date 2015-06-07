@@ -1,7 +1,7 @@
-package projekt.genUtil.list;
+package genUtil.list;
 import java.io.*;
 
-import projekt.genUtil.list.*;
+import genUtil.list.*;
 
 /** Basic List Object to store Objects. 
    written by Daniel Knuettel 2015

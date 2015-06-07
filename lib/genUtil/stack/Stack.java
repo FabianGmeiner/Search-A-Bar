@@ -1,6 +1,6 @@
-package projekt.genUtil.stack;
+package genUtil.stack;
 
-import projekt.genUtil.list.*;
+import genUtil.list.*;
 
 public class Stack
 extends List

@@ -1,7 +1,7 @@
-package projekt.genUtil.list;
+package genUtil.list;
 import java.io.*;
 
-import projekt.genUtil.list.*;
+import genUtil.list.*;
 
 /* written by Daniel Knuettel 2015 */
 

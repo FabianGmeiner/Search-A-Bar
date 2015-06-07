@@ -1,7 +1,7 @@
-package projekt.ftpUtil;
+package ftpUtil;
 
-import projekt.genUtil.list.*;
-import projekt.ftpUtil.*;
+import genUtil.list.*;
+import ftpUtil.*;
 
 public class FtpQuery
 {

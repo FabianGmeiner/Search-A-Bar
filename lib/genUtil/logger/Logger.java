@@ -1,7 +1,7 @@
-package projekt.genUtil.logger;
+package genUtil.logger;
 
 import java.io.*;
-import projekt.stats.*;
+import stats.*;
 import java.util.*;
 import java.text.*;
 

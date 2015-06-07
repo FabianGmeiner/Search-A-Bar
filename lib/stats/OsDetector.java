@@ -1,4 +1,4 @@
-package projekt.stats;
+package stats;
 
 /**written by Daniel Knuettel*/
 

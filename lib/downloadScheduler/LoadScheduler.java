@@ -1,15 +1,15 @@
-package projekt.downloadScheduler;
+package downloadScheduler;
 
-import projekt.downloadScheduler.Worker;
+import downloadScheduler.Worker;
 
 
 import org.apache.commons.net.ftp.*;
 import java.io.*;
-import projekt.ftpUtil.*;
+import ftpUtil.*;
 
-import projekt.genUtil.list.*;
+import genUtil.list.*;
 
-import projekt.stats.Stats;
+import stats.Stats;
 
 /* Small util class to download some files using Threads.
  */

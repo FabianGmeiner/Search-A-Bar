@@ -1,8 +1,8 @@
-package projekt.genUtil.list;
+package genUtil.list;
 import java.io.*;
 
-import projekt.genUtil.list.*;
-import projekt.genUtil.logger.*;
+import genUtil.list.*;
+import genUtil.logger.*;
 
 
 /**The OneList is a special List, that contains only one Element,

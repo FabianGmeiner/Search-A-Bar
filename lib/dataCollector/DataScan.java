@@ -1,6 +1,6 @@
-package projekt.dataCollector;
+package dataCollector;
 
-import projekt.genUtil.list.*;
+import genUtil.list.*;
 
 abstract class DataScan
 {

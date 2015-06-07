@@ -1,4 +1,4 @@
-package projekt.dataCollector;
+package dataCollector;
 
 import org.apache.commons.io.filefilter.*;
 

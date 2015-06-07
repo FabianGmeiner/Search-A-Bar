@@ -1,8 +1,8 @@
-package projekt.stats;
-import projekt.stats.*;
+package stats;
+import stats.*;
 import java.io.*;
 import java.nio.file.*;
-import projekt.genUtil.logger.*;
+import genUtil.logger.*;
 
 /**written by Daniel Knuettel*/
 

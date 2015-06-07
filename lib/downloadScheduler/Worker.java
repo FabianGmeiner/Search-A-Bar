@@ -1,4 +1,4 @@
-package projekt.downloadScheduler;
+package downloadScheduler;
 
 public interface Worker
 extends Runnable

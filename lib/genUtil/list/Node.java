@@ -1,6 +1,6 @@
-package projekt.genUtil.list;
+package genUtil.list;
 import java.io.*;
-import projekt.genUtil.list.*;
+import genUtil.list.*;
 
 /* A container for Composite Pattern
  written by Daniel Knuettel 2015*/
