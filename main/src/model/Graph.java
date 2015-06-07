@@ -2,6 +2,7 @@
 package model;
 
 import statics.Statics;
+import utils.GPSService;
 
 import java.util.*;
 
@@ -47,6 +48,20 @@ public class Graph {
         return mNodes.elementAt(i);
     }
     public int addNode(Node a) {
+        if(!mNodes.isEmpty()) {
+            Bar barToAdd = (Bar) a.getContent();
+            Bar nearest = (Bar) mNodes.firstElement().getContent();
+            Node nearestNode = mNodes.firstElement();
+            for (int i = 0; i < mNodes.size(); i++) {
+                Bar next = (Bar) mNodes.elementAt(i).getContent();
+                if (GPSService.getDistanceFromGPS(next.getmGpsLatitude(), next.getmGpsLongitude(), barToAdd.getmGpsLatitude(), barToAdd.getmGpsLongitude())
+                        <= GPSService.getDistanceFromGPS(nearest.getmGpsLatitude(), nearest.getmGpsLongitude(), barToAdd.getmGpsLatitude(), barToAdd.getmGpsLongitude())) {
+                    nearest = next;
+                    nearestNode = mNodes.elementAt(i);
+                }
+            }
+            mEdges.add(new Edge(a,nearestNode,GPSService.getDistanceFromGPS(nearest.getmGpsLatitude(),nearest.getmGpsLongitude(),barToAdd.getmGpsLatitude(),barToAdd.getmGpsLongitude())));
+        }
         mNodes.add(a);
 
         return mNodes.size() - 1;

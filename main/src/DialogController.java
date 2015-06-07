@@ -50,7 +50,6 @@ public class DialogController implements Initializable {
                 (ObservableValue observable, Object oldValue, Object newValue) -> changeCategory(newValue));
     }
 
-    //TODO: null-pointer !
     private void changeCategory(Object newValue) {
         int index = list.indexOf(newValue);
         bar.setCategory(index);
@@ -85,7 +84,7 @@ public class DialogController implements Initializable {
     private void handleButtonCancel(){
         mDialogStage.close();
     }
-    @FXML //TODO: add savety !
+    @FXML
     private void handleButtonSave() throws IOException {
         if(requestCode == Statics.DIALOG_CODE_EDIT) {
             bar.setName(mDialogTextFieldName.getText());
