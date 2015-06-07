@@ -15,11 +15,14 @@ import java.net.URL;
 import java.util.ResourceBundle;
 
 @SuppressWarnings("unchecked")
-public class DialogRouteController implements Initializable{
+public class DialogRouteController implements Initializable {
 
-    @FXML private ListView mDialogRouteList;
-    @FXML private Button mDialogRouteButtonCancel;
-    @FXML private Button mDialogRouteButtonOK;
+    @FXML
+    private ListView mDialogRouteList;
+    @FXML
+    private Button mDialogRouteButtonCancel;
+    @FXML
+    private Button mDialogRouteButtonOK;
 
     private Bar mBar;
     private Bar mDestination = null;
@@ -29,10 +32,12 @@ public class DialogRouteController implements Initializable{
     public void setMain(Main main) {
         mMain = main;
     }
+
     public void setDialogStage(Stage dialogStage) {
         mDialogStage = dialogStage;
     }
-    public void setBar(Bar bar){
+
+    public void setBar(Bar bar) {
         mBar = bar;
         setListItems();
     }
@@ -42,7 +47,8 @@ public class DialogRouteController implements Initializable{
     public void initialize(URL location, ResourceBundle resources) {
 
     }
-    private void setListItems(){
+
+    private void setListItems() {
         ObservableList<Bar> bars = FXCollections.observableArrayList();
         bars.addAll(Main.mGraph.getAllBars());
         bars.remove(mBar);
@@ -59,9 +65,10 @@ public class DialogRouteController implements Initializable{
     }
 
     @FXML
-    private void handleButtonCancel(){
+    private void handleButtonCancel() {
         mDialogStage.close();
     }
+
     @FXML
     private void handleButtonOK() throws IOException {
         mMain.showDialogMaps(mBar, mDestination);

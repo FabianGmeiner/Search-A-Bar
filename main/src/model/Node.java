@@ -4,9 +4,11 @@ package model;
 public class Node {
     private Object mContent;
 
-    public Node (Object content){
+    public Node(Object content) {
         mContent = content;
     }
 
-    public Object getContent () { return mContent; }
+    public Object getContent() {
+        return mContent;
+    }
 }

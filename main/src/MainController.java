@@ -16,24 +16,39 @@ import java.util.Vector;
 
 
 @SuppressWarnings({"SpellCheckingInspection", "unchecked", "SuspiciousMethodCalls"})
-public class MainController implements Initializable{
+public class MainController implements Initializable {
 
     // the FXML-Annotation allows JavaFX to inject the views based on their fx:id
-    @FXML private TextField mTextFieldSearch;
-    @FXML private Button mButtonSearch;
-    @FXML private ListView mScrollPane;
-    @FXML private ChoiceBox mFilter1;
-    @FXML private ChoiceBox mFilter2;
-    @FXML private ChoiceBox mFilter3;
-    @FXML private ChoiceBox mFilter4;
-    @FXML private Label mDescription;
-    @FXML private Hyperlink mUrl;
-    @FXML private Label mAdress;
-    @FXML private Button mButtonCalculateRoute;
-    @FXML private Button mButtonPlanTour;
-    @FXML private ToggleButton mToggleButtonAlphabet;
-    @FXML private ToggleButton mToggleButtonPopular;
-    @FXML private ToggleButton mToggleButtonPrice;
+    @FXML
+    private TextField mTextFieldSearch;
+    @FXML
+    private Button mButtonSearch;
+    @FXML
+    private ListView mScrollPane;
+    @FXML
+    private ChoiceBox mFilter1;
+    @FXML
+    private ChoiceBox mFilter2;
+    @FXML
+    private ChoiceBox mFilter3;
+    @FXML
+    private ChoiceBox mFilter4;
+    @FXML
+    private Label mDescription;
+    @FXML
+    private Hyperlink mUrl;
+    @FXML
+    private Label mAdress;
+    @FXML
+    private Button mButtonCalculateRoute;
+    @FXML
+    private Button mButtonPlanTour;
+    @FXML
+    private ToggleButton mToggleButtonAlphabet;
+    @FXML
+    private ToggleButton mToggleButtonPopular;
+    @FXML
+    private ToggleButton mToggleButtonPrice;
 
     ObservableList<String> mFilterCategory = FXCollections.observableArrayList();
     ObservableList<String> mFilterAgeRestriction = FXCollections.observableArrayList();
@@ -46,30 +61,31 @@ public class MainController implements Initializable{
     private Vector<Bar> mCurrentList = null;
     private Bar mSelectedBar = null;
 
-    public MainController(){}
+    public MainController() {
+    }
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         setListItems(Main.mGraph.sortListBy(Main.mGraph.getAllBars()));
         mFilterCategory.addAll(Statics.CATEGORYS);
-            mFilter1.setItems(mFilterCategory);
-            mFilter1.getSelectionModel().selectFirst();
-            mFilter1.getSelectionModel().selectedItemProperty().addListener(
-                    (ObservableValue observable, Object oldValue, Object newValue) -> filterBarsCategory(newValue));
+        mFilter1.setItems(mFilterCategory);
+        mFilter1.getSelectionModel().selectFirst();
+        mFilter1.getSelectionModel().selectedItemProperty().addListener(
+                (ObservableValue observable, Object oldValue, Object newValue) -> filterBarsCategory(newValue));
         mFilterAgeRestriction.addAll(Statics.AGE_RESTRICTIONS);
-            mFilter2.setItems(mFilterAgeRestriction);
-            mFilter2.getSelectionModel().selectFirst();
-            mFilter2.getSelectionModel().selectedItemProperty().addListener(
+        mFilter2.setItems(mFilterAgeRestriction);
+        mFilter2.getSelectionModel().selectFirst();
+        mFilter2.getSelectionModel().selectedItemProperty().addListener(
                 (ObservableValue observable, Object oldValue, Object newValue) -> filterBarsRestriction(newValue));
         mFilterAvgAge.addAll(Statics.AVG_AGE);
-            mFilter3.setItems(mFilterAvgAge);
-            mFilter3.getSelectionModel().selectFirst();
-            mFilter3.getSelectionModel().selectedItemProperty().addListener(
+        mFilter3.setItems(mFilterAvgAge);
+        mFilter3.getSelectionModel().selectFirst();
+        mFilter3.getSelectionModel().selectedItemProperty().addListener(
                 (ObservableValue observable, Object oldValue, Object newValue) -> filterBarsAverage(newValue));
         mFilterPrice.addAll(Statics.PRICE_RANGE);
-            mFilter4.setItems(mFilterPrice);
-            mFilter4.getSelectionModel().selectFirst();
-            mFilter4.getSelectionModel().selectedItemProperty().addListener(
+        mFilter4.setItems(mFilterPrice);
+        mFilter4.getSelectionModel().selectFirst();
+        mFilter4.getSelectionModel().selectedItemProperty().addListener(
                 (ObservableValue observable, Object oldValue, Object newValue) -> filterBarsPrice(newValue));
         mToggleButtonAlphabet.setSelected(true);
         mToggleButtonPopular.setSelected(false);
@@ -101,7 +117,7 @@ public class MainController implements Initializable{
     }
 
     private void showBarDetails(Object newValue) {
-        if(newValue != null) {
+        if (newValue != null) {
             mButtonCalculateRoute.setDisable(false);
             mSelectedBar = (Bar) newValue;
             Bar selectedBar = (Bar) newValue;
@@ -111,8 +127,7 @@ public class MainController implements Initializable{
             mDescription.setText(description);
             mUrl.setText(url);
             mAdress.setText(adress);
-        }
-        else {
+        } else {
             mSelectedBar = null;
             mButtonCalculateRoute.setDisable(true);
             mDescription.setText("");
@@ -129,33 +144,31 @@ public class MainController implements Initializable{
 
     @FXML
     private void handleButtonSearch() throws IOException {
-        if(mTextFieldSearch.getText().equals(Statics.ADMIN_CODE)){
+        if (mTextFieldSearch.getText().equals(Statics.ADMIN_CODE)) {
             mMain.showAdminPage();
         }
-        if(mTextFieldSearch.getText().isEmpty() ||
+        if (mTextFieldSearch.getText().isEmpty() ||
                 mTextFieldSearch.getText().equals("") ||
                 mTextFieldSearch.getText().contains("alle") ||
                 mTextFieldSearch.getText().contains("Alle") ||
-                mTextFieldSearch.getText().equalsIgnoreCase("alle")){
+                mTextFieldSearch.getText().equalsIgnoreCase("alle")) {
             setListItems(Main.mGraph.getBarsFiltered(mFilters));
-        }
-        else{
+        } else {
             String search = mTextFieldSearch.getText();
             String numerical;
             String text;
 
-            if(!search.isEmpty()&&!search.equals("")){
+            if (!search.isEmpty() && !search.equals("")) {
                 StringBuilder sbN = new StringBuilder();
                 StringBuilder sbT = new StringBuilder();
                 Vector<Bar> num = null;
                 Vector<Bar> alph = null;
 
-                for(char c : search.toCharArray()){
-                    if(Character.isDigit(c)){
+                for (char c : search.toCharArray()) {
+                    if (Character.isDigit(c)) {
                         sbT.append(c);
                         sbN.append(c);
-                    }
-                    else{
+                    } else {
                         sbT.append(c);
                     }
                 }
@@ -163,19 +176,19 @@ public class MainController implements Initializable{
                 numerical = sbN.toString();
                 text = sbT.toString();
 
-                if(!numerical.equals("")&&!numerical.isEmpty()) {
+                if (!numerical.equals("") && !numerical.isEmpty()) {
                     num = Main.mGraph.getBarsFilteredByNumericalSearch(Integer.parseInt(numerical));
                 }
-                if(!text.equals("")&&!text.isEmpty()){
+                if (!text.equals("") && !text.isEmpty()) {
                     alph = Main.mGraph.getBarsFilteredByStringSearch(text);
                 }
                 Vector<Bar> result = new Vector<>();
-                if(num!=null){
-                    for(int i=0;i<num.size();i++){
+                if (num != null) {
+                    for (int i = 0; i < num.size(); i++) {
                         result.add(num.elementAt(i));
                     }
                 }
-                if(alph!=null) {
+                if (alph != null) {
                     for (int i = 0; i < alph.size(); i++) {
                         result.add(alph.elementAt(i));
                     }
@@ -186,7 +199,7 @@ public class MainController implements Initializable{
     }
 
     @FXML
-    private void handleLinkClicked(){
+    private void handleLinkClicked() {
         WebController controller = new WebController();
         controller.setMainApp(mMain);
         controller.openLink(mUrl.getText());
@@ -198,21 +211,20 @@ public class MainController implements Initializable{
     }
 
     @FXML
-    private void handleButtonTour(){
+    private void handleButtonTour() {
 
     }
 
-    private void setListItems(Vector<Bar> items){
+    private void setListItems(Vector<Bar> items) {
         mCurrentList = items;
         showBarDetails(null);
         updatePopularity(items);
         ObservableList<Bar> bars = FXCollections.observableArrayList();
-        if(items == null) {
+        if (items == null) {
             mScrollPane.setItems(bars);
             mScrollPane.getSelectionModel().selectedItemProperty().addListener(
                     (ObservableValue observable, Object oldValue, Object newValue) -> showBarDetails(newValue));
-        }
-        else {
+        } else {
             for (int i = 0; i < items.size(); i++) {
                 bars.add(items.elementAt(i));
             }
@@ -221,8 +233,9 @@ public class MainController implements Initializable{
                     (ObservableValue observable, Object oldValue, Object newValue) -> showBarDetails(newValue));
         }
     }
-    public void updatePopularity(Vector<Bar> bars){
-        for(int i=0;i<bars.size();i++){
+
+    public void updatePopularity(Vector<Bar> bars) {
+        for (int i = 0; i < bars.size(); i++) {
             bars.elementAt(i).increasePopularity();
         }
     }
@@ -235,6 +248,7 @@ public class MainController implements Initializable{
         mToggleButtonPrice.setSelected(false);
         setListItems(Main.mGraph.sortListBy(mCurrentList));
     }
+
     public void handleToggleButtonPopular() throws IOException {
         mSortMode = Statics.SORT_CODE_POPULAR;
         Main.mGraph.setSortMode(mSortMode);
@@ -243,6 +257,7 @@ public class MainController implements Initializable{
         mToggleButtonPrice.setSelected(false);
         setListItems(Main.mGraph.sortListBy(mCurrentList));
     }
+
     public void handleToggleButtonPrice() throws IOException {
         mSortMode = Statics.SORT_CODE_PRICE;
         Main.mGraph.setSortMode(mSortMode);

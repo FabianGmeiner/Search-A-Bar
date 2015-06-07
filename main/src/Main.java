@@ -9,8 +9,6 @@ import javafx.stage.Modality;
 import javafx.stage.Stage;
 import model.Bar;
 import model.Graph;
-import model.Node;
-
 import statics.Statics;
 
 import java.io.IOException;
@@ -29,7 +27,7 @@ public class Main extends Application {
     public static Graph mGraph;
 
     @Override
-    public void start(Stage primaryStage) throws Exception{
+    public void start(Stage primaryStage) throws Exception {
         this.primaryStage = primaryStage;
         this.primaryStage.setTitle("Search-A-Bar");
 
@@ -65,9 +63,11 @@ public class Main extends Application {
         primaryStage.show();
         showMainPage();
     }
-    public Stage getPrimaryStage (){
+
+    public Stage getPrimaryStage() {
         return primaryStage;
     }
+
     public void showMainPage() throws IOException {
         FXMLLoader loader = new FXMLLoader();
         loader.setLocation(Main.class.getResource("view/LayoutMain.fxml"));
@@ -77,6 +77,7 @@ public class Main extends Application {
         mMainController = loader.getController();
         mMainController.setMainApp(this);
     }
+
     public void showAdminPage() throws IOException {
         FXMLLoader loader = new FXMLLoader();
         loader.setLocation(Main.class.getResource("view/LayoutAdmin.fxml"));
@@ -86,6 +87,7 @@ public class Main extends Application {
         mAdminController = loader.getController();
         mAdminController.setMainApp(this);
     }
+
     public void showDialog(Bar bar, int requestCode) throws IOException {
         FXMLLoader loader = new FXMLLoader();
         loader.setLocation(Main.class.getResource("view/LayoutDialog.fxml"));
@@ -108,6 +110,7 @@ public class Main extends Application {
         // Show the dialog and wait until the user closes it
         dialogStage.showAndWait();
     }
+
     public void showDialogRoute(Bar bar) throws IOException {
         FXMLLoader loader = new FXMLLoader();
         loader.setLocation(Main.class.getResource("view/LayoutDialogRoute.fxml"));
@@ -129,6 +132,7 @@ public class Main extends Application {
         // Show the dialog and wait until the user closes it
         dialogStage.showAndWait();
     }
+
     public void showDialogMaps(Bar bar, Bar destination) throws IOException {
         FXMLLoader loader = new FXMLLoader();
         loader.setLocation(Main.class.getResource("view/LayoutDialogMaps.fxml"));
