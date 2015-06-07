@@ -24,9 +24,9 @@ public class List
     }
 
     public Object remove() {
-        Object swp = first;
+        Object swp = first.getContent();
         first = first.remove();
-        return first.getContent();
+        return swp;
     }
 }
 
