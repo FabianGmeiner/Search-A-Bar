@@ -20,6 +20,8 @@ public class Statics {
     public static final int SORT_CODE_POPULAR = 3;
     public static final int SORT_CODE_PRICE = 4;
 
+    public static final boolean DEBUG = true;
+
     // This is a list of Bars used to test the application. Will be replaced by xml-file
     public Node node1 = new Node(new Bar("Alte Filmbühne",
             "Hippe Bar mit \ndurchgestylten Räumen.\nWochenendes meist gerammelt\nvoll. Wenige \nSitzgelegenheiten.",
@@ -77,5 +79,6 @@ public class Statics {
     public Node getNode7() {
         return node7;
     }
+
 
 }

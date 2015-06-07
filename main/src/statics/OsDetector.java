@@ -1,4 +1,4 @@
-package stats;
+package statics;
 
 /**written by Daniel Knuettel*/
 

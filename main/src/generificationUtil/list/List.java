@@ -1,7 +1,6 @@
-package genUtil.list;
-import java.io.*;
+package generificationUtil.list;
 
-import genUtil.list.*;
+import java.io.Serializable;
 
 /** Basic List Object to store Objects. 
    written by Daniel Knuettel 2015

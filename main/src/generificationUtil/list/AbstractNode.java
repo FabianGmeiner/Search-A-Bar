@@ -1,5 +1,6 @@
-package genUtil.list;
-import java.io.*;
+package generificationUtil.list;
+
+import java.io.Serializable;
 
 /* The abstract container for Composite Pattern
  written by Daniel Knuettel 2015*/

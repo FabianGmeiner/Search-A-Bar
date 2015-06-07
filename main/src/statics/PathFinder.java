@@ -1,8 +1,7 @@
-package stats;
-import stats.*;
-import java.io.*;
-import java.nio.file.*;
-import genUtil.logger.*;
+package statics;
+
+import java.nio.file.Path;
+import java.nio.file.Paths;
 
 /**written by Daniel Knuettel*/
 
@@ -33,7 +32,7 @@ public class PathFinder
 			builder.append("\\");// must the backslash be escaped?
 			builder.append(stdpathDOS);
 			homepath=builder.toString();
-			if(Stats.__DEBUG)
+			if (Statics.DEBUG)
 			{
 				System.out.printf("homepath='%s'\n",homepath);
 			}
@@ -43,7 +42,7 @@ public class PathFinder
 			builder.append("/");
 			builder.append(stdpathUnix);
 			homepath=builder.toString();
-			if(Stats.__DEBUG)
+			if (Statics.DEBUG)
 			{
 				System.out.printf("homepath='%s'\n",homepath);
 			}

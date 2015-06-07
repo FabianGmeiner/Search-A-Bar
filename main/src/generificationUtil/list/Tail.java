@@ -1,7 +1,4 @@
-package genUtil.list;
-import java.io.*;
-
-import genUtil.list.*;
+package generificationUtil.list;
 
 /* written by Daniel Knuettel 2015 */
 

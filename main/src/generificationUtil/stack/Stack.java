@@ -1,6 +1,6 @@
-package genUtil.stack;
+package generificationUtil.stack;
 
-import genUtil.list.*;
+import generificationUtil.list.List;
 
 public class Stack
 extends List

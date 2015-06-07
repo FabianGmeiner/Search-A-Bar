@@ -1,9 +1,14 @@
-package genUtil.logger;
+package generificationUtil.logger;
 
-import java.io.*;
 import stats.*;
-import java.util.*;
-import java.text.*;
+
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.PrintStream;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.Date;
 
 /**
   A completly static class for logging

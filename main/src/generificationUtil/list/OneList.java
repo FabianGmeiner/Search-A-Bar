@@ -1,8 +1,6 @@
-package genUtil.list;
-import java.io.*;
+package generificationUtil.list;
 
-import genUtil.list.*;
-import genUtil.logger.*;
+import generificationUtil.logger.Logger;
 
 
 /**The OneList is a special List, that contains only one Element,

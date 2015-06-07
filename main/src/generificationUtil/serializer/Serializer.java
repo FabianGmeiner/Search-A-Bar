@@ -1,9 +1,12 @@
-package projekt.genUtil.serializer;
+package generificationUtil.serializer;
 
 import projekt.genUtil.list.*;
-import projekt.genUtil.stack.*;
 import projekt.genUtil.logger.*;
-import java.io.*;
+import projekt.genUtil.stack.*;
+
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.ObjectOutputStream;
 
 
 public class Serializer

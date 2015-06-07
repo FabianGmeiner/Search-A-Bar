@@ -1,5 +1,4 @@
-package genUtil.list;
-import java.io.*;
+package generificationUtil.list;
 
 public class ListFullException
 extends Exception

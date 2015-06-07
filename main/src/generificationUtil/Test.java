@@ -1,7 +1,8 @@
-import stats.*;
-import genUtil.logger.*;
+package generificationUtil;
 
-class Test
+import generificationUtil.logger.Logger;
+
+public class Test
 {
 	public static void main(String [] args)
 	{

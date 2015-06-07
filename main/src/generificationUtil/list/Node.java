@@ -1,6 +1,4 @@
-package genUtil.list;
-import java.io.*;
-import genUtil.list.*;
+package generificationUtil.list;
 
 /* A container for Composite Pattern
  written by Daniel Knuettel 2015*/
