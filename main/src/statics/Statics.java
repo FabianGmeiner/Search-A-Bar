@@ -38,7 +38,7 @@ public class Statics {
     public Node node4 = new Node(new Bar("Banane",
             "Auf den ersten Blick \nspelunkig, doch ein \nBlick in den ersten Stock \nlohnt sich allemal.",
             "club-banane.de", "Banane \nAm Römling 1\n93047 Regensburg", 1,
-            49.020659, 12.092247, 2.00, 16, 21));
+            49.020659, 12.092247, 3.00, 16, 21));
     public Node node5 = new Node(new Bar("Ei",
             "Kneipe mit gutbürgerlicher \nKüche. Kleiner, \nfeiner Biergarten.",
             "...", "Ei \nKeplerstraße 3\n93047 Regensburg", 1,
