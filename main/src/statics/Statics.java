@@ -9,7 +9,7 @@ public class Statics {
     public static final String ADMIN_CODE = "#Admin#";
 
     /* edit by Daniel Knuettel: added __DEBUG*/
-    public static final boolean __DEBUG=true;
+    public static final boolean __DEBUG = true;
 
     public static final int DIALOG_CODE_EDIT = 0;
     public static final int DIALOG_CODE_NEW = 1;
@@ -22,6 +22,10 @@ public class Statics {
     public static final int SORT_CODE_ALPHABETICAL = 2;
     public static final int SORT_CODE_POPULAR = 3;
     public static final int SORT_CODE_PRICE = 4;
+
+    public static final int VALID_CODE_INT = 5;
+    public static final int VALID_CODE_DOUBLE = 6;
+
 
     // This is a list of Bars used to test the application. Will be replaced by xml-file
     public Node node1 = new Node(new Bar("Alte Filmbühne",

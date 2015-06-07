@@ -6,6 +6,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.Font?>
 <AnchorPane
+        xmlns:fx="http://javafx.com/fxml/1"
         fx:controller="DialogMapsController"
         maxHeight="-Infinity"
         maxWidth="-Infinity"
@@ -13,8 +14,7 @@
         minWidth="-Infinity"
         prefHeight="100.0"
         prefWidth="360.0"
-        xmlns="http://javafx.com/javafx/8"
-        xmlns:fx="http://javafx.com/fxml/1">
+        xmlns="http://javafx.com/javafx/8">
     <VBox
             layoutX="100.0"
             layoutY="-41.0"

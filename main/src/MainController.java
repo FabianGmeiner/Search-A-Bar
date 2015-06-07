@@ -18,6 +18,10 @@ import java.util.Vector;
 @SuppressWarnings({"SpellCheckingInspection", "unchecked", "SuspiciousMethodCalls"})
 public class MainController implements Initializable {
 
+    ObservableList<String> mFilterCategory = FXCollections.observableArrayList();
+    ObservableList<String> mFilterAgeRestriction = FXCollections.observableArrayList();
+    ObservableList<String> mFilterAvgAge = FXCollections.observableArrayList();
+    ObservableList<String> mFilterPrice = FXCollections.observableArrayList();
     // the FXML-Annotation allows JavaFX to inject the views based on their fx:id
     @FXML
     private TextField mTextFieldSearch;
@@ -49,12 +53,6 @@ public class MainController implements Initializable {
     private ToggleButton mToggleButtonPopular;
     @FXML
     private ToggleButton mToggleButtonPrice;
-
-    ObservableList<String> mFilterCategory = FXCollections.observableArrayList();
-    ObservableList<String> mFilterAgeRestriction = FXCollections.observableArrayList();
-    ObservableList<String> mFilterAvgAge = FXCollections.observableArrayList();
-    ObservableList<String> mFilterPrice = FXCollections.observableArrayList();
-
     private Main mMain;
     private int[] mFilters = new int[4];
     private int mSortMode = Statics.SORT_CODE_ALPHABETICAL;

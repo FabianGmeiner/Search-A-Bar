@@ -4,6 +4,7 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 <AnchorPane
+        xmlns:fx="http://javafx.com/fxml/1"
         maxHeight="Infinity"
         maxWidth="Infinity"
         minHeight="0"
@@ -11,7 +12,6 @@
         prefHeight="500.0"
         prefWidth="600.0"
         xmlns="http://javafx.com/javafx/8"
-        xmlns:fx="http://javafx.com/fxml/1"
         fx:controller="MainController">
     <BorderPane
             prefHeight="500.0"

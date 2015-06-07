@@ -63,12 +63,24 @@ public class Bar {
         return mPrice;
     }
 
+    public void setmPrice(double mPrice) {
+        this.mPrice = mPrice;
+    }
+
     public int getmAgeRestriction() {
         return mAgeRestriction;
     }
 
+    public void setmAgeRestriction(int mAgeRestriction) {
+        this.mAgeRestriction = mAgeRestriction;
+    }
+
     public int getmAverageAge() {
         return mAverageAge;
+    }
+
+    public void setmAverageAge(int mAverageAge) {
+        this.mAverageAge = mAverageAge;
     }
 
     // all the setter methods
@@ -82,18 +94,6 @@ public class Bar {
 
     public void setUrl(String url) {
         mUrl = url;
-    }
-
-    public void setmPrice(double mPrice) {
-        this.mPrice = mPrice;
-    }
-
-    public void setmAgeRestriction(int mAgeRestriction) {
-        this.mAgeRestriction = mAgeRestriction;
-    }
-
-    public void setmAverageAge(int mAverageAge) {
-        this.mAverageAge = mAverageAge;
     }
 
     public void setAdress(String adress) {

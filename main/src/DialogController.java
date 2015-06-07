@@ -3,17 +3,15 @@
 import javafx.beans.value.ObservableValue;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
-import javafx.scene.control.ChoiceBox;
-import javafx.scene.control.TextArea;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
 import javafx.stage.Stage;
 import model.Bar;
-import model.Edge;
 import model.Node;
 import statics.Statics;
-import utils.GPSService;
+import utils.ValidCheck;
 
 import java.io.IOException;
 import java.net.URL;
@@ -100,60 +98,94 @@ public class DialogController implements Initializable {
 
     @FXML
     private void handleButtonSave() throws IOException {
-        if (requestCode == Statics.DIALOG_CODE_EDIT) {
-            bar.setName(mDialogTextFieldName.getText());
-            bar.setDescription(mDialogTextFieldDescription.getText());
-            bar.setUrl(mDialogTextFieldUrl.getText());
-            bar.setAdress(mDialogTextFieldAdress.getText());
-            bar.setPrice(Double.parseDouble(mDialogTextFieldPrice.getText()));
-            bar.setAgeRestriction(Integer.parseInt(mDialogTextFieldRestriction.getText()));
-            bar.setAverageAge(Integer.parseInt(mDialogTextFieldAvg.getText()));
-            bar.setGpsLatitude(Double.parseDouble(mDialogTextFieldLat.getText()));
-            bar.setGpsLongitude(Double.parseDouble(mDialogTextFieldLong.getText()));
-
-            printGraphContent();
-
-            mMain.showAdminPage();
-            mDialogStage.close();
-        } else if (requestCode == Statics.DIALOG_CODE_NEW) {
-            bar = new Bar(
-                    mDialogTextFieldName.getText(),
-                    mDialogTextFieldDescription.getText(),
-                    mDialogTextFieldUrl.getText(),
-                    mDialogTextFieldAdress.getText(),
-                    0,
-                    Double.parseDouble(mDialogTextFieldLat.getText()),
-                    Double.parseDouble(mDialogTextFieldLong.getText()),
-                    Double.parseDouble(mDialogTextFieldPrice.getText()),
-                    Integer.parseInt(mDialogTextFieldRestriction.getText()),
-                    Integer.parseInt(mDialogTextFieldAvg.getText())
-            );
-            Main.mGraph.addNode(new Node(bar));
-            int index = Main.mGraph.indexOf(new Node(bar));
-            double distance = Integer.MAX_VALUE;
-            int indexNearest = -1;
-            for (int i = 0; i < Main.mGraph.mNodes.size(); i++) {
-                if (i != Main.mGraph.indexOf(new Node(bar))) {
-                    double distanceBars = GPSService.getDistanceFromGPS(
-                            bar.getmGpsLatitude(),
-                            bar.getmGpsLongitude(),
-                            ((Bar) Main.mGraph.mNodes.elementAt(i).getContent()).getmGpsLatitude(),
-                            ((Bar) Main.mGraph.mNodes.elementAt(i).getContent()).getmGpsLongitude());
-                    if (distanceBars < distance) {
-                        indexNearest = i;
-                    }
-                }
+        Dialog dialog = new Alert(Alert.AlertType.WARNING);
+        dialog.setOnHiding(event -> dialog.close());
+        dialog.setHeaderText("Achtung !");
+        dialog.setContentText("Bitte geben sie gültige Werte ein.");
+        dialog.setOnCloseRequest(new EventHandler<DialogEvent>() {
+            @Override
+            public void handle(DialogEvent event) {
+                dialog.close();
             }
-            Main.mGraph.addEdge(new Edge(
-                    Main.mGraph.mNodes.elementAt(index),
-                    Main.mGraph.mNodes.elementAt(indexNearest),
-                    distance
-            ));
+        });
+        if (requestCode == Statics.DIALOG_CODE_EDIT) {
+            if (!ValidCheck.isValidInput(mDialogTextFieldAvg.getText(), Statics.VALID_CODE_INT)) {
+                mDialogTextFieldAvg.clear();
+                mDialogTextFieldAvg.setPromptText("Gültigen Wert eingeben !");
+                dialog.show();
+            } else if (!ValidCheck.isValidInput(mDialogTextFieldRestriction.getText(), Statics.VALID_CODE_INT)) {
+                mDialogTextFieldRestriction.clear();
+                mDialogTextFieldRestriction.setPromptText("Gültigen Wert eingeben !");
+                dialog.show();
+            } else if (!ValidCheck.isValidInput(mDialogTextFieldPrice.getText(), Statics.VALID_CODE_DOUBLE)) {
+                mDialogTextFieldPrice.clear();
+                mDialogTextFieldPrice.setPromptText("Gültigen Wert eingeben !");
+                dialog.show();
+            } else if (!ValidCheck.isValidInput(mDialogTextFieldLat.getText(), Statics.VALID_CODE_DOUBLE)) {
+                mDialogTextFieldLat.clear();
+                mDialogTextFieldLat.setPromptText("Gültigen Wert eingeben !");
+                dialog.showAndWait();
+            } else if (!ValidCheck.isValidInput(mDialogTextFieldLong.getText(), Statics.VALID_CODE_DOUBLE)) {
+                mDialogTextFieldLong.clear();
+                mDialogTextFieldLong.setPromptText("Gültigen Wert eingeben !");
+                dialog.show();
+            } else {
+                bar.setName(mDialogTextFieldName.getText());
+                bar.setDescription(mDialogTextFieldDescription.getText());
+                bar.setUrl(mDialogTextFieldUrl.getText());
+                bar.setAdress(mDialogTextFieldAdress.getText());
+                bar.setPrice(Double.parseDouble(mDialogTextFieldPrice.getText()));
+                bar.setAgeRestriction(Integer.parseInt(mDialogTextFieldRestriction.getText()));
+                bar.setAverageAge(Integer.parseInt(mDialogTextFieldAvg.getText()));
+                bar.setGpsLatitude(Double.parseDouble(mDialogTextFieldLat.getText()));
+                bar.setGpsLongitude(Double.parseDouble(mDialogTextFieldLong.getText()));
 
-            printGraphContent();
+                printGraphContent();
 
-            mMain.showAdminPage();
-            mDialogStage.close();
+                mMain.showAdminPage();
+                mDialogStage.close();
+            }
+
+        } else if (requestCode == Statics.DIALOG_CODE_NEW) {
+            if (!ValidCheck.isValidInput(mDialogTextFieldAvg.getText(), Statics.VALID_CODE_INT)) {
+                mDialogTextFieldAvg.clear();
+                mDialogTextFieldAvg.setPromptText("Gültigen Wert eingeben !");
+                dialog.show();
+            } else if (!ValidCheck.isValidInput(mDialogTextFieldRestriction.getText(), Statics.VALID_CODE_INT)) {
+                mDialogTextFieldRestriction.clear();
+                mDialogTextFieldRestriction.setPromptText("Gültigen Wert eingeben !");
+                dialog.show();
+            } else if (!ValidCheck.isValidInput(mDialogTextFieldPrice.getText(), Statics.VALID_CODE_DOUBLE)) {
+                mDialogTextFieldPrice.clear();
+                mDialogTextFieldPrice.setPromptText("Gültigen Wert eingeben !");
+                dialog.show();
+            } else if (!ValidCheck.isValidInput(mDialogTextFieldLat.getText(), Statics.VALID_CODE_DOUBLE)) {
+                mDialogTextFieldLat.clear();
+                mDialogTextFieldLat.setPromptText("Gültigen Wert eingeben !");
+                dialog.show();
+            } else if (!ValidCheck.isValidInput(mDialogTextFieldLong.getText(), Statics.VALID_CODE_DOUBLE)) {
+                mDialogTextFieldLong.clear();
+                mDialogTextFieldLong.setPromptText("Gültigen Wert eingeben !");
+                dialog.show();
+            } else {
+                bar = new Bar(
+                        mDialogTextFieldName.getText(),
+                        mDialogTextFieldDescription.getText(),
+                        mDialogTextFieldUrl.getText(),
+                        mDialogTextFieldAdress.getText(),
+                        0,
+                        Double.parseDouble(mDialogTextFieldLat.getText()),
+                        Double.parseDouble(mDialogTextFieldLong.getText()),
+                        Double.parseDouble(mDialogTextFieldPrice.getText()),
+                        Integer.parseInt(mDialogTextFieldRestriction.getText()),
+                        Integer.parseInt(mDialogTextFieldAvg.getText()));
+
+                Main.mGraph.addNode(new Node(bar));
+
+                printGraphContent();
+
+            }
+
         }
     }
 

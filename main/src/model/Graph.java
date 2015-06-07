@@ -60,13 +60,25 @@ public class Graph {
             Node nearestNode = mNodes.firstElement();
             for (int i = 0; i < mNodes.size(); i++) {
                 Bar next = (Bar) mNodes.elementAt(i).getContent();
-                if (GPSService.getDistanceFromGPS(next.getmGpsLatitude(), next.getmGpsLongitude(), barToAdd.getmGpsLatitude(), barToAdd.getmGpsLongitude())
-                        <= GPSService.getDistanceFromGPS(nearest.getmGpsLatitude(), nearest.getmGpsLongitude(), barToAdd.getmGpsLatitude(), barToAdd.getmGpsLongitude())) {
+                if (GPSService.getDistanceFromGPS(
+                        next.getmGpsLatitude(),
+                        next.getmGpsLongitude(),
+                        barToAdd.getmGpsLatitude(),
+                        barToAdd.getmGpsLongitude()) <=
+                        GPSService.getDistanceFromGPS(
+                                nearest.getmGpsLatitude(),
+                                nearest.getmGpsLongitude(),
+                                barToAdd.getmGpsLatitude(),
+                                barToAdd.getmGpsLongitude())) {
                     nearest = next;
                     nearestNode = mNodes.elementAt(i);
                 }
             }
-            mEdges.add(new Edge(a, nearestNode, GPSService.getDistanceFromGPS(nearest.getmGpsLatitude(), nearest.getmGpsLongitude(), barToAdd.getmGpsLatitude(), barToAdd.getmGpsLongitude())));
+            mEdges.add(new Edge(a, nearestNode, GPSService.getDistanceFromGPS(
+                    nearest.getmGpsLatitude(),
+                    nearest.getmGpsLongitude(),
+                    barToAdd.getmGpsLatitude(),
+                    barToAdd.getmGpsLongitude())));
         }
         mNodes.add(a);
 

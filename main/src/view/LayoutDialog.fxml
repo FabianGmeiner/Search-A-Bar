@@ -5,6 +5,7 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 <AnchorPane
+        xmlns:fx="http://javafx.com/fxml/1"
         fx:controller="DialogController"
         maxHeight="-Infinity"
         maxWidth="-Infinity"
@@ -12,8 +13,7 @@
         minWidth="-Infinity"
         prefHeight="450.0"
         prefWidth="500.0"
-        xmlns="http://javafx.com/javafx/8"
-        xmlns:fx="http://javafx.com/fxml/1">
+        xmlns="http://javafx.com/javafx/8">
     <VBox
             layoutX="231.0"
             layoutY="54.0"

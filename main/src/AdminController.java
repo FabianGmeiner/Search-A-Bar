@@ -17,14 +17,13 @@ import java.util.Vector;
 @SuppressWarnings("unchecked")
 public class AdminController implements Initializable {
 
+    @FXML
+    public ListView mAdminListView;
     // the FXML-Annotation allows JavaFX to inject the views based on their fx:id
     @FXML
     private Button mAdminButtonEdit;
     @FXML
     private Button mAdminButtonDelete;
-    @FXML
-    public ListView mAdminListView;
-
     private Main mMain;
     private Bar mSelectedBar = null;
 

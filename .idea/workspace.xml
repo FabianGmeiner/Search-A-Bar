@@ -1,7 +1,64 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="89450010-f8a5-4de3-bf30-7ac7a9e9e64b" name="Default" comment="added a bit" />
+    <list default="true" id="89450010-f8a5-4de3-bf30-7ac7a9e9e64b" name="Default" comment="moved OSDetector and PathFinder">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/main/src/generificationUtil/OsDetector.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/main/src/generificationUtil/PathFinder.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/main/src/utils/ValidCheck.java" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/main/src/statics/OsDetector.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/main/src/statics/PathFinder.java" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/main/AdminController.class" afterPath="$PROJECT_DIR$/out/production/main/AdminController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/main/model/Bar.class" afterPath="$PROJECT_DIR$/out/production/main/model/Bar.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/main/dataCollection/DataScan.class" afterPath="$PROJECT_DIR$/out/production/main/dataCollection/DataScan.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/main/dataCollection/DataScanFirefox.class" afterPath="$PROJECT_DIR$/out/production/main/dataCollection/DataScanFirefox.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/main/DialogController.class" afterPath="$PROJECT_DIR$/out/production/main/DialogController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/main/model/Graph.class" afterPath="$PROJECT_DIR$/out/production/main/model/Graph.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/main/generificationUtil/list/List.class" afterPath="$PROJECT_DIR$/out/production/main/generificationUtil/list/List.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/main/generificationUtil/list/ListFullException.class" afterPath="$PROJECT_DIR$/out/production/main/generificationUtil/list/ListFullException.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/main/generificationUtil/logger/Logger.class" afterPath="$PROJECT_DIR$/out/production/main/generificationUtil/logger/Logger.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/main/Main.class" afterPath="$PROJECT_DIR$/out/production/main/Main.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/main/MainController.class" afterPath="$PROJECT_DIR$/out/production/main/MainController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/main/generificationUtil/list/Node.class" afterPath="$PROJECT_DIR$/out/production/main/generificationUtil/list/Node.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/main/generificationUtil/list/OneList.class" afterPath="$PROJECT_DIR$/out/production/main/generificationUtil/list/OneList.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/main/statics/OsDetector.class" afterPath="$PROJECT_DIR$/out/production/main/statics/OsDetector.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/main/statics/PathFinder.class" afterPath="$PROJECT_DIR$/out/production/main/statics/PathFinder.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/main/generificationUtil/serializer/Serializer.class" afterPath="$PROJECT_DIR$/out/production/main/generificationUtil/serializer/Serializer.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/main/generificationUtil/stack/Stack.class" afterPath="$PROJECT_DIR$/out/production/main/generificationUtil/stack/Stack.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/main/statics/Statics.class" afterPath="$PROJECT_DIR$/out/production/main/statics/Statics.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/main/generificationUtil/list/Tail.class" afterPath="$PROJECT_DIR$/out/production/main/generificationUtil/list/Tail.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/main/generificationUtil/Test.class" afterPath="$PROJECT_DIR$/out/production/main/generificationUtil/Test.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main/src/generificationUtil/list/AbstractNode.java" afterPath="$PROJECT_DIR$/main/src/generificationUtil/list/AbstractNode.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main/src/AdminController.java" afterPath="$PROJECT_DIR$/main/src/AdminController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main/src/model/Bar.java" afterPath="$PROJECT_DIR$/main/src/model/Bar.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main/src/dataCollection/DataScan.java" afterPath="$PROJECT_DIR$/main/src/dataCollection/DataScan.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main/src/dataCollection/DataScanFirefox.java" afterPath="$PROJECT_DIR$/main/src/dataCollection/DataScanFirefox.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main/src/DialogController.java" afterPath="$PROJECT_DIR$/main/src/DialogController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main/src/model/Graph.java" afterPath="$PROJECT_DIR$/main/src/model/Graph.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main/src/view/LayoutAdmin.fxml" afterPath="$PROJECT_DIR$/main/src/view/LayoutAdmin.fxml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/main/view/LayoutAdmin.fxml" afterPath="$PROJECT_DIR$/out/production/main/view/LayoutAdmin.fxml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main/src/view/LayoutDialog.fxml" afterPath="$PROJECT_DIR$/main/src/view/LayoutDialog.fxml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/main/view/LayoutDialog.fxml" afterPath="$PROJECT_DIR$/out/production/main/view/LayoutDialog.fxml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main/src/view/LayoutDialogMaps.fxml" afterPath="$PROJECT_DIR$/main/src/view/LayoutDialogMaps.fxml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/main/view/LayoutDialogMaps.fxml" afterPath="$PROJECT_DIR$/out/production/main/view/LayoutDialogMaps.fxml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main/src/view/LayoutDialogRoute.fxml" afterPath="$PROJECT_DIR$/main/src/view/LayoutDialogRoute.fxml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/main/view/LayoutDialogRoute.fxml" afterPath="$PROJECT_DIR$/out/production/main/view/LayoutDialogRoute.fxml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main/src/view/LayoutMain.fxml" afterPath="$PROJECT_DIR$/main/src/view/LayoutMain.fxml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/main/view/LayoutMain.fxml" afterPath="$PROJECT_DIR$/out/production/main/view/LayoutMain.fxml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main/src/generificationUtil/list/List.java" afterPath="$PROJECT_DIR$/main/src/generificationUtil/list/List.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main/src/generificationUtil/list/ListFullException.java" afterPath="$PROJECT_DIR$/main/src/generificationUtil/list/ListFullException.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main/src/generificationUtil/logger/Logger.java" afterPath="$PROJECT_DIR$/main/src/generificationUtil/logger/Logger.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main/src/Main.java" afterPath="$PROJECT_DIR$/main/src/Main.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main/src/MainController.java" afterPath="$PROJECT_DIR$/main/src/MainController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main/src/generificationUtil/list/Node.java" afterPath="$PROJECT_DIR$/main/src/generificationUtil/list/Node.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main/src/generificationUtil/list/OneList.java" afterPath="$PROJECT_DIR$/main/src/generificationUtil/list/OneList.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main/src/generificationUtil/serializer/Serializer.java" afterPath="$PROJECT_DIR$/main/src/generificationUtil/serializer/Serializer.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main/src/statics/ShowProperties.java" afterPath="$PROJECT_DIR$/main/src/statics/ShowProperties.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main/src/generificationUtil/stack/Stack.java" afterPath="$PROJECT_DIR$/main/src/generificationUtil/stack/Stack.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main/src/statics/Statics.java" afterPath="$PROJECT_DIR$/main/src/statics/Statics.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main/src/generificationUtil/list/Tail.java" afterPath="$PROJECT_DIR$/main/src/generificationUtil/list/Tail.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main/src/generificationUtil/Test.java" afterPath="$PROJECT_DIR$/main/src/generificationUtil/Test.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+    </list>
     <ignored path="Search-A-Bar.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path="$PROJECT_DIR$/out/" />
@@ -22,41 +79,51 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/main/src/Main.java">
+      <file leaf-file-name="AdminController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/main/src/AdminController.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+              <caret line="67" column="16" selection-start-line="67" selection-start-column="16" selection-end-line="67" selection-end-column="16" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Bar.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/main/src/model/Bar.java">
+      <file leaf-file-name="DialogController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/main/src/DialogController.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="18" column="50" selection-start-line="18" selection-start-column="50" selection-end-line="18" selection-end-column="50" />
+              <caret line="92" column="0" selection-start-line="92" selection-start-column="0" selection-end-line="92" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="LayoutDialog.fxml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/main/src/view/LayoutDialog.fxml">
+      <file leaf-file-name="OsDetector.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/main/src/generificationUtil/OsDetector.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="4" column="33" selection-start-line="4" selection-start-column="33" selection-end-line="4" selection-end-column="33" />
+              <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="main.iml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/main/main.iml">
+      <file leaf-file-name="PathFinder.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/main/src/generificationUtil/PathFinder.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.33333334">
+              <caret line="20" column="7" selection-start-line="20" selection-start-column="7" selection-end-line="20" selection-end-column="7" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ValidCheck.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/main/src/utils/ValidCheck.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="1" column="39" selection-start-line="1" selection-start-column="39" selection-end-line="1" selection-end-column="39" />
+              <caret line="19" column="57" selection-start-line="19" selection-start-column="57" selection-end-line="19" selection-end-column="57" />
               <folding />
             </state>
           </provider>
@@ -66,32 +133,7 @@
         <entry file="file://$PROJECT_DIR$/main/src/model/Graph.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="56" column="28" selection-start-line="56" selection-start-column="28" selection-end-line="56" selection-end-column="28" />
-              <folding>
-                <marker date="1433681038000" expanded="true" signature="56:116" placeholder="..." />
-                <marker date="1433681038000" expanded="true" signature="7691:7910" placeholder="{...}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Statics.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/main/src/statics/Statics.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.020833334">
-              <caret line="29" column="54" selection-start-line="29" selection-start-column="54" selection-end-line="29" selection-end-column="54" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MainController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/main/src/MainController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="68" column="0" selection-start-line="68" selection-start-column="0" selection-end-line="68" selection-end-column="0" />
+              <caret line="80" column="20" selection-start-line="80" selection-start-column="20" selection-end-line="80" selection-end-column="20" />
               <folding />
             </state>
           </provider>
@@ -156,16 +198,21 @@
         <option value="$PROJECT_DIR$/main/src/view/LayoutWeb.fxml" />
         <option value="$PROJECT_DIR$/main/src/AdminController.java" />
         <option value="$PROJECT_DIR$/main/src/DialogRouteController.java" />
-        <option value="$PROJECT_DIR$/main/src/DialogController.java" />
         <option value="$PROJECT_DIR$/main/resources/BarData.xml" />
         <option value="$PROJECT_DIR$/main/src/model/BarListWrapper.java" />
         <option value="$PROJECT_DIR$/main/main.iml" />
         <option value="$PROJECT_DIR$/main/src/MainController.java" />
-        <option value="$PROJECT_DIR$/main/src/model/Graph.java" />
-        <option value="$PROJECT_DIR$/main/src/Main.java" />
         <option value="$PROJECT_DIR$/main/src/model/Bar.java" />
         <option value="$PROJECT_DIR$/main/src/view/LayoutDialog.fxml" />
+        <option value="$PROJECT_DIR$/lib/generificationUtil/logger/Logger.java" />
+        <option value="$PROJECT_DIR$/main/src/static/OsDetector.java" />
+        <option value="$PROJECT_DIR$/main/src/statics/OsDetector.java" />
+        <option value="$PROJECT_DIR$/main/src/generificationUtil/logger/Logger.java" />
+        <option value="$PROJECT_DIR$/main/src/Main.java" />
         <option value="$PROJECT_DIR$/main/src/statics/Statics.java" />
+        <option value="$PROJECT_DIR$/main/src/model/Graph.java" />
+        <option value="$PROJECT_DIR$/main/src/DialogController.java" />
+        <option value="$PROJECT_DIR$/main/src/utils/ValidCheck.java" />
       </list>
     </option>
   </component>
@@ -209,6 +256,8 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -291,7 +340,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="view" />
+              <option name="myItemId" value="statics" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -313,15 +362,27 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="statics" />
+              <option name="myItemId" value="generificationUtil" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Search-A-Bar" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Search-A-Bar" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="lib" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
       <pane id="Scratches" />
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -356,6 +417,9 @@
       <recent name="$PROJECT_DIR$/main/src" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/main/src" />
+      <recent name="$PROJECT_DIR$/lib/static" />
+      <recent name="$PROJECT_DIR$/lib" />
       <recent name="E:\Privat\IDEA\Search-A-Bar\main\src\view" />
       <recent name="E:\Privat\IDEA\Search-A-Bar\main\src" />
     </key>
@@ -648,7 +712,7 @@
     <option name="localTasksCounter" value="18" />
     <servers />
   </component>
-  <component name="TodoView">
+  <component name="TodoView" selected-index="4">
     <todo-panel id="selected-file">
       <is-autoscroll-to-source value="true" />
     </todo-panel>
@@ -658,31 +722,31 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="1280" height="800" extended-state="6" />
-    <editor active="false" />
+    <frame x="0" y="0" width="1280" height="800" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32972136" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32817337" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3380682" sideWeight="0.33117932" order="12" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.328125" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3338068" sideWeight="0.6688207" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32954547" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32954547" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24961948" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32952815" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.18820679" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2784091" sideWeight="0.49676898" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32817337" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3338068" sideWeight="0.6688207" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.37926137" sideWeight="0.49676898" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
     </layout>
@@ -701,7 +765,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Basic layout added" />
     <MESSAGE value="added a bit" />
-    <option name="LAST_COMMIT_MESSAGE" value="added a bit" />
+    <MESSAGE value="moved OSDetector and PathFinder" />
+    <option name="LAST_COMMIT_MESSAGE" value="moved OSDetector and PathFinder" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
@@ -716,58 +781,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/main/src/MainController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="52" column="0" selection-start-line="52" selection-start-column="0" selection-end-line="52" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/main/main.iml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="4" column="39" selection-start-line="4" selection-start-column="39" selection-end-line="4" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/main/src/AdminController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="31" column="5" selection-start-line="31" selection-start-column="5" selection-end-line="31" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/main/src/utils/GPSService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="5" column="19" selection-start-line="5" selection-start-column="19" selection-end-line="5" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/main/src/DialogController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="49" column="62" selection-start-line="49" selection-start-column="62" selection-end-line="49" selection-end-column="62" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/main/src/MainController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="41" column="34" selection-start-line="41" selection-start-column="34" selection-end-line="41" selection-end-column="34" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/main/src/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/main/src/WebController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -813,14 +826,14 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/main/src/view/LayoutMain.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder">
-        <state />
-      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
+      </provider>
+      <provider editor-type-id="JavaFX-Scene-Builder">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/main/src/DialogController.java">
@@ -841,19 +854,24 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="22" column="45" selection-start-line="22" selection-start-column="45" selection-end-line="22" selection-end-column="45" />
-          <folding />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#358#402#0" expanded="true" />
+            <element signature="e#2033#2034#0" expanded="true" />
+            <element signature="e#2068#2069#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/main/src/view/LayoutAdmin.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder">
-        <state />
-      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="9" column="38" selection-start-line="9" selection-start-column="38" selection-end-line="9" selection-end-column="38" />
           <folding />
         </state>
+      </provider>
+      <provider editor-type-id="JavaFX-Scene-Builder">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/main/src/model/Bar.java">
@@ -864,14 +882,14 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/main/src/view/LayoutMain.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder">
-        <state />
-      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
           <folding />
         </state>
+      </provider>
+      <provider editor-type-id="JavaFX-Scene-Builder">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/main/src/AdminController.java">
@@ -900,7 +918,12 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#358#402#0" expanded="true" />
+            <element signature="e#2033#2034#0" expanded="true" />
+            <element signature="e#2068#2069#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -908,7 +931,12 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="18" column="39" selection-start-line="18" selection-start-column="39" selection-end-line="18" selection-end-column="39" />
-          <folding />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#358#402#0" expanded="true" />
+            <element signature="e#2033#2034#0" expanded="true" />
+            <element signature="e#2068#2069#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -916,7 +944,12 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="18" column="39" selection-start-line="18" selection-start-column="39" selection-end-line="18" selection-end-column="39" />
-          <folding />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#358#402#0" expanded="true" />
+            <element signature="e#2033#2034#0" expanded="true" />
+            <element signature="e#2068#2069#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -924,7 +957,12 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="43" column="0" selection-start-line="43" selection-start-column="0" selection-end-line="43" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#358#402#0" expanded="true" />
+            <element signature="e#2033#2034#0" expanded="true" />
+            <element signature="e#2068#2069#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -987,21 +1025,14 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/main/src/view/LayoutMain.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder">
-        <state />
-      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.20118344">
           <caret line="137" column="36" selection-start-line="137" selection-start-column="36" selection-end-line="137" selection-end-column="36" />
           <folding />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/main/src/AdminController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.556213">
-          <caret line="67" column="87" selection-start-line="67" selection-start-column="87" selection-end-line="67" selection-end-column="87" />
-        </state>
+      <provider editor-type-id="JavaFX-Scene-Builder">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/main/src/WebController.java">
@@ -1012,25 +1043,23 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/main/src/view/LayoutRoot.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder">
-        <state />
-      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.15532544">
           <caret line="7" column="38" selection-start-line="7" selection-start-column="38" selection-end-line="7" selection-end-column="38" />
-          <folding />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/main/src/view/LayoutWeb.fxml">
       <provider editor-type-id="JavaFX-Scene-Builder">
         <state />
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main/src/view/LayoutWeb.fxml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.110946745">
           <caret line="5" column="42" selection-start-line="5" selection-start-column="42" selection-end-line="5" selection-end-column="42" />
-          <folding />
         </state>
+      </provider>
+      <provider editor-type-id="JavaFX-Scene-Builder">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/main/src/DialogMapsController.java">
@@ -1047,22 +1076,15 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/main/src/DialogController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="86" column="9" selection-start-line="86" selection-start-column="9" selection-end-line="86" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/main/src/view/LayoutAdmin.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder">
-        <state />
-      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="38" />
           <folding />
         </state>
+      </provider>
+      <provider editor-type-id="JavaFX-Scene-Builder">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/main/src/MainController.java">
@@ -1073,13 +1095,104 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/main/src/model/Graph.java">
+    <entry file="file://$PROJECT_DIR$/main/src/model/Bar.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="56" column="28" selection-start-line="56" selection-start-column="28" selection-end-line="56" selection-end-column="28" />
+          <caret line="18" column="50" selection-start-line="18" selection-start-column="50" selection-end-line="18" selection-end-column="50" />
           <folding>
-            <marker date="1433681038000" expanded="true" signature="56:116" placeholder="..." />
-            <marker date="1433681038000" expanded="true" signature="7691:7910" placeholder="{...}" />
+            <element signature="e#1217#1218#0" expanded="false" />
+            <element signature="e#1245#1246#0" expanded="false" />
+            <element signature="e#1284#1285#0" expanded="false" />
+            <element signature="e#1319#1320#0" expanded="false" />
+            <element signature="e#1350#1351#0" expanded="false" />
+            <element signature="e#1377#1378#0" expanded="false" />
+            <element signature="e#1411#1412#0" expanded="false" />
+            <element signature="e#1441#1442#0" expanded="false" />
+            <element signature="e#1474#1475#0" expanded="false" />
+            <element signature="e#1506#1507#0" expanded="false" />
+            <element signature="e#1546#1547#0" expanded="false" />
+            <element signature="e#1582#1583#0" expanded="false" />
+            <element signature="e#1621#1622#0" expanded="false" />
+            <element signature="e#1656#1657#0" expanded="false" />
+            <element signature="e#1689#1690#0" expanded="false" />
+            <element signature="e#1718#1719#0" expanded="false" />
+            <element signature="e#1762#1763#0" expanded="false" />
+            <element signature="e#1798#1799#0" expanded="false" />
+            <element signature="e#1934#1935#0" expanded="false" />
+            <element signature="e#1988#1989#0" expanded="false" />
+            <element signature="e#2108#2109#0" expanded="false" />
+            <element signature="e#2154#2155#0" expanded="false" />
+            <element signature="e#2456#2457#0" expanded="false" />
+            <element signature="e#2488#2489#0" expanded="false" />
+            <element signature="e#2533#2534#0" expanded="false" />
+            <element signature="e#2569#2570#0" expanded="false" />
+            <element signature="e#2625#2626#0" expanded="false" />
+            <element signature="e#2669#2670#0" expanded="false" />
+            <element signature="e#2723#2724#0" expanded="false" />
+            <element signature="e#2765#2766#0" expanded="false" />
+            <element signature="e#2807#2808#0" expanded="false" />
+            <element signature="e#2837#2838#0" expanded="false" />
+            <element signature="e#2894#2895#0" expanded="false" />
+            <element signature="e#2942#2943#0" expanded="false" />
+            <element signature="e#2991#2992#0" expanded="false" />
+            <element signature="e#3031#3032#0" expanded="false" />
+            <element signature="e#3071#3072#0" expanded="false" />
+            <element signature="e#3100#3101#0" expanded="false" />
+            <element signature="e#3134#3135#0" expanded="false" />
+            <element signature="e#3168#3169#0" expanded="false" />
+            <element signature="e#3214#3215#0" expanded="false" />
+            <element signature="e#3242#3243#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main/src/view/LayoutDialog.fxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="4" column="33" selection-start-line="4" selection-start-column="33" selection-end-line="4" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="JavaFX-Scene-Builder">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main/main.iml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="1" column="39" selection-start-line="1" selection-start-column="39" selection-end-line="1" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main/src/statics/ShowProperties.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main/src/dataCollection/DataScan.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main/src/generificationUtil/list/List.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main/src/generificationUtil/logger/Logger.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="38" column="0" selection-start-line="38" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1087,45 +1200,71 @@
     <entry file="file://$PROJECT_DIR$/main/src/Main.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/main/src/model/Bar.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="18" column="50" selection-start-line="18" selection-start-column="50" selection-end-line="18" selection-end-column="50" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/main/src/view/LayoutDialog.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="4" column="33" selection-start-line="4" selection-start-column="33" selection-end-line="4" selection-end-column="33" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/main/main.iml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="1" column="39" selection-start-line="1" selection-start-column="39" selection-end-line="1" selection-end-column="39" />
-          <folding />
+          <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#358#402#0" expanded="true" />
+            <element signature="e#2033#2034#0" expanded="true" />
+            <element signature="e#2068#2069#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/main/src/statics/Statics.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.020833334">
-          <caret line="29" column="54" selection-start-line="29" selection-start-column="54" selection-end-line="29" selection-end-column="54" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="26" column="50" selection-start-line="26" selection-start-column="50" selection-end-line="26" selection-end-column="50" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main/src/AdminController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="67" column="16" selection-start-line="67" selection-start-column="16" selection-end-line="67" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main/src/model/Graph.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="80" column="20" selection-start-line="80" selection-start-column="20" selection-end-line="80" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main/src/utils/ValidCheck.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="19" column="57" selection-start-line="19" selection-start-column="57" selection-end-line="19" selection-end-column="57" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main/src/DialogController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="92" column="0" selection-start-line="92" selection-start-column="0" selection-end-line="92" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main/src/generificationUtil/OsDetector.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main/src/generificationUtil/PathFinder.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.33333334">
+          <caret line="20" column="7" selection-start-line="20" selection-start-column="7" selection-end-line="20" selection-end-column="7" />
+          <folding />
         </state>
       </provider>
     </entry>

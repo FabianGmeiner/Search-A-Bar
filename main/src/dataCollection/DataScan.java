@@ -2,14 +2,12 @@ package dataCollection;
 
 import generificationUtil.list.List;
 
-abstract class DataScan
-{
+abstract class DataScan {
 
 
-	public abstract List scan();
+    public abstract List scan();
 
-	protected int getOstype()
-	{
-		return 0;
-	}
+    protected int getOstype() {
+        return 0;
+    }
 }

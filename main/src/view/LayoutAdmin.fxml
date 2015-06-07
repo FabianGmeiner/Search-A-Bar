@@ -5,6 +5,7 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 <AnchorPane
+        xmlns:fx="http://javafx.com/fxml/1"
         fx:controller="AdminController"
         maxHeight="Infinity"
         maxWidth="Infinity"
@@ -12,8 +13,7 @@
         minWidth="0"
         prefHeight="500.0"
         prefWidth="600.0"
-        xmlns="http://javafx.com/javafx/8"
-        xmlns:fx="http://javafx.com/fxml/1">
+        xmlns="http://javafx.com/javafx/8">
     <VBox
             alignment="TOP_RIGHT"
             prefHeight="400.0"
