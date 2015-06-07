@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="89450010-f8a5-4de3-bf30-7ac7a9e9e64b" name="Default" comment="added a bit">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/main/statics/Statics.class" afterPath="$PROJECT_DIR$/out/production/main/statics/Statics.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main/src/statics/Statics.java" afterPath="$PROJECT_DIR$/main/src/statics/Statics.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Search-A-Bar.iws" />
@@ -625,7 +624,13 @@
       <option name="project" value="LOCAL" />
       <updated>1433680848249</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="added a bit">
+      <created>1433680946443</created>
+      <option name="number" value="00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1433680946443</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TodoView">
