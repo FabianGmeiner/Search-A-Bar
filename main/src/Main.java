@@ -11,6 +11,9 @@ import model.Bar;
 import model.Graph;
 import statics.Statics;
 
+/**Logger added by Daniel Knuettel */
+import genUtil.logger.*;
+
 import java.io.IOException;
 
 @SuppressWarnings("SpellCheckingInspection")
@@ -28,6 +31,7 @@ public class Main extends Application {
 
     @Override
     public void start(Stage primaryStage) throws Exception {
+	Logger.log(Logger.MSG,"Main: starting\n");
         this.primaryStage = primaryStage;
         this.primaryStage.setTitle("Search-A-Bar");
 
@@ -48,6 +52,7 @@ public class Main extends Application {
 
     @Override
     public void stop() throws Exception {
+	Logger.log(Logger.MSG,"Main:stopped\n");
         System.out.println("Stopped");
         super.stop();
     }
