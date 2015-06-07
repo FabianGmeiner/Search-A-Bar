@@ -1,280 +1,279 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+
 <?import javafx.geometry.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
-
-
 <AnchorPane
-    fx:controller="DialogController"
-    maxHeight="-Infinity"
-    maxWidth="-Infinity"
-    minHeight="-Infinity"
-    minWidth="-Infinity"
-    prefHeight="450.0"
-    prefWidth="500.0"
-    xmlns="http://javafx.com/javafx/8"
-    xmlns:fx="http://javafx.com/fxml/1">
+        fx:controller="DialogController"
+        maxHeight="-Infinity"
+        maxWidth="-Infinity"
+        minHeight="-Infinity"
+        minWidth="-Infinity"
+        prefHeight="450.0"
+        prefWidth="500.0"
+        xmlns="http://javafx.com/javafx/8"
+        xmlns:fx="http://javafx.com/fxml/1">
     <VBox
-          layoutX="231.0"
-          layoutY="54.0"
-          prefHeight="450.0"
-          prefWidth="400.0"
-          AnchorPane.bottomAnchor="0.0"
-          AnchorPane.leftAnchor="0.0"
-          AnchorPane.rightAnchor="0.0"
-          AnchorPane.topAnchor="0.0">
-          <HBox
-              alignment="CENTER_RIGHT"
-              prefHeight="30.0"
-              prefWidth="400.0">
-                  <Label
-                      contentDisplay="CENTER"
-                      prefHeight="15.0"
-                      prefWidth="140.0"
-                      text="Name" />
-                  <TextField
-                          fx:id="mDialogTextFieldName"
-                      nodeOrientation="LEFT_TO_RIGHT"
-                      prefWidth="310.0"
-                      promptText="Name eingeben ...">
-                      <HBox.margin>
-                         <Insets left="20.0" />
-                      </HBox.margin>
-                  </TextField>
-              <VBox.margin>
-                  <Insets bottom="5.0" />
-              </VBox.margin>
-          </HBox>
-          <HBox
+            layoutX="231.0"
+            layoutY="54.0"
+            prefHeight="450.0"
+            prefWidth="400.0"
+            AnchorPane.bottomAnchor="0.0"
+            AnchorPane.leftAnchor="0.0"
+            AnchorPane.rightAnchor="0.0"
+            AnchorPane.topAnchor="0.0">
+        <HBox
+                alignment="CENTER_RIGHT"
+                prefHeight="30.0"
+                prefWidth="400.0">
+            <Label
+                    contentDisplay="CENTER"
+                    prefHeight="15.0"
+                    prefWidth="140.0"
+                    text="Name"/>
+            <TextField
+                    fx:id="mDialogTextFieldName"
+                    nodeOrientation="LEFT_TO_RIGHT"
+                    prefWidth="310.0"
+                    promptText="Name eingeben ...">
+                <HBox.margin>
+                    <Insets left="20.0"/>
+                </HBox.margin>
+            </TextField>
+            <VBox.margin>
+                <Insets bottom="5.0"/>
+            </VBox.margin>
+        </HBox>
+        <HBox
                 alignment="TOP_RIGHT"
                 layoutX="10.0"
                 layoutY="10.0"
                 prefHeight="90.0"
                 prefWidth="400.0">
-               <Label
-                  alignment="TOP_LEFT"
-                  contentDisplay="CENTER"
-                  prefWidth="140.0"
-                  text="Beschreibung">
-                  <HBox.margin>
-                     <Insets top="8.0" />
-                  </HBox.margin>
-               </Label>
-               <TextArea
-                       fx:id="mDialogTextFieldDescription"
-                  prefHeight="90.0"
-                  prefWidth="310.0"
-                  promptText="Beschreibung eingeben ..."
-                       >
-                 <HBox.margin>
-                    <Insets left="20.0" />
-                 </HBox.margin>
-               </TextArea>
-               <VBox.margin>
-                  <Insets bottom="5.0" />
-               </VBox.margin>
-            </HBox>
-            <HBox
+            <Label
+                    alignment="TOP_LEFT"
+                    contentDisplay="CENTER"
+                    prefWidth="140.0"
+                    text="Beschreibung">
+                <HBox.margin>
+                    <Insets top="8.0"/>
+                </HBox.margin>
+            </Label>
+            <TextArea
+                    fx:id="mDialogTextFieldDescription"
+                    prefHeight="90.0"
+                    prefWidth="310.0"
+                    promptText="Beschreibung eingeben ..."
+                    >
+                <HBox.margin>
+                    <Insets left="20.0"/>
+                </HBox.margin>
+            </TextArea>
+            <VBox.margin>
+                <Insets bottom="5.0"/>
+            </VBox.margin>
+        </HBox>
+        <HBox
                 alignment="TOP_RIGHT"
                 layoutX="10.0"
                 layoutY="10.0"
                 prefHeight="90.0"
                 prefWidth="400.0">
-                <Label
+            <Label
                     alignment="TOP_LEFT"
                     contentDisplay="CENTER"
                     prefWidth="140.0"
                     text="Adresse">
-                    <HBox.margin>
-                        <Insets top="8.0" />
-                    </HBox.margin>
-                </Label>
-                <TextArea
+                <HBox.margin>
+                    <Insets top="8.0"/>
+                </HBox.margin>
+            </Label>
+            <TextArea
                     fx:id="mDialogTextFieldAdress"
                     prefHeight="90.0"
                     prefWidth="310.0"
                     promptText="Adresse eingeben ..."
                     >
-                    <HBox.margin>
-                        <Insets left="20.0" />
-                    </HBox.margin>
-                </TextArea>
-                <VBox.margin>
-                    <Insets bottom="5.0" />
-                </VBox.margin>
-            </HBox>
-            <HBox
+                <HBox.margin>
+                    <Insets left="20.0"/>
+                </HBox.margin>
+            </TextArea>
+            <VBox.margin>
+                <Insets bottom="5.0"/>
+            </VBox.margin>
+        </HBox>
+        <HBox
                 alignment="CENTER_RIGHT"
                 prefHeight="30.0"
                 prefWidth="400.0">
-                <Label
+            <Label
                     contentDisplay="CENTER"
                     prefHeight="15.0"
                     prefWidth="140.0"
-                    text="Webadresse" />
-                <TextField
+                    text="Webadresse"/>
+            <TextField
                     fx:id="mDialogTextFieldUrl"
                     nodeOrientation="LEFT_TO_RIGHT"
                     prefWidth="310.0"
                     promptText="URL eingeben ...">
-                    <HBox.margin>
-                        <Insets left="20.0" />
-                    </HBox.margin>
-                </TextField>
-                <VBox.margin>
-                    <Insets bottom="5.0" />
-                </VBox.margin>
-            </HBox>
-            <HBox
+                <HBox.margin>
+                    <Insets left="20.0"/>
+                </HBox.margin>
+            </TextField>
+            <VBox.margin>
+                <Insets bottom="5.0"/>
+            </VBox.margin>
+        </HBox>
+        <HBox
                 alignment="CENTER_RIGHT"
                 layoutX="10.0"
                 layoutY="40.0"
                 prefHeight="30.0"
                 prefWidth="400.0">
-                <Label
+            <Label
                     contentDisplay="CENTER"
                     prefWidth="140.0"
-                    text="Kategorie" />
-                <ChoiceBox
-                        fx:id="mDialogChoiceBoxCategory"
+                    text="Kategorie"/>
+            <ChoiceBox
+                    fx:id="mDialogChoiceBoxCategory"
                     prefWidth="310.0">
-                    <HBox.margin>
-                        <Insets
-                            left="20.0" />
-                    </HBox.margin>
-                </ChoiceBox>
-               <VBox.margin>
-                  <Insets bottom="5.0" />
-               </VBox.margin>
-            </HBox>
-            <HBox
+                <HBox.margin>
+                    <Insets
+                            left="20.0"/>
+                </HBox.margin>
+            </ChoiceBox>
+            <VBox.margin>
+                <Insets bottom="5.0"/>
+            </VBox.margin>
+        </HBox>
+        <HBox
                 alignment="CENTER_RIGHT"
                 layoutX="10.0"
                 layoutY="70.0"
                 prefHeight="30.0"
                 prefWidth="400.0">
-                  <Label
-                      contentDisplay="CENTER"
-                      prefWidth="140.0"
-                      text="Eintritt" />
-                  <TextField
-                          fx:id="mDialogTextFieldPrice"
-                      prefWidth="310.0"
-                      promptText="Preis eingeben ...">
-                     <HBox.margin>
-                        <Insets
-                            left="20.0" />
-                     </HBox.margin>
-                  </TextField>
-               <VBox.margin>
-                  <Insets
-                      bottom="5.0" />
-               </VBox.margin>
-            </HBox>
-            <HBox
+            <Label
+                    contentDisplay="CENTER"
+                    prefWidth="140.0"
+                    text="Eintritt"/>
+            <TextField
+                    fx:id="mDialogTextFieldPrice"
+                    prefWidth="310.0"
+                    promptText="Preis eingeben ...">
+                <HBox.margin>
+                    <Insets
+                            left="20.0"/>
+                </HBox.margin>
+            </TextField>
+            <VBox.margin>
+                <Insets
+                        bottom="5.0"/>
+            </VBox.margin>
+        </HBox>
+        <HBox
                 alignment="CENTER_RIGHT"
                 layoutX="10.0"
                 layoutY="160.0"
                 prefHeight="30.0"
                 prefWidth="400.0">
-                  <Label
-                      contentDisplay="CENTER"
-                      prefWidth="140.0"
-                      text="Mindestalter" />
-                  <TextField
-                          fx:id="mDialogTextFieldRestriction"
-                      prefWidth="310.0"
-                      promptText="Mindestalter eingeben ...">
-                     <HBox.margin>
-                        <Insets
-                            left="20.0" />
-                     </HBox.margin>
-                  </TextField>
-               <VBox.margin>
-                  <Insets
-                      bottom="5.0" />
-               </VBox.margin>
-            </HBox>
-            <HBox
+            <Label
+                    contentDisplay="CENTER"
+                    prefWidth="140.0"
+                    text="Mindestalter"/>
+            <TextField
+                    fx:id="mDialogTextFieldRestriction"
+                    prefWidth="310.0"
+                    promptText="Mindestalter eingeben ...">
+                <HBox.margin>
+                    <Insets
+                            left="20.0"/>
+                </HBox.margin>
+            </TextField>
+            <VBox.margin>
+                <Insets
+                        bottom="5.0"/>
+            </VBox.margin>
+        </HBox>
+        <HBox
                 alignment="CENTER_RIGHT"
                 layoutX="10.0"
                 layoutY="190.0"
                 prefHeight="30.0"
                 prefWidth="400.0">
-                  <Label
-                      contentDisplay="CENTER"
-                      prefWidth="140.0"
-                      text="Durchschnittsalter" />
-                  <TextField
-                          fx:id="mDialogTextFieldAvg"
-                      prefWidth="310.0"
-                      promptText="Durchschnittsalter eingeben ...">
-                     <HBox.margin>
-                        <Insets
-                            left="20.0" />
-                     </HBox.margin>
-                  </TextField>
-               <VBox.margin>
-                  <Insets
-                      bottom="5.0" />
-               </VBox.margin>
-            </HBox>
-            <HBox
+            <Label
+                    contentDisplay="CENTER"
+                    prefWidth="140.0"
+                    text="Durchschnittsalter"/>
+            <TextField
+                    fx:id="mDialogTextFieldAvg"
+                    prefWidth="310.0"
+                    promptText="Durchschnittsalter eingeben ...">
+                <HBox.margin>
+                    <Insets
+                            left="20.0"/>
+                </HBox.margin>
+            </TextField>
+            <VBox.margin>
+                <Insets
+                        bottom="5.0"/>
+            </VBox.margin>
+        </HBox>
+        <HBox
                 alignment="CENTER_RIGHT"
                 layoutX="10.0"
                 layoutY="220.0"
                 prefHeight="30.0"
                 prefWidth="400.0">
-                  <Label
-                      contentDisplay="CENTER"
-                      prefWidth="140.0"
-                      text="GPS" />
-                  <TextField
-                          fx:id="mDialogTextFieldLat"
-                      prefWidth="150.0"
-                      promptText="Längengrad">
-                     <HBox.margin>
-                        <Insets
+            <Label
+                    contentDisplay="CENTER"
+                    prefWidth="140.0"
+                    text="GPS"/>
+            <TextField
+                    fx:id="mDialogTextFieldLat"
+                    prefWidth="150.0"
+                    promptText="Längengrad">
+                <HBox.margin>
+                    <Insets
                             left="20.0"
-                            right="10.0" />
-                     </HBox.margin>
-                  </TextField>
-                  <TextField
-                          fx:id="mDialogTextFieldLong"
-                      maxWidth="150.0"
-                      promptText="Breitengrad" />
-            </HBox>
-            <HBox
+                            right="10.0"/>
+                </HBox.margin>
+            </TextField>
+            <TextField
+                    fx:id="mDialogTextFieldLong"
+                    maxWidth="150.0"
+                    promptText="Breitengrad"/>
+        </HBox>
+        <HBox
                 alignment="BOTTOM_RIGHT"
                 prefHeight="50.0"
                 prefWidth="200.0">
-                  <Button
-                      onAction="#handleButtonCancel"
-                      mnemonicParsing="false"
-                      prefWidth="90.0"
-                      text="Abbruch" />
-                  <Button
-                      onAction="#handleButtonSave"
-                      mnemonicParsing="false"
-                      prefWidth="90.0"
-                      text="Speichern"
-                      defaultButton="true">
-                     <HBox.margin>
-                        <Insets
-                            left="10.0" />
-                     </HBox.margin>
-                  </Button>
-               <opaqueInsets>
-                  <Insets />
-               </opaqueInsets>
-            </HBox>
-      </VBox>
-   <padding>
-      <Insets
-          bottom="10.0"
-          left="10.0"
-          right="10.0"
-          top="10.0" />
-   </padding>
+            <Button
+                    onAction="#handleButtonCancel"
+                    mnemonicParsing="false"
+                    prefWidth="90.0"
+                    text="Abbruch"/>
+            <Button
+                    onAction="#handleButtonSave"
+                    mnemonicParsing="false"
+                    prefWidth="90.0"
+                    text="Speichern"
+                    defaultButton="true">
+                <HBox.margin>
+                    <Insets
+                            left="10.0"/>
+                </HBox.margin>
+            </Button>
+            <opaqueInsets>
+                <Insets/>
+            </opaqueInsets>
+        </HBox>
+    </VBox>
+    <padding>
+        <Insets
+                bottom="10.0"
+                left="10.0"
+                right="10.0"
+                top="10.0"/>
+    </padding>
 </AnchorPane>

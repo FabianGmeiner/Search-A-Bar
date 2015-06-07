@@ -10,8 +10,10 @@ import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
 
+
 /**
   A completly static class for logging
+  written by Daniel Knuettel
  */
 
 public class Logger
@@ -30,10 +32,10 @@ public class Logger
 	public static void log ( int logType, String _msg)
 	{
 		FileOutputStream logfile;
-		String errFile=PathFinder.getPrettyName(_errFile);
-		String warnFile=PathFinder.getPrettyName(_warnFile);
-		String msgFile=PathFinder.getPrettyName(_msgFile);
-		String debugFile=PathFinder.getPrettyName(_debugFile);
+		String errFile = getPrettyName(_errFile);
+		String warnFile = getPrettyName(_warnFile);
+		String msgFile = getPrettyName(_msgFile);
+		String debugFile = getPrettyName(_debugFile);
 
 
 		try

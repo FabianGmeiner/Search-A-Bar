@@ -28,7 +28,7 @@ public class Statics {
     // This is a list of Bars used to test the application. Will be replaced by xml-file
     public Node node1 = new Node(new Bar("Alte Filmbühne",
             "Hippe Bar mit \ndurchgestylten Räumen.\nWochenendes meist gerammelt\nvoll. Wenige \nSitzgelegenheiten.",
-            "filmbuehne.com", "Alte Filmbühne \nTaubengäßchen 2\n93047 Regensburg", 1,
+            "filmbuehne.com", "Alte Filmbühne \nTaubengäßchen 3\n93047 Regensburg", 1,
             49.020783, 12.097135, 0, 18, 23));
     public Node node2 = new Node(new Bar("Alte Mälze",
             "Viele Großveranstaltungen \nmit garantiert \nguter Stimmung.",

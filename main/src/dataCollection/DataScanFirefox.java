@@ -1,11 +1,10 @@
 package dataCollection;
 
-import org.apache.commons.io.filefilter.*;
+import generificationUtil.list.List;
 
-public class DataScanFirefox
-extends DataScan
+public class DataScanFirefox extends DataScan
 {
-	protected  WildcardFileFilter mFilter;
+	//protected  WildcardFileFilter mFilter;
 	protected List mFiles;
 
 	protected int mOsType;
@@ -17,16 +16,16 @@ extends DataScan
 	protected String [] mWantedFilesWindows=
 	{
 		"\\addons.json","\\webapps\\webapps.json"
-	}
+	};
 	protected String [] mWantedRegexFilesWindows=
 	{
 		"\\bookmarkbackups\\bookmarks-*.json"
-	}
+	};
 
 	public DataScanFirefox()
 	{
 		mFiles=new List();
-		mFilter=new WildcardFileFilter();
+		//mFilter=new WildcardFileFilter();
 	}
 
 	
@@ -34,5 +33,6 @@ extends DataScan
 	public List scan()
 	{
 		String path;
+		return null;
 	}
 }
