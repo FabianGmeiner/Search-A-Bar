@@ -1,16 +1,17 @@
 //Created by Fabian on 19.05.15.
 package statics;
 
+import generificationUtil.PathFinder;
 import model.Bar;
 import model.Node;
 
-import generificationUtil.PathFinder;
-import java.io.*;
+import java.io.FileInputStream;
+import java.io.IOException;
 
 public class Statics {
     // all statics are stored here
     public static final String ADMIN_CODE = "#Admin#";
-    public static final String defaultSave="GraphDefault.ser";
+    public static final String defaultSave = "GraphDefault.ser";
     /* edit by Daniel Knuettel: added __DEBUG*/
     public static final boolean __DEBUG = true;
 
@@ -60,6 +61,18 @@ public class Statics {
             "suite15.de", "Suite15 \nAdolph-Kolping-Straße 5\n93047 Regensburg", 3,
             49.019134, 12.101690, 3.00, 16, 19));
 
+    /**
+     * Added by Daniel Knuettel
+     */
+    public static boolean isGraphSafed() {
+        try {
+            FileInputStream file = new FileInputStream(PathFinder.getPrettyName(Statics.defaultSave));
+        } catch (IOException e) {
+            return false;
+        }
+        return true;
+    }
+
     public Node getNode1() {
         return node1;
     }
@@ -87,19 +100,4 @@ public class Statics {
     public Node getNode7() {
         return node7;
     }
-
-    /**Added by Daniel Knuettel*/
-    public static boolean isGraphSafed()
-    {
-	try
-	{
-		FileInputStream file=new FileInputStream(PathFinder.getPrettyName(Statics.defaultSave));
-	}
-	catch (IOException e)
-	{
-		return false;
-	}
-	return true;
-    }
-
 }

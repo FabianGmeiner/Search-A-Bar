@@ -4,12 +4,10 @@ package model;
 import statics.Statics;
 import utils.GPSService;
 
+import java.io.Serializable;
 import java.util.Vector;
-import java.io.*;
 
-public class Graph 
-implements Serializable
-{
+public class Graph implements Serializable {
 
     public Vector<Node> mNodes = new Vector<>();
     public Vector<Edge> mEdges = new Vector<>();

@@ -53,6 +53,7 @@ public class MainController implements Initializable {
     private ToggleButton mToggleButtonPopular;
     @FXML
     private ToggleButton mToggleButtonPrice;
+
     private Main mMain;
     private int[] mFilters = new int[4];
     private int mSortMode = Statics.SORT_CODE_ALPHABETICAL;

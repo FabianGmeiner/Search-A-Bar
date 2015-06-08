@@ -1,5 +1,9 @@
 //Created by Fabian on 18.05.15.
 
+import generificationUtil.PathFinder;
+import generificationUtil.logger.Logger;
+import generificationUtil.serializer.Deserializer;
+import generificationUtil.serializer.Serializer;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
@@ -10,10 +14,6 @@ import javafx.stage.Stage;
 import model.Bar;
 import model.Graph;
 import statics.Statics;
-
-import generificationUtil.PathFinder;
-import generificationUtil.serializer.*;
-import generificationUtil.logger.*;
 
 import java.io.IOException;
 
@@ -35,52 +35,48 @@ public class Main extends Application {
 
     @Override
     public void start(Stage primaryStage) throws Exception {
-	Logger.clearFiles();
+        Logger.clearFiles();
 
 
         this.primaryStage = primaryStage;
         this.primaryStage.setTitle("Search-A-Bar");
 
-        Statics statics = new Statics();
-	/**Save/Load added by Daniel Knuettel*/
-	if(Statics.isGraphSafed())
-	{
-		Logger.log(Logger.MSG,"Main:start(): graph is safed : loading from file "+PathFinder.getPrettyName(Statics.defaultSave)+"\n");	
-		Deserializer deser=new Deserializer(PathFinder.getPrettyName(Statics.defaultSave));
-		deser.readObjs();
-		mGraph=(Graph)deser.getObject();
+        statics.Statics statics = new statics.Statics();
+        /**Save/Load added by Daniel Knuettel*/
+        if (Statics.isGraphSafed()) {
+            Logger.log(Logger.MSG, "Main:start(): graph is safed : loading from file " + PathFinder.getPrettyName(Statics.defaultSave) + "\n");
+            Deserializer deser = new Deserializer(PathFinder.getPrettyName(Statics.defaultSave));
+            deser.readObjs();
+            mGraph = (Graph) deser.getObject();
 
-		if(mGraph==null)
-		{
-			Logger.log(Logger.WARN,"Main:start(): graph is safed :but cannot loaded from file: using hard coded version \n");
-			mGraph = new Graph();
-			mGraph.addNode(statics.getNode1());
-			mGraph.addNode(statics.getNode2());
-			mGraph.addNode(statics.getNode3());
-			mGraph.addNode(statics.getNode4());
-			mGraph.addNode(statics.getNode5());
-			mGraph.addNode(statics.getNode6());
-			mGraph.addNode(statics.getNode7());
-			mGraph.printNodes();
-			mGraph.printEdges();
+            if (mGraph == null) {
+                Logger.log(Logger.WARN, "Main:start(): graph is safed :but cannot loaded from file: using hard coded version \n");
+                mGraph = new Graph();
+                mGraph.addNode(statics.getNode1());
+                mGraph.addNode(statics.getNode2());
+                mGraph.addNode(statics.getNode3());
+                mGraph.addNode(statics.getNode4());
+                mGraph.addNode(statics.getNode5());
+                mGraph.addNode(statics.getNode6());
+                mGraph.addNode(statics.getNode7());
+                mGraph.printNodes();
+                mGraph.printEdges();
 
-		}
-			
-	}
-	else
-	{
-		Logger.log(Logger.MSG,"Main:start(): graph is not safed : using hard coded Version.\n");
-		mGraph = new Graph();
-		mGraph.addNode(statics.getNode1());
-		mGraph.addNode(statics.getNode2());
-		mGraph.addNode(statics.getNode3());
-		mGraph.addNode(statics.getNode4());
-		mGraph.addNode(statics.getNode5());
-		mGraph.addNode(statics.getNode6());
-		mGraph.addNode(statics.getNode7());
-		mGraph.printNodes();
-		mGraph.printEdges();
-	}
+            }
+
+        } else {
+            Logger.log(Logger.MSG, "Main:start(): graph is not safed : using hard coded Version.\n");
+            mGraph = new Graph();
+            mGraph.addNode(statics.getNode1());
+            mGraph.addNode(statics.getNode2());
+            mGraph.addNode(statics.getNode3());
+            mGraph.addNode(statics.getNode4());
+            mGraph.addNode(statics.getNode5());
+            mGraph.addNode(statics.getNode6());
+            mGraph.addNode(statics.getNode7());
+            mGraph.printNodes();
+            mGraph.printEdges();
+        }
 
         initialiseRootLayout();
     }
@@ -88,11 +84,11 @@ public class Main extends Application {
     @Override
     public void stop() throws Exception {
         super.stop();
-		/**added by Daniel Knuettel*/
-		Serializer ser=new Serializer(PathFinder.getPrettyName(Statics.defaultSave));
-		ser.addObject(mGraph);
-		ser.serialize();
-		Logger.log(Logger.MSG,"Main:stop(): saving Graph\n");
+	/**added by Daniel Knuettel*/
+	Serializer ser=new Serializer(PathFinder.getPrettyName(Statics.defaultSave));
+	ser.addObject(mGraph);
+	ser.serialize();
+	Logger.log(Logger.MSG,"Main:stop(): saving Graph\n");
     }
 
     private void initialiseRootLayout() throws IOException {
