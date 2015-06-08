@@ -13,6 +13,7 @@ public class PathFinder {
 
     public static final String stdpathUnix = ".FindABar";
     public static final String stdpathDOS = "_FindABar";
+    public static final String stdpathMAC="_FindABar";
 
 
     /**
@@ -40,7 +41,15 @@ public class PathFinder {
         }
         if (os.compareTo(OsDetector.UNIX) == 0) {
             builder.append("/");
-            builder.append(stdpathUnix);
+	   		if(OsDetector.detect(OsDetector.OSSTD).compareTo(OsDetector.Mac)==0)
+			{
+				builder.append(stdpathMAC);
+				Logger.log(Logger.MSG,"Pathfinder:getHomePath(): Mac is annoying me!\n");
+			}
+			else
+			{
+				builder.append(stdpathUnix);
+			}
             homepath = builder.toString();
             if (Statics.__DEBUG) {
                 //System.out.printf("homepath='%s'\n",homepath);
