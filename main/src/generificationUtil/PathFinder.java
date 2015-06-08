@@ -4,6 +4,7 @@ import statics.Statics;
 
 import java.nio.file.Path;
 import java.nio.file.Paths;
+import generificationUtil.logger.*;
 
 /**
  * written by Daniel Knuettel
@@ -26,6 +27,7 @@ public class PathFinder {
         if (userpath == null) {
             userpath = ".";
             System.err.printf("Pathfinder:WARNING: user.home is null using '.'\n");
+	    BaseLogger.log("PathFinder.log","Pathfinder:getHomePath():WARNING: user.home is null using '.'\n");
         }
         String homepath = "";
         StringBuilder builder = new StringBuilder();
@@ -44,7 +46,7 @@ public class PathFinder {
 	   		if(OsDetector.detect(OsDetector.OSSTD).compareTo(OsDetector.Mac)==0)
 			{
 				builder.append(stdpathMAC);
-//				Logger.log(Logger.MSG,"Pathfinder:getHomePath(): Mac is annoying me!\n");
+			        BaseLogger.log("PathFinder.log","Pathfinder:getHomePath():Mac is annoying me!\n");
 			}
 			else
 			{
