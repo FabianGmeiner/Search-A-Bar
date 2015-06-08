@@ -20,8 +20,9 @@ public class OneList
         if (!isFull) {
             first = first.insert(_obj);
             isFull = true;
+			Logger.log(Logger.MSG,"OneList:insert(): filled now\n");
         } else {
-            Logger.log(Logger.ERROR, "Onelist:insert():ERROR: list is full");
+            Logger.log(Logger.ERROR, "OneList:insert():ERROR: list is full");
         }
     }
 
@@ -29,6 +30,7 @@ public class OneList
         if (!isFull) {
             first = new Node(first, _obj);
             isFull = true;
+			Logger.log(Logger.MSG,"OneList:insert(): filled now\n");
         } else {
             Logger.log(Logger.ERROR, "Onelist:insert_stack():ERROR: list is full");
         }
@@ -36,6 +38,10 @@ public class OneList
 
     public Object remove() {
         Object swp = first;
+		if(swp==null)
+		{
+			Logger.log(Logger.WARN,"Onelist:remove():returning 'null'\n");
+		}
         first = first.remove();
         isFull = false;
         return first.getContent();

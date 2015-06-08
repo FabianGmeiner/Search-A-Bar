@@ -25,6 +25,14 @@ public class List
 
     public Object remove() {
         Object swp = first.getContent();
+		if(Statics.__DEBUG)
+		{
+			Logger.log(Logger.DEBUG,"List:removing one object\n");
+		}
+		if(swp==null)
+		{
+			Logger.log(Logger.WARN,"List:remove(): returning 'null'\n");
+		}
         first = first.remove();
         return swp;
     }
