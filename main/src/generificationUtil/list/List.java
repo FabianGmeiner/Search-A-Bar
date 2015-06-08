@@ -1,6 +1,8 @@
 package generificationUtil.list;
 
 import java.io.Serializable;
+import generificationUtil.logger.*;
+import statics.Statics;
 
 /**
  * Basic List Object to store Objects.
@@ -8,7 +10,8 @@ import java.io.Serializable;
  */
 
 public class List
-        implements Serializable {
+implements Serializable 
+{
     protected AbstractNode first;
 
     public List() {

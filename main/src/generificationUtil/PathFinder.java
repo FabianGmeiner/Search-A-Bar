@@ -44,7 +44,7 @@ public class PathFinder {
 	   		if(OsDetector.detect(OsDetector.OSSTD).compareTo(OsDetector.Mac)==0)
 			{
 				builder.append(stdpathMAC);
-				Logger.log(Logger.MSG,"Pathfinder:getHomePath(): Mac is annoying me!\n");
+//				Logger.log(Logger.MSG,"Pathfinder:getHomePath(): Mac is annoying me!\n");
 			}
 			else
 			{
