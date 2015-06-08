@@ -8,6 +8,12 @@ import generificationUtil.stack.*;
 import java.io.*;
 
 
+/**
+  Class Serializer to store Objects,
+  <b>you may not use it with unbuffered mode</b>
+  but it is supportted,
+  The Deserializer does not support unbuffered mode.
+ */
 public class Serializer
 {
 	public final int queueMode=1;
@@ -16,6 +22,7 @@ public class Serializer
 
 	private int mode=queueMode;
 
+	/* will be overwritten in the constructor. */
 	private String fileName="default.ser";
 
 	private List toSerialize=new List();
@@ -137,6 +144,27 @@ public class Serializer
 			swp=_list.remove();
 		}
 	}
+
+	public void addObjectArray(Object[] objs)
+	{
+		int len=0;
+		try
+		{
+			len=objs.length;
+		}
+		catch (Exception e)
+		{
+			Logger.log(Logger.ERROR,e.toString());
+			return;
+		}
+		for(int i=0;i<len;i++)
+		{
+			toSerialize.insert(objs[i]);
+		}
+		return;
+
+	}
+
 
 
 }
