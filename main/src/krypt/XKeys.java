@@ -1,4 +1,5 @@
 package krypt;
+/** Written by Daniel Knuettel*/
 
 import generificationUtil.list.*;
 import generificationUtil.logger.*;

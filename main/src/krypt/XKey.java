@@ -1,8 +1,11 @@
 package krypt;
 
+/** Written by Daniel Knuettel */
+
 import generificationUtil.list.*;
 import generificationUtil.logger.*;
 import java.io.*;
+ 
 public class XKey
 implements Serializable
 {
