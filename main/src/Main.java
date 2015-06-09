@@ -15,6 +15,7 @@ import model.Bar;
 import model.Graph;
 import statics.Statics;
 import krypt.*;
+import passwd.*;
 
 import java.io.IOException;
 
@@ -78,6 +79,18 @@ public class Main extends Application {
             mGraph.printNodes();
             mGraph.printEdges();
         }
+
+	/*
+	//TEST
+	try{
+	PasswdStore ps=new PasswdStore();
+	ps.addPasswd(new Passwd("Horst","Geheim"));
+	System.out.println("Horst Geheim");
+	ps.save();
+	ps.load();
+	System.out.println(ps.getPasswd("Horst").getPasswd());
+	}catch(Exception e){}
+*/
 
         initialiseRootLayout();
     }

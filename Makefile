@@ -20,6 +20,8 @@ generificationUtil/serializer:generificationUtil/logger
 	$(com) -cp $(CLPATH) main/src/generificationUtil/serializer/*.java
 krypt:
 	$(com) -cp $(CLPATH) main/src/krypt/*.java
+passwd:krypt
+	$(com) -cp $(CLPATH) main/src/passwd/*.java
 
 testSer:
 	$(com) -cp $(CLPATH) main/src/tests/TestSerializer.java;\

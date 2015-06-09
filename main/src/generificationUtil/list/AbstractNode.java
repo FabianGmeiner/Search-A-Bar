@@ -13,5 +13,8 @@ abstract class AbstractNode
     public abstract AbstractNode remove();
 
     public abstract Object getContent();
+
+    public abstract Object getEleAt(int place,int current);
+   
 }
 
