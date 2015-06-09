@@ -14,6 +14,7 @@ import javafx.stage.Stage;
 import model.Bar;
 import model.Graph;
 import statics.Statics;
+import krypt.*;
 
 import java.io.IOException;
 
