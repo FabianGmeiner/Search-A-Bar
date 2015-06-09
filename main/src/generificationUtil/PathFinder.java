@@ -2,9 +2,8 @@ package generificationUtil;
 
 import statics.Statics;
 
-import java.nio.file.Path;
-import java.nio.file.Paths;
 import generificationUtil.logger.*;
+import java.io.*;
 
 /**
  * written by Daniel Knuettel
@@ -58,7 +57,19 @@ public class PathFinder {
             }
         }
         /* create the path,if it is not there yet */
-        Path p = Paths.get(homepath);
+	File dir=new File(homepath);
+	if(!dir.exists())
+	{
+		BaseLogger.log("PathFinder.log","Pathfinder:getHomePath():homeDirectory does not exist: creating it\n");
+		try
+		{
+			dir.mkdir();
+		}
+		catch (SecurityException e)
+		{
+			BaseLogger.log("PathFinder.log",e.toString());
+		}
+	}
 
         return homepath;
 
