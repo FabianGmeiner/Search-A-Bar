@@ -30,8 +30,15 @@ public class PathFinder {
         }
         String homepath = "";
         StringBuilder builder = new StringBuilder();
-        String os = OsDetector.detect(OsDetector.OSBASIC);
-        builder.append(userpath);
+	String os = OsDetector.detect(OsDetector.OSBASIC);
+	if(Statics.useExternHome)
+	{
+		builder.append(userpath);
+	}
+	else
+	{
+		builder.append(".");
+	}
         if (os.compareTo(OsDetector.DOS) == 0) {
             builder.append("\\");// must the backslash be escaped?
             builder.append(stdpathDOS);

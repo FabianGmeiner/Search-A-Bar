@@ -16,4 +16,8 @@ class Tail
     public Object getContent() {
         return null;
     }
+    public Object getEleAt(int place,int current)
+    {
+	    return null;
+    }
 }

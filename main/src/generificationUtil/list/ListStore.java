@@ -83,6 +83,11 @@ public class ListStore
 	    ret.first=this.first;
 	    return ret;
     }
+    public Object getObjectAt(int place)
+    {
+	    /*starting with 0*/
+	    return first.getEleAt(place,0);
+    }
 
 
 }

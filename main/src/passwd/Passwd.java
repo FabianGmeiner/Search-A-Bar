@@ -40,7 +40,7 @@ implements Serializable
 			}
 		}
 		key=XKeys.getKey(masks,speeds);
-		Krypter k=new Krypter(key);
+		XKrypter k=new XKrypter(key);
 		passwd=k.kryptBytes(unkr);
 	}
 	public String getName()
@@ -49,7 +49,7 @@ implements Serializable
 	}
 	public String getPasswd()
 	{
-		Krypter k=new Krypter(key);
+		XKrypter k=new XKrypter(key);
 		byte [] pswd=k.deKryptBytes(passwd);
 		return new String(pswd);
 	}
