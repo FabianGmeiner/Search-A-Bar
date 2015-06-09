@@ -73,6 +73,16 @@ public class ListStore
         return swp;
 
     }
+    public String getName()
+    {
+	    return name;
+    }
+    public ListStore duplicate()
+    {
+	    ListStore ret=new ListStore(name);
+	    ret.first=this.first;
+	    return ret;
+    }
 
 
 }

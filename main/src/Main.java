@@ -14,6 +14,7 @@ import javafx.stage.Stage;
 import model.Bar;
 import model.Graph;
 import statics.Statics;
+import krypt.*;
 
 import java.io.IOException;
 
@@ -84,10 +85,11 @@ public class Main extends Application {
     @Override
     public void stop() throws Exception {
         super.stop();
-        Serializer ser = new Serializer(PathFinder.getPrettyName(Statics.defaultSave));
-        ser.addObject(mGraph);
-        ser.serialize();
-        Logger.log(Logger.MSG, "Main:stop(): saving Graph\n");
+	/**added by Daniel Knuettel*/
+	Serializer ser=new Serializer(PathFinder.getPrettyName(Statics.defaultSave));
+	ser.addObject(mGraph);
+	ser.serialize();
+	Logger.log(Logger.MSG,"Main:stop(): saving Graph\n");
     }
 
     private void initialiseRootLayout() throws IOException {

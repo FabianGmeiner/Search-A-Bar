@@ -1,6 +1,8 @@
 package generificationUtil.list;
 
 import java.io.Serializable;
+import generificationUtil.logger.*;
+import statics.Statics;
 
 /**
  * Basic List Object to store Objects.
@@ -8,7 +10,8 @@ import java.io.Serializable;
  */
 
 public class List
-        implements Serializable {
+implements Serializable 
+{
     protected AbstractNode first;
 
     public List() {
@@ -25,6 +28,14 @@ public class List
 
     public Object remove() {
         Object swp = first.getContent();
+		if(Statics.__DEBUG)
+		{
+			Logger.log(Logger.DEBUG,"List:removing one object\n");
+		}
+		if(swp==null)
+		{
+			Logger.log(Logger.WARN,"List:remove(): returning 'null'\n");
+		}
         first = first.remove();
         return swp;
     }

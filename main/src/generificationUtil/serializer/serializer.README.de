@@ -1,0 +1,45 @@
+Modul Serializer:
+Ansprueche:
+-Komfortables Speichern und Laden von Daten
+-Speicherung von Objekten (beispielsweise fuer Graphen)
+-Speicherung von Zustaenden
+
+Ausserdem:
+-Pufferung von Daten
+	+im Stapelmodus
+	+im Warteschlangenmodus
+-ungepufferte Verarbeitung fuer Systeme mit wenig Hauptspeicher
+
+
+Umsetzung:
+-Klasse Serializer fuer
+	+Speicherung von Daten
+	+Speicherung von Objekten/Zustaenden
+	+Modi: Stapel,Warteschlange,ungepuffert
+
+-Klasse Deserializer fuer
+	+Laden von Daten
+	+Laden von Objekten/Zustaenden
+	+Modi: Stapel,Warteschlange
+	+Modus ungepuffert nicht vorhanden,weil er nicht sinnvoll waere.
+	 Ein Laden von Daten/Objekten sollte immer am Stueck erfolgen, um
+	 ein Uebergehen von Daten/Objekten zu verhindern.
+
+Empfehlungen:
+-Daten moeglichst in einem ListStore (siehe ../list/ListStore.java) speichern
+ und dann diesen dem Serializer uebergeben, was die Handhabung von Daten deutlich ver.
+ einfacht.
+-Pfade koennen mit dem PathFinder (siehe ../PathFinder.java) im Homeverzeichnis des Programms
+ gut gehandhabt werden.
+
+WICHTIG:
+-ALLE zu speichernden Objekte muessen von java.io.Serializable abgeleitet sein.
+ eine Abfrage wird nicht durchgefuehrt, da eine valide Benutzung durch Programmierer
+ vorrausgesetzt wird
+
+Daniel Knuettel
+
+Weiterfuehrendes:
+$ man java
+das Modul list
+das Modul stack
