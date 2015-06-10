@@ -2,16 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="89450010-f8a5-4de3-bf30-7ac7a9e9e64b" name="Default" comment="added mask for textfield when entering a password;&#10;moved GraphSer.ser to local directory (in-project) for testing purpose.">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/GraphDefault.ser" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/passwds.ser" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/main/src/krypt/XKrypt.README.de" afterPath="$PROJECT_DIR$/main/src/krypt/XKrypt.README.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/main/AdminController.class" afterPath="$PROJECT_DIR$/out/production/main/AdminController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/main/DialogController.class" afterPath="$PROJECT_DIR$/out/production/main/DialogController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/main/DialogRouteController.class" afterPath="$PROJECT_DIR$/out/production/main/DialogRouteController.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/main/Main.class" afterPath="$PROJECT_DIR$/out/production/main/Main.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/main/MainController.class" afterPath="$PROJECT_DIR$/out/production/main/MainController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/GraphDefault.ser" afterPath="$PROJECT_DIR$/GraphDefault.ser" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main/src/Main.java" afterPath="$PROJECT_DIR$/main/src/Main.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/copyright/profiles_settings.xml" afterPath="$PROJECT_DIR$/.idea/copyright/profiles_settings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/passwds.ser" afterPath="$PROJECT_DIR$/passwds.ser" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Search-A-Bar.iws" />
@@ -37,8 +31,8 @@
       <file leaf-file-name="Main.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/main/src/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.6066176">
-              <caret line="64" column="44" selection-start-line="64" selection-start-column="44" selection-end-line="64" selection-end-column="44" />
+            <state vertical-scroll-proportion="0.44117647">
+              <caret line="57" column="37" selection-start-line="57" selection-start-column="37" selection-end-line="57" selection-end-column="37" />
               <folding>
                 <element signature="e#548#592#0" expanded="true" />
                 <element signature="e#1192#1193#0" expanded="true" />
@@ -790,7 +784,13 @@
       <option name="project" value="LOCAL" />
       <updated>1433941166055</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="added mask for textfield when entering a password;&#10;moved GraphSer.ser to local directory (in-project) for testing purpose.">
+      <created>1433943661661</created>
+      <option name="number" value="00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1433943661661</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="TodoView" selected-index="4">
@@ -1260,8 +1260,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/main/src/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6066176">
-          <caret line="64" column="44" selection-start-line="64" selection-start-column="44" selection-end-line="64" selection-end-column="44" />
+        <state vertical-scroll-proportion="0.44117647">
+          <caret line="57" column="37" selection-start-line="57" selection-start-column="37" selection-end-line="57" selection-end-column="37" />
           <folding>
             <element signature="e#548#592#0" expanded="true" />
             <element signature="e#1192#1193#0" expanded="true" />
