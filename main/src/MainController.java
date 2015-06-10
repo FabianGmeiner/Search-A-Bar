@@ -26,6 +26,8 @@ public class MainController implements Initializable {
     @FXML
     private TextField mTextFieldSearch;
     @FXML
+    private PasswordField mTextFieldPassword;
+    @FXML
     private Button mButtonSearch;
     @FXML
     private ListView mScrollPane;
@@ -150,7 +152,11 @@ public class MainController implements Initializable {
             if (mTextFieldSearch.getText().equals(Statics.ADMIN_CODE)) {
                 mButtonSearch.setText("Anmelden");
                 mTextFieldSearch.clear();
-                mTextFieldSearch.setPromptText("Passwort eingeben");
+                mTextFieldSearch.setManaged(false);
+                mTextFieldSearch.setVisible(false);
+                mTextFieldPassword.setManaged(true);
+                mTextFieldPassword.setVisible(true);
+
                 mPasswordMode = true;
             }
             if (mTextFieldSearch.getText().isEmpty() ||
@@ -203,11 +209,23 @@ public class MainController implements Initializable {
                 }
             }
         } else {
-            if (mTextFieldSearch.getText().equals(mMain.mPassword)) {
+            if (mTextFieldPassword.getText().equals(mMain.mPassword)) {
                 mPasswordMode = false;
+                mTextFieldSearch.setManaged(true);
+                mTextFieldSearch.setVisible(true);
+                mTextFieldPassword.setManaged(false);
+                mTextFieldPassword.setVisible(false);
+                mTextFieldPassword.clear();
                 mButtonSearch.setText("Suche");
-                mTextFieldSearch.setPromptText("Suchbegriff eingeben");
                 mMain.showAdminPage();
+            } else if (!mTextFieldPassword.getText().equals(mMain.mPassword)) {
+                mPasswordMode = false;
+                mTextFieldSearch.setManaged(true);
+                mTextFieldSearch.setVisible(true);
+                mTextFieldPassword.setManaged(false);
+                mTextFieldPassword.setVisible(false);
+                mButtonSearch.setText("Suche");
+                mTextFieldPassword.clear();
             }
         }
     }

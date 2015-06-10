@@ -1,6 +1,5 @@
 //Created by Fabian on 18.05.15.
 
-import generificationUtil.PathFinder;
 import generificationUtil.logger.Logger;
 import generificationUtil.serializer.Deserializer;
 import generificationUtil.serializer.Serializer;
@@ -48,8 +47,8 @@ public class Main extends Application {
         statics.Statics statics = new statics.Statics();
         /**Save/Load added by Daniel Knuettel*/
         if (Statics.isGraphSafed()) {
-            Logger.log(Logger.MSG, "Main:start(): graph is safed : loading from file " + PathFinder.getPrettyName(Statics.defaultSave) + "\n");
-            Deserializer deser = new Deserializer(PathFinder.getPrettyName(Statics.defaultSave));
+            Logger.log(Logger.MSG, "Main:start(): graph is safed : loading from file " + Statics.defaultSave + "\n");
+            Deserializer deser = new Deserializer(Statics.defaultSave);
             deser.readObjs();
             mGraph = (Graph) deser.getObject();
 
@@ -71,17 +70,11 @@ public class Main extends Application {
 
 	//TEST
 	try{
-	PasswdStore ps=new PasswdStore();
-        //ps.addPasswd(new Passwd("Horst","Geheim"));
-        //System.out.println("Horst Geheim");
-        //ps.save();
-
-	ps.load();
-	System.out.println(ps.getPasswd("Horst").getPasswd());
-        mPassword = ps.getPasswd("Horst").getPasswd();
-	}catch(Exception e){}
-
-
+        PasswdStore ps = new PasswdStore();
+        ps.load();
+        System.out.println(ps.getPasswd("Fabian").getPasswd());
+        mPassword = ps.getPasswd("Fabian").getPasswd();
+    }catch(Exception e){}
         initialiseRootLayout();
     }
 
@@ -89,13 +82,13 @@ public class Main extends Application {
     public void stop() throws Exception {
         super.stop();
 	/**added by Daniel Knuettel*/
-	Serializer ser=new Serializer(PathFinder.getPrettyName(Statics.defaultSave));
-	ser.addObject(mGraph);
+        Serializer ser = new Serializer(Statics.defaultSave);
+        ser.addObject(mGraph);
 	ser.serialize();
         Logger.log(Logger.MSG, "Main:stop(): saving Graph\n");
 
         PasswdStore ps = new PasswdStore();
-        ps.addPasswd(new Passwd("Horst", mPassword));
+        ps.addPasswd(new Passwd("Fabian", mPassword));
         System.out.println("Saved: " + mPassword);
         ps.save();
     }

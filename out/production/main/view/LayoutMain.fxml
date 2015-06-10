@@ -48,6 +48,8 @@
                         centerShape="false"
                         maxHeight="Infinity"
                         maxWidth="Infinity"
+                        managed="true"
+                        visible="true"
                         minHeight="0"
                         minWidth="0"
                         prefHeight="25.0"
@@ -58,6 +60,23 @@
                                 top="5.0"/>
                     </HBox.margin>
                 </TextField>
+                <PasswordField
+                        fx:id="mTextFieldPassword"
+                        centerShape="false"
+                        managed="false"
+                        visible="false"
+                        maxHeight="Infinity"
+                        maxWidth="Infinity"
+                        minHeight="0"
+                        minWidth="0"
+                        prefHeight="25.0"
+                        prefWidth="470"
+                        promptText="Passwort eingeben">
+                    <HBox.margin>
+                        <Insets
+                                top="5.0"/>
+                    </HBox.margin>
+                </PasswordField>
                 <Button
                         fx:id="mButtonSearch"
                         contentDisplay="CENTER"
