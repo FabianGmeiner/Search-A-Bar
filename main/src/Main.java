@@ -69,13 +69,13 @@ public class Main extends Application {
         }
 
 
-	//TEST
-	try{
-        PasswdStore ps = new PasswdStore();
-        ps.load();
-        System.out.println(ps.getPasswd("Fabian").getPasswd());
-        mPassword = ps.getPasswd("Fabian").getPasswd();
-    }catch(Exception e){}
+        //TEST
+        try {
+            PasswdStore ps = new PasswdStore();
+            ps.load();
+            mPassword = ps.getPasswd("Fabian").getPasswd();
+        } catch (Exception e) {
+        }
         initialiseRootLayout();
     }
 
@@ -91,7 +91,6 @@ public class Main extends Application {
 
         PasswdStore ps = new PasswdStore();
         ps.addPasswd(new Passwd("Fabian", mPassword));
-        System.out.println("Saved: " + mPassword);
         ps.save();
     }
 

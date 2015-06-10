@@ -2,10 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="89450010-f8a5-4de3-bf30-7ac7a9e9e64b" name="Default" comment="XKrypter Bug repariert">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/GraphDefault.ser" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/passwds.ser" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main/src/krypt/XKrypter.java" afterPath="$PROJECT_DIR$/main/src/krypt/XKrypter.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/codeStyleSettings.xml" afterPath="$PROJECT_DIR$/.idea/codeStyleSettings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main/src/DialogPasswordController.java" afterPath="$PROJECT_DIR$/main/src/DialogPasswordController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main/src/Main.java" afterPath="$PROJECT_DIR$/main/src/Main.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Search-A-Bar.iws" />
@@ -79,19 +77,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="XKrypter.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="XKrypter.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/main/src/krypt/XKrypter.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="48" column="29" selection-start="1410" selection-end="1410" vertical-scroll-proportion="0.703125" vertical-offset="315" max-vertical-offset="1335">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="passwds.ser" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/passwds.ser">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="3" column="32" selection-start="664" selection-end="664" vertical-scroll-proportion="0.0" vertical-offset="15" max-vertical-offset="135">
+            <state line="48" column="30" selection-start="1411" selection-end="1411" vertical-scroll-proportion="0.0" vertical-offset="90" max-vertical-offset="1335">
               <folding />
             </state>
           </provider>
@@ -126,10 +115,19 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="DialogPasswordController.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/main/src/DialogPasswordController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="63" column="1" selection-start="1750" selection-end="1750" vertical-scroll-proportion="0.98579043" vertical-offset="180" max-vertical-offset="855">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="Main.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/main/src/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="164" column="8" selection-start="5649" selection-end="5649" vertical-scroll-proportion="0.0" vertical-offset="540" max-vertical-offset="3165">
+            <state line="92" column="0" selection-start="3069" selection-end="3069" vertical-scroll-proportion="0.0" vertical-offset="765" max-vertical-offset="3135">
               <folding />
             </state>
           </provider>
@@ -193,8 +191,9 @@
         <option value="$PROJECT_DIR$/main/src/PathFinder.log" />
         <option value="$PROJECT_DIR$/main/src/passwd/Passwd.java" />
         <option value="$PROJECT_DIR$/main/src/krypt/XKey.java" />
-        <option value="$PROJECT_DIR$/main/src/Main.java" />
         <option value="$PROJECT_DIR$/main/src/krypt/XKrypter.java" />
+        <option value="$PROJECT_DIR$/main/src/Main.java" />
+        <option value="$PROJECT_DIR$/main/src/DialogPasswordController.java" />
       </list>
     </option>
   </component>
@@ -848,7 +847,11 @@
       <created>1433942604264</created>
       <updated>1433942604264</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="XKrypter Bug repariert">
+      <created>1433943145530</created>
+      <updated>1433943145531</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TodoView" selected-index="4">
@@ -1189,13 +1192,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/main/src/DialogPasswordController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/main/src/AdminController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
@@ -1217,13 +1213,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/main/src/passwds.ser">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="710">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/main/src/passwd/Passwd.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="37" column="13" selection-start="771" selection-end="771" vertical-scroll-proportion="0.0" vertical-offset="368" max-vertical-offset="945">
@@ -1240,23 +1229,37 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/passwds.ser">
+    <entry file="file://$PROJECT_DIR$/main/src/passwds.ser">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="32" selection-start="664" selection-end="664" vertical-scroll-proportion="0.0" vertical-offset="15" max-vertical-offset="135">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="710">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/main/src/Main.java">
+    <entry file="file://$PROJECT_DIR$/passwds.ser">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="164" column="8" selection-start="5649" selection-end="5649" vertical-scroll-proportion="0.0" vertical-offset="540" max-vertical-offset="3165">
+        <state line="3" column="32" selection-start="664" selection-end="664" vertical-scroll-proportion="0.07992895" vertical-offset="0" max-vertical-offset="563">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/main/src/krypt/XKrypter.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="48" column="29" selection-start="1410" selection-end="1410" vertical-scroll-proportion="0.703125" vertical-offset="315" max-vertical-offset="1335">
+        <state line="48" column="30" selection-start="1411" selection-end="1411" vertical-scroll-proportion="0.0" vertical-offset="90" max-vertical-offset="1335">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main/src/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="92" column="0" selection-start="3069" selection-end="3069" vertical-scroll-proportion="0.0" vertical-offset="765" max-vertical-offset="3135">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main/src/DialogPasswordController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="63" column="1" selection-start="1750" selection-end="1750" vertical-scroll-proportion="0.98579043" vertical-offset="180" max-vertical-offset="855">
           <folding />
         </state>
       </provider>
