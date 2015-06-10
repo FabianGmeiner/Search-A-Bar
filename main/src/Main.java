@@ -39,6 +39,7 @@ public class Main extends Application {
     @Override
     public void start(Stage primaryStage) throws Exception {
         Logger.clearFiles();
+        Logger.log(Logger.MSG, "Main:start() running\n");
 
 
         this.primaryStage = primaryStage;
@@ -81,10 +82,11 @@ public class Main extends Application {
     @Override
     public void stop() throws Exception {
         super.stop();
-	/**added by Daniel Knuettel*/
+        Logger.log(Logger.MSG, "Main:stop() called\n");
+        /**added by Daniel Knuettel*/
         Serializer ser = new Serializer(Statics.defaultSave);
         ser.addObject(mGraph);
-	ser.serialize();
+        ser.serialize();
         Logger.log(Logger.MSG, "Main:stop(): saving Graph\n");
 
         PasswdStore ps = new PasswdStore();
