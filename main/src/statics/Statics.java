@@ -14,6 +14,9 @@ public class Statics {
     public static final String defaultSave = "GraphDefault.ser";
     /* edit by Daniel Knuettel: added __DEBUG*/
     public static final boolean __DEBUG = true;
+	/*  edit by Daniel Knuettel: added useExternHome*/
+    public static final boolean useExternHome = true;
+
 
     public static final int DIALOG_CODE_EDIT = 0;
     public static final int DIALOG_CODE_NEW = 1;

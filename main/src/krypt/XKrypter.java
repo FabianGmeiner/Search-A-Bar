@@ -58,7 +58,7 @@ public class XKrypter
 				XKey.increment(positions[i],key[1][i]);
 				buffer^=mask;
 			}
-			Logger.log(Logger.DEBUG,"XKrypter: _kryptBytes() :["+j+"] 0x"+String.format("%x",_bytes[j])+" -> 0x"+String.format("%x",buffer)+"\n");
+			Logger.log(Logger.DEBUG,"XKrypter: _deKryptBytes() :["+j+"] 0x"+String.format("%x",_bytes[j])+" -> 0x"+String.format("%x",buffer)+"\n");
 			dekrypted[j]=buffer;
 		}
 		return dekrypted;
