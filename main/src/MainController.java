@@ -59,6 +59,7 @@ public class MainController implements Initializable {
     private int mSortMode = Statics.SORT_CODE_ALPHABETICAL;
     private Vector<Bar> mCurrentList = null;
     private Bar mSelectedBar = null;
+    private boolean mPasswordMode = false;
 
     public MainController() {
     }
@@ -117,7 +118,9 @@ public class MainController implements Initializable {
 
     private void showBarDetails(Object newValue) {
         if (newValue != null) {
-            mButtonCalculateRoute.setDisable(false);
+            if (mMain.mGraph.mNodes.size() > 1) {
+                mButtonCalculateRoute.setDisable(false);
+            }
             mSelectedBar = (Bar) newValue;
             Bar selectedBar = (Bar) newValue;
             String description = selectedBar.getmDescription();
@@ -143,56 +146,68 @@ public class MainController implements Initializable {
 
     @FXML
     private void handleButtonSearch() throws IOException {
-        if (mTextFieldSearch.getText().equals(Statics.ADMIN_CODE)) {
-            mMain.showAdminPage();
-        }
-        if (mTextFieldSearch.getText().isEmpty() ||
-                mTextFieldSearch.getText().equals("") ||
-                mTextFieldSearch.getText().contains("alle") ||
-                mTextFieldSearch.getText().contains("Alle") ||
-                mTextFieldSearch.getText().equalsIgnoreCase("alle")) {
-            setListItems(Main.mGraph.getBarsFiltered(mFilters));
+        if (!mPasswordMode) {
+            if (mTextFieldSearch.getText().equals(Statics.ADMIN_CODE)) {
+                mButtonSearch.setText("Anmelden");
+                mTextFieldSearch.clear();
+                mTextFieldSearch.setPromptText("Passwort eingeben");
+                mPasswordMode = true;
+            }
+            if (mTextFieldSearch.getText().isEmpty() ||
+                    mTextFieldSearch.getText().equals("") ||
+                    mTextFieldSearch.getText().contains("alle") ||
+                    mTextFieldSearch.getText().contains("Alle") ||
+                    mTextFieldSearch.getText().equalsIgnoreCase("alle")) {
+                setListItems(Main.mGraph.getBarsFiltered(mFilters));
+            } else {
+                String search = mTextFieldSearch.getText();
+                String numerical;
+                String text;
+
+                if (!search.isEmpty() && !search.equals("")) {
+                    StringBuilder sbN = new StringBuilder();
+                    StringBuilder sbT = new StringBuilder();
+                    Vector<Bar> num = null;
+                    Vector<Bar> alph = null;
+
+                    for (char c : search.toCharArray()) {
+                        if (Character.isDigit(c)) {
+                            sbT.append(c);
+                            sbN.append(c);
+                        } else {
+                            sbT.append(c);
+                        }
+                    }
+
+                    numerical = sbN.toString();
+                    text = sbT.toString();
+
+                    if (!numerical.equals("") && !numerical.isEmpty()) {
+                        num = Main.mGraph.getBarsFilteredByNumericalSearch(Integer.parseInt(numerical));
+                    }
+                    if (!text.equals("") && !text.isEmpty()) {
+                        alph = Main.mGraph.getBarsFilteredByStringSearch(text);
+                    }
+                    Vector<Bar> result = new Vector<>();
+                    if (num != null) {
+                        for (int i = 0; i < num.size(); i++) {
+                            result.add(num.elementAt(i));
+                        }
+                    }
+                    if (alph != null) {
+                        for (int i = 0; i < alph.size(); i++) {
+                            result.add(alph.elementAt(i));
+                        }
+                    }
+                    setListItems(result);
+                }
+            }
         } else {
-            String search = mTextFieldSearch.getText();
-            String numerical;
-            String text;
-
-            if (!search.isEmpty() && !search.equals("")) {
-                StringBuilder sbN = new StringBuilder();
-                StringBuilder sbT = new StringBuilder();
-                Vector<Bar> num = null;
-                Vector<Bar> alph = null;
-
-                for (char c : search.toCharArray()) {
-                    if (Character.isDigit(c)) {
-                        sbT.append(c);
-                        sbN.append(c);
-                    } else {
-                        sbT.append(c);
-                    }
-                }
-
-                numerical = sbN.toString();
-                text = sbT.toString();
-
-                if (!numerical.equals("") && !numerical.isEmpty()) {
-                    num = Main.mGraph.getBarsFilteredByNumericalSearch(Integer.parseInt(numerical));
-                }
-                if (!text.equals("") && !text.isEmpty()) {
-                    alph = Main.mGraph.getBarsFilteredByStringSearch(text);
-                }
-                Vector<Bar> result = new Vector<>();
-                if (num != null) {
-                    for (int i = 0; i < num.size(); i++) {
-                        result.add(num.elementAt(i));
-                    }
-                }
-                if (alph != null) {
-                    for (int i = 0; i < alph.size(); i++) {
-                        result.add(alph.elementAt(i));
-                    }
-                }
-                setListItems(result);
+            if (mTextFieldSearch.getText().equals(mMain.mPassword)) {
+                mPasswordMode = false;
+                mButtonSearch.setText("Suche");
+                mTextFieldSearch.setPromptText("Suchbegriff eingeben");
+                mMain.showAdminPage();
             }
         }
     }

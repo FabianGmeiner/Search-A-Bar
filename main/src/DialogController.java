@@ -3,7 +3,6 @@
 import javafx.beans.value.ObservableValue;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
-import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.*;
@@ -102,12 +101,7 @@ public class DialogController implements Initializable {
         dialog.setOnHiding(event -> dialog.close());
         dialog.setHeaderText("Achtung !");
         dialog.setContentText("Bitte geben sie gültige Werte ein.");
-        dialog.setOnCloseRequest(new EventHandler<DialogEvent>() {
-            @Override
-            public void handle(DialogEvent event) {
-                dialog.close();
-            }
-        });
+        dialog.setOnCloseRequest(event -> dialog.close());
         if (requestCode == Statics.DIALOG_CODE_EDIT) {
             if (!ValidCheck.isValidInput(mDialogTextFieldAvg.getText(), Statics.VALID_CODE_INT)) {
                 mDialogTextFieldAvg.clear();
@@ -183,7 +177,8 @@ public class DialogController implements Initializable {
                 Main.mGraph.addNode(new Node(bar));
 
                 printGraphContent();
-
+                mMain.showAdminPage();
+                mDialogStage.close();
             }
 
         }

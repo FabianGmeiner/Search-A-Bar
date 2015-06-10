@@ -12,6 +12,7 @@ public class Graph implements Serializable {
     public Vector<Node> mNodes = new Vector<>();
     public Vector<Edge> mEdges = new Vector<>();
     public int mSortMode = Statics.SORT_CODE_ALPHABETICAL;
+    private boolean done = false;
 
     public void setSortMode(int sortCode) {
         mSortMode = sortCode;
@@ -230,5 +231,18 @@ public class Graph implements Serializable {
         }
         return result;
     }
+
+    public void depthSearch(Bar start) {
+    }
+
+    public void depthSearchDestination(Bar start, Bar end) {
+    }
+
+    public void initialiseGraph() {
+        for (int i = 0; i < mNodes.size(); i++) {
+            mNodes.elementAt(i).initialiseDepthSearch();
+        }
+    }
+
 }
 

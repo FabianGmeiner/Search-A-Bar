@@ -1,6 +1,11 @@
 package passwd;
-import krypt.*;
-import java.io.*;
+
+import generificationUtil.logger.Logger;
+import krypt.XKey;
+import krypt.XKeys;
+import krypt.XKrypter;
+
+import java.io.Serializable;
 /**
  written by Daniel Knuettel 
 TODO:test
@@ -9,9 +14,9 @@ TODO:test
 public class Passwd
 implements Serializable
 {
+	XKey key;
 	private String uname;
 	private byte [] passwd;
-	XKey key;
 	
 	public Passwd(String _uname,String _passwd)
 	{
@@ -51,6 +56,7 @@ implements Serializable
 	{
 		XKrypter k=new XKrypter(key);
 		byte [] pswd=k.deKryptBytes(passwd);
+		Logger.log(Logger.DEBUG, new String(pswd) + "\n");
 		return new String(pswd);
 	}
 }

@@ -13,9 +13,9 @@ import javafx.stage.Modality;
 import javafx.stage.Stage;
 import model.Bar;
 import model.Graph;
+import passwd.Passwd;
+import passwd.PasswdStore;
 import statics.Statics;
-import krypt.*;
-import passwd.*;
 
 import java.io.IOException;
 
@@ -27,7 +27,9 @@ public class Main extends Application {
     public static DialogController mDialogController;
     public static DialogRouteController mDialogRouteController;
     public static DialogMapsController mDialogMapsController;
+    public static DialogPasswordController mDialogPasswordController;
     public static Graph mGraph;
+    public static String mPassword = Statics.ADMIN_PASSWORD;
     protected BorderPane rootLayout;
     private Stage primaryStage;
 
@@ -54,13 +56,6 @@ public class Main extends Application {
             if (mGraph == null) {
                 Logger.log(Logger.WARN, "Main:start(): graph is safed :but cannot loaded from file: using hard coded version \n");
                 mGraph = new Graph();
-                mGraph.addNode(statics.getNode1());
-                mGraph.addNode(statics.getNode2());
-                mGraph.addNode(statics.getNode3());
-                mGraph.addNode(statics.getNode4());
-                mGraph.addNode(statics.getNode5());
-                mGraph.addNode(statics.getNode6());
-                mGraph.addNode(statics.getNode7());
                 mGraph.printNodes();
                 mGraph.printEdges();
 
@@ -69,28 +64,23 @@ public class Main extends Application {
         } else {
             Logger.log(Logger.MSG, "Main:start(): graph is not safed : using hard coded Version.\n");
             mGraph = new Graph();
-            mGraph.addNode(statics.getNode1());
-            mGraph.addNode(statics.getNode2());
-            mGraph.addNode(statics.getNode3());
-            mGraph.addNode(statics.getNode4());
-            mGraph.addNode(statics.getNode5());
-            mGraph.addNode(statics.getNode6());
-            mGraph.addNode(statics.getNode7());
             mGraph.printNodes();
             mGraph.printEdges();
         }
 
-	/*
+
 	//TEST
 	try{
 	PasswdStore ps=new PasswdStore();
-	ps.addPasswd(new Passwd("Horst","Geheim"));
-	System.out.println("Horst Geheim");
-	ps.save();
+        //ps.addPasswd(new Passwd("Horst","Geheim"));
+        //System.out.println("Horst Geheim");
+        //ps.save();
+
 	ps.load();
 	System.out.println(ps.getPasswd("Horst").getPasswd());
+        mPassword = ps.getPasswd("Horst").getPasswd();
 	}catch(Exception e){}
-*/
+
 
         initialiseRootLayout();
     }
@@ -102,7 +92,12 @@ public class Main extends Application {
 	Serializer ser=new Serializer(PathFinder.getPrettyName(Statics.defaultSave));
 	ser.addObject(mGraph);
 	ser.serialize();
-	Logger.log(Logger.MSG,"Main:stop(): saving Graph\n");
+        Logger.log(Logger.MSG, "Main:stop(): saving Graph\n");
+
+        PasswdStore ps = new PasswdStore();
+        ps.addPasswd(new Passwd("Horst", mPassword));
+        System.out.println("Saved: " + mPassword);
+        ps.save();
     }
 
     private void initialiseRootLayout() throws IOException {
@@ -181,6 +176,27 @@ public class Main extends Application {
         mDialogRouteController.setDialogStage(dialogStage);
         mDialogRouteController.setMain(this);
         mDialogRouteController.setBar(bar);
+
+        // Show the dialog and wait until the user closes it
+        dialogStage.showAndWait();
+    }
+
+    public void showDialogPassword() throws IOException {
+        FXMLLoader loader = new FXMLLoader();
+        loader.setLocation(Main.class.getResource("view/LayoutDialogPassword.fxml"));
+        AnchorPane dialog = loader.load();
+
+        // creating the dialog stage
+        Stage dialogStage = new Stage();
+        dialogStage.initModality(Modality.WINDOW_MODAL);
+        dialogStage.initOwner(primaryStage);
+        Scene scene = new Scene(dialog);
+        dialogStage.setScene(scene);
+        dialogStage.setTitle("Search-A-Bar");
+
+        mDialogPasswordController = loader.getController();
+        mDialogPasswordController.setDialogStage(dialogStage);
+        mDialogPasswordController.setMain(this);
 
         // Show the dialog and wait until the user closes it
         dialogStage.showAndWait();

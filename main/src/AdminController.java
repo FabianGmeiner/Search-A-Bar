@@ -19,7 +19,8 @@ public class AdminController implements Initializable {
 
     @FXML
     public ListView mAdminListView;
-    // the FXML-Annotation allows JavaFX to inject the views based on their fx:id
+    @FXML
+    private Button mAdminButtonNew;
     @FXML
     private Button mAdminButtonEdit;
     @FXML
@@ -29,6 +30,7 @@ public class AdminController implements Initializable {
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
+        mAdminButtonNew.requestFocus();
         setListItems();
     }
 
@@ -39,6 +41,11 @@ public class AdminController implements Initializable {
     @FXML
     private void handleButtonLogout() throws IOException {
         mMain.showMainPage();
+    }
+
+    @FXML
+    private void handleButtonChangePassword() throws IOException {
+        mMain.showDialogPassword();
     }
 
     @FXML
