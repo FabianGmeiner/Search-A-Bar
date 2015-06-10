@@ -46,7 +46,7 @@ public class XKrypter {
 				/* key [0] is the mask */
                 mask = (byte) (((byte) (1 << positions[i])) & key[0][i]);
 				/* key [1] is the speed */
-                XKey.increment(positions[i], key[1][i]);
+                positions[i] = XKey.increment(positions[i], key[1][i]);
                 buffer ^= mask;
             }
             dekrypted[j] = buffer;
