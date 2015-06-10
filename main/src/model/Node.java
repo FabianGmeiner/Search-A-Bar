@@ -5,6 +5,7 @@ import java.io.Serializable;
 
 public class Node implements Serializable {
     private Object mContent;
+    private boolean checkmark = false;
 
     public Node(Object content) {
         mContent = content;
@@ -12,5 +13,17 @@ public class Node implements Serializable {
 
     public Object getContent() {
         return mContent;
+    }
+
+    public boolean getCheckmark() {
+        return checkmark;
+    }
+
+    public void setCheckmark(boolean value) {
+        checkmark = value;
+    }
+
+    public void initialiseDepthSearch() {
+
     }
 }

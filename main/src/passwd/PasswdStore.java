@@ -1,9 +1,8 @@
 package passwd;
-import krypt.*;
-import java.io.*;
-import generificationUtil.serializer.*;
-import generificationUtil.list.*;
-import generificationUtil.*;
+
+import generificationUtil.list.ListStore;
+import generificationUtil.serializer.Deserializer;
+import generificationUtil.serializer.Serializer;
 
 /**written by Daniel Knuettel*/
 
@@ -16,8 +15,8 @@ public class PasswdStore
 	public PasswdStore()
 	{
 		passwdList=new ListStore("passwd");
-		serializer=new Serializer(PathFinder.getPrettyName("passwds.ser"));
-		deserializer=new Deserializer(PathFinder.getPrettyName("passwds.ser"));
+		serializer = new Serializer("passwds.ser");
+		deserializer = new Deserializer("passwds.ser");
 
 	}
 	public void addPasswd(Passwd _pswd)
