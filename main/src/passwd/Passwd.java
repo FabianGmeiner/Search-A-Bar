@@ -28,23 +28,26 @@ implements Serializable
 		byte [] masks= new byte[8];
 		for(int i=0;i<8;i++)
 		{
-			speeds[i]=(byte)((Math.random()*4)+1);
-		}
-		if(name_in_bytes.length>=8)
+            speeds[i] = (byte) ((Math.random() * 3) + 1);
+        }
+        Logger.log(Logger.DEBUG, "new Passwd():speeds[0]= " + speeds[0] + "\n");
+
+        if(name_in_bytes.length>=8)
 		{
 			for(int i=0;i<8;i++)
 			{
-				masks[i]=(byte)(name_in_bytes[i]^(1<<(byte)((Math.random()*4)+1)));
-			}
+                masks[i] = (byte) (name_in_bytes[i] ^ (1 << (byte) ((Math.random() * 5) + 1)));
+            }
 		}
 		else
 		{
 			for(int i=0;i<8;i++)
 			{
-				masks[i]=(byte)((Math.random()*4)+1);
-			}
+                masks[i] = (byte) ((Math.random() * 30) + 2);
+            }
 		}
-		key=XKeys.getKey(masks,speeds);
+        Logger.log(Logger.DEBUG, "new Passwd():masks[0]= " + masks[0] + "\n");
+        key=XKeys.getKey(masks,speeds);
 		XKrypter k=new XKrypter(key);
 		passwd=k.kryptBytes(unkr);
 	}

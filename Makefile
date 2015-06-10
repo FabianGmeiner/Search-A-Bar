@@ -29,7 +29,7 @@ testSer:
 #	java TestSerializer;\
 #	cd ../../..;
 
-main:generificationUtil/logger
+main:
 	$(com) -cp $(CLPATH) main/src/Main.java
 exeMain:main
 	cd main/src;\

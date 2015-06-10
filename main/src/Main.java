@@ -71,15 +71,15 @@ public class Main extends Application {
 
 	//TEST
 	try{
-	PasswdStore ps=new PasswdStore();
-        //ps.addPasswd(new Passwd("Horst","Geheim"));
+        PasswdStore ps = new PasswdStore();
+        //ps.addPasswd(new Passwd("HorstDerAdmin","Geheim"));
         //System.out.println("Horst Geheim");
         //ps.save();
 
-	ps.load();
-	System.out.println(ps.getPasswd("Horst").getPasswd());
-        mPassword = ps.getPasswd("Horst").getPasswd();
-	}catch(Exception e){}
+        ps.load();
+        System.out.println(ps.getPasswd("HorstDerAdmin").getPasswd());
+        mPassword = ps.getPasswd("HorstDerAdmin").getPasswd();
+    }catch(Exception e){}
 
 
         initialiseRootLayout();
@@ -89,13 +89,13 @@ public class Main extends Application {
     public void stop() throws Exception {
         super.stop();
 	/**added by Daniel Knuettel*/
-	Serializer ser=new Serializer(PathFinder.getPrettyName(Statics.defaultSave));
-	ser.addObject(mGraph);
-	ser.serialize();
+        Serializer ser = new Serializer(PathFinder.getPrettyName(Statics.defaultSave));
+        ser.addObject(mGraph);
+        ser.serialize();
         Logger.log(Logger.MSG, "Main:stop(): saving Graph\n");
 
         PasswdStore ps = new PasswdStore();
-        ps.addPasswd(new Passwd("Horst", mPassword));
+        ps.addPasswd(new Passwd("HorstDerAdmin", mPassword));
         System.out.println("Saved: " + mPassword);
         ps.save();
     }

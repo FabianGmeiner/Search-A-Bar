@@ -1,8 +1,8 @@
 package krypt;
 /** Written by Daniel Knuettel*/
 
-import generificationUtil.list.*;
-import generificationUtil.logger.*;
+import generificationUtil.list.ListStore;
+import generificationUtil.logger.Logger;
 
 public class XKrypter
 {
@@ -29,10 +29,12 @@ public class XKrypter
 			{
 				/* key [0] is the mask */
 				mask=(byte)(((byte)(1<<positions[i]))&key[0][i]);
-				/* key [1] is the speed */
-				XKey.increment(positions[i],key[1][i]);
-				buffer^=mask;
-			}
+                Logger.log(Logger.DEBUG, "XKrypter: _kryptBytes() :[" + i + "][" + j + "]:positions[i]= " + positions[i] + "\n");
+                /* key [1] is the speed */
+                positions[i] = XKey.increment(positions[i], key[1][i]);
+                buffer^=mask;
+                Logger.log(Logger.DEBUG, "XKrypter: _kryptBytes() :[" + i + "][" + j + "]:mask= " + mask + "\n");
+            }
 			Logger.log(Logger.DEBUG,"XKrypter: _kryptBytes() :["+j+"] 0x"+String.format("%x",_bytes[j])+" -> 0x"+String.format("%x",buffer)+"\n");
 			krypted[j]=buffer;
 		}
