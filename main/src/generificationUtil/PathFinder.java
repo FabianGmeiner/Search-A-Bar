@@ -1,9 +1,9 @@
 package generificationUtil;
 
+import generificationUtil.logger.BaseLogger;
 import statics.Statics;
 
-import generificationUtil.logger.*;
-import java.io.*;
+import java.io.File;
 
 /**
  * written by Daniel Knuettel
@@ -13,7 +13,7 @@ public class PathFinder {
 
     public static final String stdpathUnix = ".FindABar";
     public static final String stdpathDOS = "_FindABar";
-    public static final String stdpathMAC="_FindABar";
+    public static final String stdpathMAC = "_FindABar";
 
 
     /**
@@ -26,19 +26,16 @@ public class PathFinder {
         if (userpath == null) {
             userpath = ".";
             System.err.printf("Pathfinder:WARNING: user.home is null using '.'\n");
-	    BaseLogger.log("PathFinder.log","Pathfinder:getHomePath():WARNING: user.home is null using '.'\n");
+            BaseLogger.log("PathFinder.log", "Pathfinder:getHomePath():WARNING: user.home is null using '.'\n");
         }
         String homepath = "";
         StringBuilder builder = new StringBuilder();
-	String os = OsDetector.detect(OsDetector.OSBASIC);
-	if(Statics.useExternHome)
-	{
-		builder.append(userpath);
-	}
-	else
-	{
-		builder.append(".");
-	}
+        String os = OsDetector.detect(OsDetector.OSBASIC);
+        if (Statics.useExternHome) {
+            builder.append(userpath);
+        } else {
+            builder.append(".");
+        }
         if (os.compareTo(OsDetector.DOS) == 0) {
             builder.append("\\");// must the backslash be escaped?
             builder.append(stdpathDOS);
@@ -49,34 +46,26 @@ public class PathFinder {
         }
         if (os.compareTo(OsDetector.UNIX) == 0) {
             builder.append("/");
-	   		if(OsDetector.detect(OsDetector.OSSTD).compareTo(OsDetector.Mac)==0)
-			{
-				builder.append(stdpathMAC);
-			        BaseLogger.log("PathFinder.log","Pathfinder:getHomePath():Mac is annoying me!\n");
-			}
-			else
-			{
-				builder.append(stdpathUnix);
-			}
+            if (OsDetector.detect(OsDetector.OSSTD).compareTo(OsDetector.Mac) == 0) {
+                builder.append(stdpathMAC);
+            } else {
+                builder.append(stdpathUnix);
+            }
             homepath = builder.toString();
             if (Statics.__DEBUG) {
                 //System.out.printf("homepath='%s'\n",homepath);
             }
         }
         /* create the path,if it is not there yet */
-	File dir=new File(homepath);
-	if(!dir.exists())
-	{
-		BaseLogger.log("PathFinder.log","Pathfinder:getHomePath():homeDirectory does not exist: creating it\n");
-		try
-		{
-			dir.mkdir();
-		}
-		catch (SecurityException e)
-		{
-			BaseLogger.log("PathFinder.log",e.toString());
-		}
-	}
+        File dir = new File(homepath);
+        if (!dir.exists()) {
+            BaseLogger.log("PathFinder.log", "Pathfinder:getHomePath():homeDirectory does not exist: creating it\n");
+            try {
+                dir.mkdir();
+            } catch (SecurityException e) {
+                BaseLogger.log("PathFinder.log", e.toString());
+            }
+        }
 
         return homepath;
 

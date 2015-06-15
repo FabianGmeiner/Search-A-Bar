@@ -25,12 +25,11 @@ class Node
     public Object getContent() {
         return content;
     }
-    public Object getEleAt(int place,int current)
-    {
-	if(place==current)
-	{
-		return content;
-	}
-	return next.getEleAt(place,current+1);
+
+    public Object getEleAt(int place, int current) {
+        if (place == current) {
+            return content;
+        }
+        return next.getEleAt(place, current + 1);
     }
 }

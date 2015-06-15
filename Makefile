@@ -18,10 +18,10 @@ generificationUtil/OsDetector:
 	$(com) -cp $(CLPATH) main/src/generificationUtil/OsDetector.java
 generificationUtil/serializer:generificationUtil/logger
 	$(com) -cp $(CLPATH) main/src/generificationUtil/serializer/*.java
-krypt:
-	$(com) -cp $(CLPATH) main/src/krypt/*.java
-passwd:krypt
-	$(com) -cp $(CLPATH) main/src/passwd/*.java
+encryption:
+	$(com) -cp $(CLPATH) main/src/encryption/*.java
+password:encryption
+	$(com) -cp $(CLPATH) main/src/password/*.java
 
 testSer:
 	$(com) -cp $(CLPATH) main/src/tests/TestSerializer.java;\

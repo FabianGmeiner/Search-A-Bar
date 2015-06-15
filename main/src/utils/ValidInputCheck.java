@@ -3,7 +3,7 @@ package utils;
 
 import statics.Statics;
 
-public class ValidCheck {
+public class ValidInputCheck {
 
     public static boolean isValidInput(String input, int code) {
         boolean valid = true;

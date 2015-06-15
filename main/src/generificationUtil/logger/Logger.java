@@ -70,10 +70,7 @@ public class Logger {
             logfile.close();
         } catch (IOException e) {
             System.err.printf("Logger:Error: cannot log msgtype (%d) is the path writable?\n", logType);
-            return;
         }
-
-        return;
     }
 
     public static void clearFiles() {

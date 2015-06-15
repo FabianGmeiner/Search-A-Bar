@@ -73,20 +73,20 @@ public class ListStore
         return swp;
 
     }
-    public String getName()
-    {
-	    return name;
+
+    public String getName() {
+        return name;
     }
-    public ListStore duplicate()
-    {
-	    ListStore ret=new ListStore(name);
-	    ret.first=this.first;
-	    return ret;
+
+    public ListStore duplicate() {
+        ListStore ret = new ListStore(name);
+        ret.first = this.first;
+        return ret;
     }
-    public Object getObjectAt(int place)
-    {
-	    /*starting with 0*/
-	    return first.getEleAt(place,0);
+
+    public Object getObjectAt(int place) {
+        /*starting with 0*/
+        return first.getEleAt(place, 0);
     }
 
 

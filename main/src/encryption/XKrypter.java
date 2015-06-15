@@ -1,5 +1,7 @@
-package krypt;
-/** Written by Daniel Knuettel*/
+package encryption;
+/**
+ * Written by Daniel Knuettel
+ */
 
 import generificationUtil.list.ListStore;
 
@@ -43,7 +45,7 @@ public class XKrypter {
         for (int j = 0; j < _bytes.length; j++) {
             buffer = _bytes[j];
             for (int i = 0; i < 8; i++) {
-				/* key [0] is the mask */
+                /* key [0] is the mask */
                 mask = (byte) (((byte) (1 << positions[i])) & key[0][i]);
 				/* key [1] is the speed */
                 positions[i] = XKey.increment(positions[i], key[1][i]);

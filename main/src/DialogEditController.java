@@ -10,7 +10,7 @@ import javafx.stage.Stage;
 import model.Bar;
 import model.Node;
 import statics.Statics;
-import utils.ValidCheck;
+import utils.ValidInputCheck;
 
 import java.io.IOException;
 import java.net.URL;
@@ -18,7 +18,7 @@ import java.util.ResourceBundle;
 
 
 @SuppressWarnings("unchecked")
-public class DialogController implements Initializable {
+public class DialogEditController implements Initializable {
 
     // the FXML-Annotation allows JavaFX to inject the views based on their fx:id
     @FXML
@@ -103,23 +103,23 @@ public class DialogController implements Initializable {
         dialog.setContentText("Bitte geben sie gültige Werte ein.");
         dialog.setOnCloseRequest(event -> dialog.close());
         if (requestCode == Statics.DIALOG_CODE_EDIT) {
-            if (!ValidCheck.isValidInput(mDialogTextFieldAvg.getText(), Statics.VALID_CODE_INT)) {
+            if (!ValidInputCheck.isValidInput(mDialogTextFieldAvg.getText(), Statics.VALID_CODE_INT)) {
                 mDialogTextFieldAvg.clear();
                 mDialogTextFieldAvg.setPromptText("Gültigen Wert eingeben !");
                 dialog.show();
-            } else if (!ValidCheck.isValidInput(mDialogTextFieldRestriction.getText(), Statics.VALID_CODE_INT)) {
+            } else if (!ValidInputCheck.isValidInput(mDialogTextFieldRestriction.getText(), Statics.VALID_CODE_INT)) {
                 mDialogTextFieldRestriction.clear();
                 mDialogTextFieldRestriction.setPromptText("Gültigen Wert eingeben !");
                 dialog.show();
-            } else if (!ValidCheck.isValidInput(mDialogTextFieldPrice.getText(), Statics.VALID_CODE_DOUBLE)) {
+            } else if (!ValidInputCheck.isValidInput(mDialogTextFieldPrice.getText(), Statics.VALID_CODE_DOUBLE)) {
                 mDialogTextFieldPrice.clear();
                 mDialogTextFieldPrice.setPromptText("Gültigen Wert eingeben !");
                 dialog.show();
-            } else if (!ValidCheck.isValidInput(mDialogTextFieldLat.getText(), Statics.VALID_CODE_DOUBLE)) {
+            } else if (!ValidInputCheck.isValidInput(mDialogTextFieldLat.getText(), Statics.VALID_CODE_DOUBLE)) {
                 mDialogTextFieldLat.clear();
                 mDialogTextFieldLat.setPromptText("Gültigen Wert eingeben !");
                 dialog.showAndWait();
-            } else if (!ValidCheck.isValidInput(mDialogTextFieldLong.getText(), Statics.VALID_CODE_DOUBLE)) {
+            } else if (!ValidInputCheck.isValidInput(mDialogTextFieldLong.getText(), Statics.VALID_CODE_DOUBLE)) {
                 mDialogTextFieldLong.clear();
                 mDialogTextFieldLong.setPromptText("Gültigen Wert eingeben !");
                 dialog.show();
@@ -133,6 +133,7 @@ public class DialogController implements Initializable {
                 bar.setAverageAge(Integer.parseInt(mDialogTextFieldAvg.getText()));
                 bar.setGpsLatitude(Double.parseDouble(mDialogTextFieldLat.getText()));
                 bar.setGpsLongitude(Double.parseDouble(mDialogTextFieldLong.getText()));
+                bar.setCategory(mDialogChoiceBoxCategory.getSelectionModel().getSelectedIndex());
 
                 printGraphContent();
 
@@ -141,23 +142,23 @@ public class DialogController implements Initializable {
             }
 
         } else if (requestCode == Statics.DIALOG_CODE_NEW) {
-            if (!ValidCheck.isValidInput(mDialogTextFieldAvg.getText(), Statics.VALID_CODE_INT)) {
+            if (!ValidInputCheck.isValidInput(mDialogTextFieldAvg.getText(), Statics.VALID_CODE_INT)) {
                 mDialogTextFieldAvg.clear();
                 mDialogTextFieldAvg.setPromptText("Gültigen Wert eingeben !");
                 dialog.show();
-            } else if (!ValidCheck.isValidInput(mDialogTextFieldRestriction.getText(), Statics.VALID_CODE_INT)) {
+            } else if (!ValidInputCheck.isValidInput(mDialogTextFieldRestriction.getText(), Statics.VALID_CODE_INT)) {
                 mDialogTextFieldRestriction.clear();
                 mDialogTextFieldRestriction.setPromptText("Gültigen Wert eingeben !");
                 dialog.show();
-            } else if (!ValidCheck.isValidInput(mDialogTextFieldPrice.getText(), Statics.VALID_CODE_DOUBLE)) {
+            } else if (!ValidInputCheck.isValidInput(mDialogTextFieldPrice.getText(), Statics.VALID_CODE_DOUBLE)) {
                 mDialogTextFieldPrice.clear();
                 mDialogTextFieldPrice.setPromptText("Gültigen Wert eingeben !");
                 dialog.show();
-            } else if (!ValidCheck.isValidInput(mDialogTextFieldLat.getText(), Statics.VALID_CODE_DOUBLE)) {
+            } else if (!ValidInputCheck.isValidInput(mDialogTextFieldLat.getText(), Statics.VALID_CODE_DOUBLE)) {
                 mDialogTextFieldLat.clear();
                 mDialogTextFieldLat.setPromptText("Gültigen Wert eingeben !");
                 dialog.show();
-            } else if (!ValidCheck.isValidInput(mDialogTextFieldLong.getText(), Statics.VALID_CODE_DOUBLE)) {
+            } else if (!ValidInputCheck.isValidInput(mDialogTextFieldLong.getText(), Statics.VALID_CODE_DOUBLE)) {
                 mDialogTextFieldLong.clear();
                 mDialogTextFieldLong.setPromptText("Gültigen Wert eingeben !");
                 dialog.show();
@@ -167,7 +168,7 @@ public class DialogController implements Initializable {
                         mDialogTextFieldDescription.getText(),
                         mDialogTextFieldUrl.getText(),
                         mDialogTextFieldAdress.getText(),
-                        0,
+                        mDialogChoiceBoxCategory.getSelectionModel().getSelectedIndex(),
                         Double.parseDouble(mDialogTextFieldLat.getText()),
                         Double.parseDouble(mDialogTextFieldLong.getText()),
                         Double.parseDouble(mDialogTextFieldPrice.getText()),

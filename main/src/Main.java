@@ -12,8 +12,8 @@ import javafx.stage.Modality;
 import javafx.stage.Stage;
 import model.Bar;
 import model.Graph;
-import passwd.Passwd;
-import passwd.PasswdStore;
+import password.Password;
+import password.PasswordStore;
 import statics.Statics;
 
 import java.io.IOException;
@@ -23,7 +23,7 @@ public class Main extends Application {
 
     public static MainController mMainController;
     public static AdminController mAdminController;
-    public static DialogController mDialogController;
+    public static DialogEditController mDialogEditController;
     public static DialogRouteController mDialogRouteController;
     public static DialogMapsController mDialogMapsController;
     public static DialogPasswordController mDialogPasswordController;
@@ -45,7 +45,6 @@ public class Main extends Application {
         this.primaryStage = primaryStage;
         this.primaryStage.setTitle("Search-A-Bar");
 
-        statics.Statics statics = new statics.Statics();
         /**Save/Load added by Daniel Knuettel*/
         if (Statics.isGraphSafed()) {
             Logger.log(Logger.MSG, "Main:start(): graph is safed : loading from file " + Statics.defaultSave + "\n");
@@ -68,13 +67,12 @@ public class Main extends Application {
             mGraph.printEdges();
         }
 
-
-        //TEST
         try {
-            PasswdStore ps = new PasswdStore();
+            PasswordStore ps = new PasswordStore();
             ps.load();
             mPassword = ps.getPasswd("Fabian").getPasswd();
         } catch (Exception e) {
+            Logger.log(Logger.MSG, "Exception in Application-Start: password could not be loaded.");
         }
         initialiseRootLayout();
     }
@@ -89,8 +87,8 @@ public class Main extends Application {
         ser.serialize();
         Logger.log(Logger.MSG, "Main:stop(): saving Graph\n");
 
-        PasswdStore ps = new PasswdStore();
-        ps.addPasswd(new Passwd("Fabian", mPassword));
+        PasswordStore ps = new PasswordStore();
+        ps.addPasswd(new Password("Fabian", mPassword));
         ps.save();
     }
 
@@ -132,7 +130,7 @@ public class Main extends Application {
 
     public void showDialog(Bar bar, int requestCode) throws IOException {
         FXMLLoader loader = new FXMLLoader();
-        loader.setLocation(Main.class.getResource("view/LayoutDialog.fxml"));
+        loader.setLocation(Main.class.getResource("view/LayoutDialogEdit.fxml"));
         AnchorPane dialog = loader.load();
 
         // creating the dialog stage
@@ -143,11 +141,11 @@ public class Main extends Application {
         dialogStage.setScene(scene);
         dialogStage.setTitle("Search-A-Bar");
 
-        mDialogController = loader.getController();
-        mDialogController.setDialogStage(dialogStage);
-        mDialogController.setMainApp(this);
-        mDialogController.setRequestCode(requestCode);
-        mDialogController.fillDialog(bar);
+        mDialogEditController = loader.getController();
+        mDialogEditController.setDialogStage(dialogStage);
+        mDialogEditController.setMainApp(this);
+        mDialogEditController.setRequestCode(requestCode);
+        mDialogEditController.fillDialog(bar);
 
         // Show the dialog and wait until the user closes it
         dialogStage.showAndWait();
