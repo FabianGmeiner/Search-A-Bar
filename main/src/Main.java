@@ -1,5 +1,6 @@
 //Created by Fabian on 18.05.15.
 
+import generificationUtil.PathFinder;
 import generificationUtil.logger.Logger;
 import generificationUtil.serializer.Deserializer;
 import generificationUtil.serializer.Serializer;
@@ -47,8 +48,8 @@ public class Main extends Application {
 
         /**Save/Load added by Daniel Knuettel*/
         if (Statics.isGraphSafed()) {
-            Logger.log(Logger.MSG, "Main:start(): graph is safed : loading from file " + Statics.defaultSave + "\n");
-            Deserializer deser = new Deserializer(Statics.defaultSave);
+            Logger.log(Logger.MSG, "Main:start(): graph is safed : loading from file " + PathFinder.getPrettyName(Statics.defaultSave) + "\n");
+            Deserializer deser = new Deserializer(PathFinder.getPrettyName(Statics.defaultSave));
             deser.readObjs();
             mGraph = (Graph) deser.getObject();
 
@@ -72,7 +73,7 @@ public class Main extends Application {
             ps.load();
             mPassword = ps.getPasswd("Fabian").getPasswd();
         } catch (Exception e) {
-            Logger.log(Logger.MSG, "Exception in Application-Start: password could not be loaded.");
+            Logger.log(Logger.MSG, "Exception in Application-Start: password could not be loaded." + e.toString() + "\n");
         }
         initialiseRootLayout();
     }
@@ -82,7 +83,7 @@ public class Main extends Application {
         super.stop();
         Logger.log(Logger.MSG, "Main:stop() called\n");
         /**added by Daniel Knuettel*/
-        Serializer ser = new Serializer(Statics.defaultSave);
+        Serializer ser = new Serializer(PathFinder.getPrettyName(Statics.defaultSave));
         ser.addObject(mGraph);
         ser.serialize();
         Logger.log(Logger.MSG, "Main:stop(): saving Graph\n");

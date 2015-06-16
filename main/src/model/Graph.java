@@ -121,6 +121,26 @@ public class Graph implements Serializable {
         return result;
     }
 
+    public Vector<Edge> getAllEdges() {
+        Vector<Edge> res = new Vector<>();
+        for (int i = 0; i < mEdges.size(); i++) {
+            res.add((Edge) mEdges.elementAt(i));
+        }
+        return res;
+    }
+
+    public Vector<Node> getAllNodes() {
+        Vector<Node> result = new Vector<>();
+        for (int i = 0; i < mNodes.size(); i++) {
+            result.add((Node) mNodes.elementAt(i));
+        }
+        return result;
+
+    }
+
+
+}
+
     public Vector<Bar> getBarsFilteredByStringSearch(String search) {
         Vector<Bar> result = new Vector<>();
         for (int i = 0; i < mNodes.size(); i++) {

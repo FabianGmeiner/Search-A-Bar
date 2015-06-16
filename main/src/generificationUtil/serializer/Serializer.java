@@ -14,10 +14,10 @@ import java.io.ObjectOutputStream;
 
 
 /**
- Class Serializer to store Objects,
- <b>you may not use it with unbuffered mode</b>
- but it is supportted,
- The Deserializer does not support unbuffered mode.
+ * Class Serializer to store Objects,
+ * <b>you may not use it with unbuffered mode</b>
+ * but it is supportted,
+ * The Deserializer does not support unbuffered mode.
  */
 public class Serializer {
     public final int queueMode = 1;
@@ -114,7 +114,7 @@ public class Serializer {
             }
         } catch (IOException e) {
             Logger.log(Logger.ERROR, "Serializer.serialize(): cannot write Object (implements it Serializable?)\n");
-            Logger.log(Logger.ERROR, e.toString());
+            Logger.log(Logger.ERROR, e.toString() + "\n");
         }
     }
 

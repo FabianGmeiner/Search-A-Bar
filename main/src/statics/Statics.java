@@ -17,7 +17,7 @@ public class Statics {
     /* edit by Daniel Knuettel: added __DEBUG*/
     public static final boolean __DEBUG = true;
     /*  edit by Daniel Knuettel: added useExternHome*/
-    public static final boolean useExternHome = true;
+    public static final boolean useExternHome = false;
 
 
     public static final int DIALOG_CODE_EDIT = 0;
