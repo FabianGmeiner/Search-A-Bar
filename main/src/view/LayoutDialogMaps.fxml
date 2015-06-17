@@ -13,7 +13,7 @@
         minHeight="-Infinity"
         minWidth="-Infinity"
         prefHeight="100.0"
-        prefWidth="360.0"
+        prefWidth="400.0"
         xmlns="http://javafx.com/javafx/8">
     <VBox
             layoutX="100.0"
@@ -88,7 +88,24 @@
                     onAction="#handleButtonCancel"
                     prefHeight="30.0"
                     prefWidth="130.0"
-                    text="Abbruch"/>
+                    text="Abbruch">
+                <HBox.margin>
+                    <Insets
+                            left="5.0"/>
+                </HBox.margin>
+            </Button>
+            <Button
+                    mnemonicParsing="false"
+                    onAction="#handleButtonDirect"
+                    prefHeight="30.0"
+                    prefWidth="130.0"
+                    text="Direktroute">
+                <HBox.margin>
+                    <Insets
+                            left="5.0"
+                            right="5.0"/>
+                </HBox.margin>
+            </Button>
             <Button
                     defaultButton="true"
                     mnemonicParsing="false"
@@ -98,7 +115,7 @@
                     text="Route berechnen">
                 <HBox.margin>
                     <Insets
-                            left="10.0"/>
+                            left="5.0"/>
                 </HBox.margin>
             </Button>
         </HBox>

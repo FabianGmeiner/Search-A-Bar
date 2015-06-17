@@ -16,8 +16,8 @@ public class Statics {
     public static final String defaultSave = "GraphDefault.ser";
     /* edit by Daniel Knuettel: added __DEBUG*/
     public static final boolean __DEBUG = true;
-	/*  edit by Daniel Knuettel: added useExternHome*/
-    public static final boolean useExternHome = true;
+    /*  edit by Daniel Knuettel: added useExternHome*/
+    public static final boolean useExternHome = false;
 
 
     public static final int DIALOG_CODE_EDIT = 0;
@@ -65,6 +65,7 @@ public class Statics {
             "Eher Club als \nTanzfabrik und schon \ndeshalb einen Besuch \nwert.",
             "suite15.de", "Suite15 \nAdolph-Kolping-Straße 5\n93047 Regensburg", 3,
             49.019134, 12.101690, 3.00, 16, 19));
+
     /**
      * Added by Daniel Knuettel
      */

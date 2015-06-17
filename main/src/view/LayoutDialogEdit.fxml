@@ -6,7 +6,7 @@
 <?import javafx.scene.layout.*?>
 <AnchorPane
         xmlns:fx="http://javafx.com/fxml/1"
-        fx:controller="DialogController"
+        fx:controller="DialogEditController"
         maxHeight="-Infinity"
         maxWidth="-Infinity"
         minHeight="-Infinity"

@@ -42,6 +42,7 @@ public class AdminController implements Initializable {
     private void handleButtonLogout() throws IOException {
         mMain.showMainPage();
     }
+
     @FXML
     private void handleButtonChangePassword() throws IOException {
         mMain.showDialogPassword();

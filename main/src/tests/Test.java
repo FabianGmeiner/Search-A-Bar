@@ -1,4 +1,4 @@
-package generificationUtil;
+package tests;
 
 import generificationUtil.logger.Logger;
 

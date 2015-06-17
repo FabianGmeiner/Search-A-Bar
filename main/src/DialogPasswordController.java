@@ -49,7 +49,8 @@ public class DialogPasswordController implements Initializable {
         warning.setOnCloseRequest(event -> warning.close());
         if (mDialogPasswordOld.getText().equals(Main.mPassword) && mDialogPasswordNew.getText().equals(mDialogPasswordConfirm.getText())) {
             Main.mPassword = mDialogPasswordNew.getText();
-            Logger.log(Logger.MSG, Main.mPassword);
+            /*TODO: entfernen*/
+            Logger.log(Logger.MSG, "new Password: " + Main.mPassword + "\n");
             mDialogStage.close();
         } else {
             warning.showAndWait();

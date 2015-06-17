@@ -12,7 +12,10 @@ public class Graph implements Serializable {
     public Vector<Node> mNodes = new Vector<>();
     public Vector<Edge> mEdges = new Vector<>();
     public int mSortMode = Statics.SORT_CODE_ALPHABETICAL;
+    public Vector<Bar> mSearchResult = new Vector<>();
+    public Vector<Bar> mBars = new Vector<>();
     private boolean done = false;
+    private double[][] adjazencyMatrix = null;
 
     public void setSortMode(int sortCode) {
         mSortMode = sortCode;
@@ -41,6 +44,7 @@ public class Graph implements Serializable {
                 }
             }
         }
+        System.out.println(adjMatrix);
         return adjMatrix;
     }
 
@@ -232,16 +236,47 @@ public class Graph implements Serializable {
         return result;
     }
 
-    public void depthSearch(Bar start) {
+    public Vector<Bar> depthSearch(Bar start) {
+        mNodes.elementAt(mBars.indexOf(start)).setCheckmark(true);
+        mSearchResult.add(start);
+        for (int i = 0; i < mNodes.size(); i++) {
+            if ((adjazencyMatrix[mBars.indexOf(start)][i] != Double.POSITIVE_INFINITY || adjazencyMatrix[i][mBars.indexOf(start)] != Double.POSITIVE_INFINITY)
+                    && !mNodes.elementAt(i).getCheckmark()) {
+                depthSearch(mBars.elementAt(i));
+            }
+        }
+        mSearchResult.add(start);
+        return mSearchResult;
     }
 
-    public void depthSearchDestination(Bar start, Bar end) {
+    public Vector<Bar> depthSearchDestination(Bar start, Bar end) {
+        mNodes.elementAt(mBars.indexOf(start)).setCheckmark(true);
+        mSearchResult.add(start);
+        if (!start.equals(end)) {
+            for (int i = 0; i < mNodes.size(); i++) {
+                if ((adjazencyMatrix[mBars.indexOf(start)][i] != Double.POSITIVE_INFINITY
+                        || adjazencyMatrix[i][mBars.indexOf(start)] != Double.POSITIVE_INFINITY)
+                        && !mNodes.elementAt(i).getCheckmark()) {
+                    if (!done) {
+                        depthSearchDestination(mBars.elementAt(i), end);
+                    }
+                }
+            }
+        } else {
+            done = true;
+        }
+        mSearchResult.add(start);
+        return mSearchResult;
     }
 
     public void initialiseGraph() {
+        done = false;
+        mSearchResult = new Vector<>();
         for (int i = 0; i < mNodes.size(); i++) {
             mNodes.elementAt(i).initialiseDepthSearch();
         }
+        adjazencyMatrix = getAdjacencyMatrix();
+        mBars = getAllBars();
     }
 
 }
