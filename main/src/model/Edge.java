@@ -20,4 +20,12 @@ public class Edge implements Serializable {
     public double getWeight() {
         return weight;
     }
+
+    public Node getA() {
+        return a;
+    }
+
+    public Node getB() {
+        return b;
+    }
 }
