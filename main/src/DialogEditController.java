@@ -1,6 +1,5 @@
 //Created by Fabian on 20.05.15.
 
-import javafx.beans.value.ObservableValue;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
@@ -53,13 +52,6 @@ public class DialogEditController implements Initializable {
         list.addAll(Statics.CATEGORYS);
         mDialogChoiceBoxCategory.setItems(list);
         mDialogChoiceBoxCategory.getSelectionModel().selectFirst();
-        mDialogChoiceBoxCategory.getSelectionModel().selectedItemProperty().addListener(
-                (ObservableValue observable, Object oldValue, Object newValue) -> changeCategory(newValue));
-    }
-
-    private void changeCategory(Object newValue) {
-        int index = list.indexOf(newValue);
-        bar.setCategory(index);
     }
 
     public void setMainApp(Main main) {

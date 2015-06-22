@@ -244,7 +244,23 @@ public class MainController implements Initializable {
 
     @FXML
     private void handleButtonTour() {
+        Bar selectedBar = (Bar) mScrollPane.getSelectionModel().getSelectedItem();
+        mMain.mGraph.initialiseGraph();
+        Vector<Bar> result = mMain.mGraph.depthSearch(selectedBar);
+        StringBuilder sb = new StringBuilder();
+        sb.append("www.google.de/maps/dir/");
+        for (int i = 0; i < result.size(); i++) {
+            if (i == result.size() - 1) {
+                sb.append(result.elementAt(i).getmGpsLatitude() + "," + result.elementAt(i).getmGpsLongitude() + "/");
+            } else if (!result.elementAt(i).equals(result.elementAt(i + 1))) {
+                sb.append(result.elementAt(i).getmGpsLatitude() + "," + result.elementAt(i).getmGpsLongitude() + "/");
+            }
+        }
+        String url = sb.toString();
 
+        WebController controller = new WebController();
+        controller.setMainApp(mMain);
+        controller.openLink(url);
     }
 
     private void setListItems(Vector<Bar> items) {

@@ -56,6 +56,13 @@ public class Main extends Application {
             if (mGraph == null) {
                 Logger.log(Logger.WARN, "Main:start(): graph is safed :but cannot loaded from file: using hard coded version \n");
                 mGraph = new Graph();
+                mGraph.addNode(Statics.node1);
+                mGraph.addNode(Statics.node2);
+                mGraph.addNode(Statics.node3);
+                mGraph.addNode(Statics.node4);
+                mGraph.addNode(Statics.node5);
+                mGraph.addNode(Statics.node6);
+                mGraph.addNode(Statics.node7);
                 mGraph.printNodes();
                 mGraph.printEdges();
 
@@ -64,6 +71,13 @@ public class Main extends Application {
         } else {
             Logger.log(Logger.MSG, "Main:start(): graph is not safed : using hard coded Version.\n");
             mGraph = new Graph();
+            mGraph.addNode(Statics.node1);
+            mGraph.addNode(Statics.node2);
+            mGraph.addNode(Statics.node3);
+            mGraph.addNode(Statics.node4);
+            mGraph.addNode(Statics.node5);
+            mGraph.addNode(Statics.node6);
+            mGraph.addNode(Statics.node7);
             mGraph.printNodes();
             mGraph.printEdges();
         }

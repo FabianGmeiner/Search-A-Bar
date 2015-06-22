@@ -9,6 +9,7 @@ import utils.GPSService;
 
 import java.net.URL;
 import java.util.ResourceBundle;
+import java.util.Vector;
 
 public class DialogMapsController implements Initializable {
 
@@ -55,6 +56,43 @@ public class DialogMapsController implements Initializable {
 
     @FXML
     private void handleButtonOK() {
+        /*
+        String lat1 = mBar.getmGpsLatitude() + "";
+        String long1 = mBar.getmGpsLongitude() + "";
+        String lat2 = mDestination.getmGpsLatitude() + "";
+        String long2 = mDestination.getmGpsLongitude() + "";
+        String googleMapsUrl = "google.de/maps/dir/" + lat1 + "," + long1 + "/" + lat2 + "," + long2;
+        */
+
+        mMain.mGraph.initialiseGraph();
+        Vector<Bar> dirtyResult = mMain.mGraph.depthSearchDestination(mBar, mDestination);
+        Vector<Bar> result = new Vector<>();
+        for (int i = 0; i < dirtyResult.size(); i++) {
+            if (!result.contains(dirtyResult.elementAt(i))) {
+                result.add(dirtyResult.elementAt(i));
+            }
+        }
+        StringBuilder sb = new StringBuilder();
+        sb.append("www.google.de/maps/dir/");
+        for (int i = 0; i < result.size(); i++) {
+            if (i == result.size() - 1) {
+                sb.append(result.elementAt(i).getmGpsLatitude() + "," + result.elementAt(i).getmGpsLongitude() + "/");
+            } else if (!result.elementAt(i).equals(result.elementAt(i + 1))) {
+                sb.append(result.elementAt(i).getmGpsLatitude() + "," + result.elementAt(i).getmGpsLongitude() + "/");
+            }
+        }
+        String url = sb.toString();
+        System.out.println(url);
+        System.out.println(result);
+        WebController controller = new WebController();
+        controller.setMainApp(this.mMain);
+        controller.openLink(url);
+        mDialogStage.close();
+    }
+
+    @FXML
+    private void handleButtonDirect() {
+
         String lat1 = mBar.getmGpsLatitude() + "";
         String long1 = mBar.getmGpsLongitude() + "";
         String lat2 = mDestination.getmGpsLatitude() + "";
@@ -65,7 +103,6 @@ public class DialogMapsController implements Initializable {
         controller.setMainApp(this.mMain);
         controller.openLink(googleMapsUrl);
         mDialogStage.close();
-
     }
 
     @FXML
