@@ -135,7 +135,7 @@ public class Serializer {
         try {
             len = objs.length;
         } catch (Exception e) {
-            Logger.log(Logger.ERROR, e.toString());
+            Logger.log(Logger.ERROR, e.toString() + "\n");
             return;
         }
         for (int i = 0; i < len; i++) {

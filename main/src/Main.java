@@ -1,5 +1,6 @@
 //Created by Fabian on 18.05.15.
 
+import dijkstra.DijkstraHelperGraph;
 import generificationUtil.PathFinder;
 import generificationUtil.logger.Logger;
 import generificationUtil.serializer.Deserializer;
@@ -32,6 +33,7 @@ public class Main extends Application {
     public static String mPassword = Statics.ADMIN_PASSWORD;
     protected BorderPane rootLayout;
     private Stage primaryStage;
+    private boolean graphPresent = false;
 
     public static void main(String[] args) {
         launch(args);
@@ -52,6 +54,7 @@ public class Main extends Application {
             Deserializer deser = new Deserializer(PathFinder.getPrettyName(Statics.defaultSave));
             deser.readObjs();
             mGraph = (Graph) deser.getObject();
+            graphPresent = true;
 
             if (mGraph == null) {
                 Logger.log(Logger.WARN, "Main:start(): graph is safed :but cannot loaded from file: using hard coded version \n");
@@ -75,7 +78,15 @@ public class Main extends Application {
         } catch (Exception e) {
             Logger.log(Logger.MSG, "Exception in Application-Start: password could not be loaded." + e.toString() + "\n");
         }
+
+
+        if (graphPresent) {
+            DijkstraHelperGraph g = new DijkstraHelperGraph();
+            g.build(mGraph);
+            g.dijkstraSearch("Bar1", "Bar2");
+        }
         initialiseRootLayout();
+
     }
 
     @Override

@@ -1,5 +1,6 @@
 //Created by Fabian on 20.05.15.
 
+import generificationUtil.logger.Logger;
 import javafx.beans.value.ObservableValue;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -58,8 +59,12 @@ public class DialogEditController implements Initializable {
     }
 
     private void changeCategory(Object newValue) {
-        int index = list.indexOf(newValue);
-        bar.setCategory(index);
+        try {
+            int index = list.indexOf(newValue);
+            bar.setCategory(index);
+        } catch (Exception e) {
+            Logger.log(Logger.ERROR, e.toString() + "\n");
+        }
     }
 
     public void setMainApp(Main main) {
