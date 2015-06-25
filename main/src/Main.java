@@ -1,5 +1,7 @@
-//Created by Fabian Gmeiner on 18.05.15.
+//Created by Fabian on 18.05.15.
 
+import dijkstra.DijkstraHelperGraph;
+import generificationUtil.PathFinder;
 import generificationUtil.logger.Logger;
 import generificationUtil.serializer.Deserializer;
 import generificationUtil.serializer.Serializer;
@@ -31,37 +33,32 @@ public class Main extends Application {
     public static String mPassword = Statics.ADMIN_PASSWORD;
     protected BorderPane rootLayout;
     private Stage primaryStage;
+    private boolean graphPresent = false;
 
-    // main-method
     public static void main(String[] args) {
         launch(args);
     }
 
-    @Override // method thats called within the launch(args) method of the Application class
+    @Override
     public void start(Stage primaryStage) throws Exception {
         Logger.clearFiles();
         Logger.log(Logger.MSG, "Main:start() running\n");
+
 
         this.primaryStage = primaryStage;
         this.primaryStage.setTitle("Search-A-Bar");
 
         /**Save/Load added by Daniel Knuettel*/
         if (Statics.isGraphSafed()) {
-            Logger.log(Logger.MSG, "Main:start(): graph is safed : loading from file " + Statics.defaultSave + "\n");
-            Deserializer deser = new Deserializer(Statics.defaultSave);
+            Logger.log(Logger.MSG, "Main:start(): graph is safed : loading from file " + PathFinder.getPrettyName(Statics.defaultSave) + "\n");
+            Deserializer deser = new Deserializer(PathFinder.getPrettyName(Statics.defaultSave));
             deser.readObjs();
             mGraph = (Graph) deser.getObject();
+            graphPresent = true;
 
             if (mGraph == null) {
                 Logger.log(Logger.WARN, "Main:start(): graph is safed :but cannot loaded from file: using hard coded version \n");
                 mGraph = new Graph();
-                mGraph.addNode(Statics.node1);
-                mGraph.addNode(Statics.node2);
-                mGraph.addNode(Statics.node3);
-                mGraph.addNode(Statics.node4);
-                mGraph.addNode(Statics.node5);
-                mGraph.addNode(Statics.node6);
-                mGraph.addNode(Statics.node7);
                 mGraph.printNodes();
                 mGraph.printEdges();
 
@@ -70,13 +67,6 @@ public class Main extends Application {
         } else {
             Logger.log(Logger.MSG, "Main:start(): graph is not safed : using hard coded Version.\n");
             mGraph = new Graph();
-            mGraph.addNode(Statics.node1);
-            mGraph.addNode(Statics.node2);
-            mGraph.addNode(Statics.node3);
-            mGraph.addNode(Statics.node4);
-            mGraph.addNode(Statics.node5);
-            mGraph.addNode(Statics.node6);
-            mGraph.addNode(Statics.node7);
             mGraph.printNodes();
             mGraph.printEdges();
         }
@@ -86,9 +76,17 @@ public class Main extends Application {
             ps.load();
             mPassword = ps.getPasswd("Fabian").getPasswd();
         } catch (Exception e) {
-            Logger.log(Logger.MSG, "Exception in Application-Start: password could not be loaded.");
+            Logger.log(Logger.MSG, "Exception in Application-Start: password could not be loaded." + e.toString() + "\n");
+        }
+
+
+        if (graphPresent) {
+            DijkstraHelperGraph g = new DijkstraHelperGraph();
+            g.build(mGraph);
+            g.dijkstraSearch("Bar1", "Maxis Club");
         }
         initialiseRootLayout();
+
     }
 
     @Override
@@ -96,7 +94,7 @@ public class Main extends Application {
         super.stop();
         Logger.log(Logger.MSG, "Main:stop() called\n");
         /**added by Daniel Knuettel*/
-        Serializer ser = new Serializer(Statics.defaultSave);
+        Serializer ser = new Serializer(PathFinder.getPrettyName(Statics.defaultSave));
         ser.addObject(mGraph);
         ser.serialize();
         Logger.log(Logger.MSG, "Main:stop(): saving Graph\n");
@@ -106,7 +104,6 @@ public class Main extends Application {
         ps.save();
     }
 
-    // method to initialize the root
     private void initialiseRootLayout() throws IOException {
         FXMLLoader loader = new FXMLLoader();
         loader.setLocation(Main.class.getResource("view/LayoutRoot.fxml"));
@@ -118,12 +115,10 @@ public class Main extends Application {
         showMainPage();
     }
 
-    // method needed to display dialogs
     public Stage getPrimaryStage() {
         return primaryStage;
     }
 
-    // methods used to switch between the different pages
     public void showMainPage() throws IOException {
         FXMLLoader loader = new FXMLLoader();
 
@@ -134,6 +129,7 @@ public class Main extends Application {
         mMainController = loader.getController();
         mMainController.setMainApp(this);
     }
+
     public void showAdminPage() throws IOException {
         FXMLLoader loader = new FXMLLoader();
         loader.setLocation(Main.class.getResource("view/LayoutAdmin.fxml"));
@@ -143,6 +139,7 @@ public class Main extends Application {
         mAdminController = loader.getController();
         mAdminController.setMainApp(this);
     }
+
     public void showDialog(Bar bar, int requestCode) throws IOException {
         FXMLLoader loader = new FXMLLoader();
         loader.setLocation(Main.class.getResource("view/LayoutDialogEdit.fxml"));
@@ -165,6 +162,7 @@ public class Main extends Application {
         // Show the dialog and wait until the user closes it
         dialogStage.showAndWait();
     }
+
     public void showDialogRoute(Bar bar) throws IOException {
         FXMLLoader loader = new FXMLLoader();
         loader.setLocation(Main.class.getResource("view/LayoutDialogRoute.fxml"));
@@ -186,6 +184,7 @@ public class Main extends Application {
         // Show the dialog and wait until the user closes it
         dialogStage.showAndWait();
     }
+
     public void showDialogPassword() throws IOException {
         FXMLLoader loader = new FXMLLoader();
         loader.setLocation(Main.class.getResource("view/LayoutDialogPassword.fxml"));
@@ -206,6 +205,7 @@ public class Main extends Application {
         // Show the dialog and wait until the user closes it
         dialogStage.showAndWait();
     }
+
     public void showDialogMaps(Bar bar, Bar destination) throws IOException {
         FXMLLoader loader = new FXMLLoader();
         loader.setLocation(Main.class.getResource("view/LayoutDialogMaps.fxml"));

@@ -34,12 +34,12 @@ public class XKey
     }
 
     public static byte increment(byte toIncrement, byte speed) {
-        Logger.log(Logger.DEBUG, "XKey:increment(" + toIncrement + "," + speed + "): raw= " + (toIncrement + speed) + "\n");
+        //Logger.log(Logger.DEBUG, "XKey:increment(" + toIncrement + "," + speed + "): raw= " + (toIncrement + speed) + "\n");
         if ((toIncrement + speed) > 7) {
-            Logger.log(Logger.DEBUG, "XKey:increment():returning " + ((toIncrement + speed) - 7) + "\n");
+           // Logger.log(Logger.DEBUG, "XKey:increment():returning " + ((toIncrement + speed) - 7) + "\n");
             return (byte) ((toIncrement + speed) - 7);
         }
-        Logger.log(Logger.DEBUG, "XKey:increment():returning " + ((toIncrement + speed)) + "\n");
+        //Logger.log(Logger.DEBUG, "XKey:increment():returning " + ((toIncrement + speed)) + "\n");
         return (byte) (toIncrement + speed);
 
 
