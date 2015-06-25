@@ -1,4 +1,4 @@
-//Created by Fabian on 31.05.15.
+//Created by Fabian Gmeiner on 31.05.15.
 
 import javafx.beans.value.ObservableValue;
 import javafx.collections.FXCollections;
@@ -14,7 +14,6 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-@SuppressWarnings("unchecked")
 public class DialogRouteController implements Initializable {
 
     @FXML
@@ -29,25 +28,22 @@ public class DialogRouteController implements Initializable {
     private Main mMain;
     private Stage mDialogStage;
 
+    @Override // method called after the constructor
+    public void initialize(URL location, ResourceBundle resources) {
+    }
+
     public void setMain(Main main) {
         mMain = main;
     }
-
     public void setDialogStage(Stage dialogStage) {
         mDialogStage = dialogStage;
     }
-
     public void setBar(Bar bar) {
         mBar = bar;
         setListItems();
     }
 
-
-    @Override
-    public void initialize(URL location, ResourceBundle resources) {
-
-    }
-
+    // method to refresh the listView
     private void setListItems() {
         ObservableList<Bar> bars = FXCollections.observableArrayList();
         bars.addAll(Main.mGraph.getAllBars());
@@ -59,16 +55,17 @@ public class DialogRouteController implements Initializable {
         mDialogRouteButtonOK.setDisable(true);
     }
 
+    // method to handle selection-changes
     private void handleSelection(Object newValue) {
         mDestination = (Bar) newValue;
         mDialogRouteButtonOK.setDisable(false);
     }
 
+    // methods to handle the buttons
     @FXML
     private void handleButtonCancel() {
         mDialogStage.close();
     }
-
     @FXML
     private void handleButtonOK() throws IOException {
         mMain.showDialogMaps(mBar, mDestination);

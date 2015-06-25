@@ -1,4 +1,4 @@
-//Created by Fabian on 20.05.15.
+//Created by Fabian Gmeiner on 20.05.15.
 
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
@@ -17,7 +17,7 @@ public class WebController implements Initializable {
     private WebView mWebView;
     private Main mMain;
 
-    @Override
+    @Override // method called after the constructor
     public void initialize(URL location, ResourceBundle resources) {
     }
 
@@ -25,6 +25,7 @@ public class WebController implements Initializable {
         this.mMain = main;
     }
 
+    // method to show the webView and display a webPage
     public void openLink(String url) {
         FXMLLoader loader = new FXMLLoader();
         loader.setLocation(Main.class.getResource("view/LayoutWeb.fxml"));

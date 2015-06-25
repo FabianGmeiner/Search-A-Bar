@@ -1,6 +1,5 @@
-//Created by Fabian on 31.05.15.
+//Created by Fabian Gmeiner on 31.05.15.
 
-import generificationUtil.logger.Logger;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Alert;
@@ -29,34 +28,36 @@ public class DialogPasswordController implements Initializable {
     private Main mMain;
     private Stage mDialogStage;
 
-    @Override
+    @Override // method called after the constructor
     public void initialize(URL location, ResourceBundle resources) {
     }
 
     public void setMain(Main main) {
         mMain = main;
     }
-
     public void setDialogStage(Stage dialogStage) {
         mDialogStage = dialogStage;
     }
 
+    // methods to handle the buttons
     @FXML
     private void handleButtonOK() {
+
         Dialog warning = new Alert(Alert.AlertType.WARNING);
         warning.setHeaderText("Falsche Eingabe !");
         warning.setContentText("Bitte Ueberpruefen Sie ihre Eingabe !");
         warning.setOnCloseRequest(event -> warning.close());
-        if (mDialogPasswordOld.getText().equals(Main.mPassword) && mDialogPasswordNew.getText().equals(mDialogPasswordConfirm.getText())) {
+
+        if (mDialogPasswordOld.getText().equals(Main.mPassword)
+                && mDialogPasswordNew.getText().equals(mDialogPasswordConfirm.getText())) {
+
             Main.mPassword = mDialogPasswordNew.getText();
-            /*TODO: entfernen*/
-            Logger.log(Logger.MSG, "new Password: " + Main.mPassword + "\n");
             mDialogStage.close();
+
         } else {
             warning.showAndWait();
         }
     }
-
     @FXML
     private void handleButtonCancel() {
         mDialogStage.close();

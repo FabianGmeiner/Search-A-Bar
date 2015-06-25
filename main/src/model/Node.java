@@ -1,7 +1,10 @@
-//Created by Fabian on 22.05.15.
+//Created by Fabian Gmeiner on 22.05.15.
+
 package model;
 
 import java.io.Serializable;
+
+// simple class used as nodes for the graph to allow for universal useablility
 
 public class Node implements Serializable {
     private Object mContent;
@@ -10,7 +13,6 @@ public class Node implements Serializable {
     public Node(Object content) {
         mContent = content;
     }
-
     public Object getContent() {
         return mContent;
     }
@@ -18,12 +20,10 @@ public class Node implements Serializable {
     public boolean getCheckmark() {
         return checkmark;
     }
-
     public void setCheckmark(boolean value) {
         checkmark = value;
     }
 
     public void initialiseDepthSearch() {
-
     }
 }

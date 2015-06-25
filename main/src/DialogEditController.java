@@ -1,4 +1,4 @@
-//Created by Fabian on 20.05.15.
+//Created by Fabian Gmeiner on 20.05.15.
 
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -15,8 +15,6 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
-
-@SuppressWarnings("unchecked")
 public class DialogEditController implements Initializable {
 
     // the FXML-Annotation allows JavaFX to inject the views based on their fx:id
@@ -43,14 +41,14 @@ public class DialogEditController implements Initializable {
 
     private Main mMain;
     private Stage mDialogStage;
-    private Bar bar = null;
-    private int requestCode;
-    private ObservableList list = FXCollections.observableArrayList();
+    private Bar mBar = null;
+    private int mRequestCode;
+    private ObservableList mList = FXCollections.observableArrayList();
 
-    @Override
+    @Override // method called after the constructor, views are injected
     public void initialize(URL location, ResourceBundle resources) {
-        list.addAll(Statics.CATEGORYS);
-        mDialogChoiceBoxCategory.setItems(list);
+        mList.addAll(Statics.CATEGORYS);
+        mDialogChoiceBoxCategory.setItems(mList);
         mDialogChoiceBoxCategory.getSelectionModel().selectFirst();
     }
 
@@ -58,9 +56,18 @@ public class DialogEditController implements Initializable {
         this.mMain = main;
     }
 
+    public void setDialogStage(Stage dialogStage) {
+        this.mDialogStage = dialogStage;
+    }
+
+    public void setRequestCode(int requestCode) {
+        this.mRequestCode = requestCode;
+    }
+
+    // fills the textFields with informations from the bar (can be empty)
     public void fillDialog(Bar bar) {
         if (bar != null) {
-            this.bar = bar;
+            this.mBar = bar;
             mDialogTextFieldName.setText(bar.getmName());
             mDialogTextFieldDescription.setText(bar.getmDescription());
             mDialogTextFieldUrl.setText(bar.getmUrl());
@@ -74,19 +81,11 @@ public class DialogEditController implements Initializable {
         }
     }
 
-    public void setDialogStage(Stage dialogStage) {
-        this.mDialogStage = dialogStage;
-    }
-
-    public void setRequestCode(int requestCode) {
-        this.requestCode = requestCode;
-    }
-
+    // methods to handle the buttons
     @FXML
     private void handleButtonCancel() {
         mDialogStage.close();
     }
-
     @FXML
     private void handleButtonSave() throws IOException {
         Dialog dialog = new Alert(Alert.AlertType.WARNING);
@@ -94,7 +93,8 @@ public class DialogEditController implements Initializable {
         dialog.setHeaderText("Achtung !");
         dialog.setContentText("Bitte geben sie gültige Werte ein.");
         dialog.setOnCloseRequest(event -> dialog.close());
-        if (requestCode == Statics.DIALOG_CODE_EDIT) {
+        // bar already exists
+        if (mRequestCode == Statics.DIALOG_CODE_EDIT) {
             if (!ValidInputCheck.isValidInput(mDialogTextFieldAvg.getText(), Statics.VALID_CODE_INT)) {
                 mDialogTextFieldAvg.clear();
                 mDialogTextFieldAvg.setPromptText("Gültigen Wert eingeben !");
@@ -116,24 +116,24 @@ public class DialogEditController implements Initializable {
                 mDialogTextFieldLong.setPromptText("Gültigen Wert eingeben !");
                 dialog.show();
             } else {
-                bar.setName(mDialogTextFieldName.getText());
-                bar.setDescription(mDialogTextFieldDescription.getText());
-                bar.setUrl(mDialogTextFieldUrl.getText());
-                bar.setAdress(mDialogTextFieldAdress.getText());
-                bar.setPrice(Double.parseDouble(mDialogTextFieldPrice.getText()));
-                bar.setAgeRestriction(Integer.parseInt(mDialogTextFieldRestriction.getText()));
-                bar.setAverageAge(Integer.parseInt(mDialogTextFieldAvg.getText()));
-                bar.setGpsLatitude(Double.parseDouble(mDialogTextFieldLat.getText()));
-                bar.setGpsLongitude(Double.parseDouble(mDialogTextFieldLong.getText()));
-                bar.setCategory(mDialogChoiceBoxCategory.getSelectionModel().getSelectedIndex());
-
-                printGraphContent();
+                mBar.setName(mDialogTextFieldName.getText());
+                mBar.setDescription(mDialogTextFieldDescription.getText());
+                mBar.setUrl(mDialogTextFieldUrl.getText());
+                mBar.setAdress(mDialogTextFieldAdress.getText());
+                mBar.setPrice(Double.parseDouble(mDialogTextFieldPrice.getText()));
+                mBar.setAgeRestriction(Integer.parseInt(mDialogTextFieldRestriction.getText()));
+                mBar.setAverageAge(Integer.parseInt(mDialogTextFieldAvg.getText()));
+                mBar.setGpsLatitude(Double.parseDouble(mDialogTextFieldLat.getText()));
+                mBar.setGpsLongitude(Double.parseDouble(mDialogTextFieldLong.getText()));
+                mBar.setCategory(mDialogChoiceBoxCategory.getSelectionModel().getSelectedIndex());
 
                 mMain.showAdminPage();
                 mDialogStage.close();
             }
 
-        } else if (requestCode == Statics.DIALOG_CODE_NEW) {
+        }
+        // the bar has to be created first
+        else if (mRequestCode == Statics.DIALOG_CODE_NEW) {
             if (!ValidInputCheck.isValidInput(mDialogTextFieldAvg.getText(), Statics.VALID_CODE_INT)) {
                 mDialogTextFieldAvg.clear();
                 mDialogTextFieldAvg.setPromptText("Gültigen Wert eingeben !");
@@ -155,7 +155,7 @@ public class DialogEditController implements Initializable {
                 mDialogTextFieldLong.setPromptText("Gültigen Wert eingeben !");
                 dialog.show();
             } else {
-                bar = new Bar(
+                mBar = new Bar(
                         mDialogTextFieldName.getText(),
                         mDialogTextFieldDescription.getText(),
                         mDialogTextFieldUrl.getText(),
@@ -167,19 +167,11 @@ public class DialogEditController implements Initializable {
                         Integer.parseInt(mDialogTextFieldRestriction.getText()),
                         Integer.parseInt(mDialogTextFieldAvg.getText()));
 
-                Main.mGraph.addNode(new Node(bar));
+                Main.mGraph.addNode(new Node(mBar));
 
-                printGraphContent();
                 mMain.showAdminPage();
                 mDialogStage.close();
             }
-
         }
     }
-
-    private void printGraphContent() {
-        System.out.println(Main.mGraph.mNodes);
-        System.out.println(Main.mGraph.mEdges);
-    }
-
 }

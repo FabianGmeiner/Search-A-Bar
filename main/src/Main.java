@@ -1,4 +1,4 @@
-//Created by Fabian on 18.05.15.
+//Created by Fabian Gmeiner on 18.05.15.
 
 import generificationUtil.logger.Logger;
 import generificationUtil.serializer.Deserializer;
@@ -32,15 +32,15 @@ public class Main extends Application {
     protected BorderPane rootLayout;
     private Stage primaryStage;
 
+    // main-method
     public static void main(String[] args) {
         launch(args);
     }
 
-    @Override
+    @Override // method thats called within the launch(args) method of the Application class
     public void start(Stage primaryStage) throws Exception {
         Logger.clearFiles();
         Logger.log(Logger.MSG, "Main:start() running\n");
-
 
         this.primaryStage = primaryStage;
         this.primaryStage.setTitle("Search-A-Bar");
@@ -106,6 +106,7 @@ public class Main extends Application {
         ps.save();
     }
 
+    // method to initialize the root
     private void initialiseRootLayout() throws IOException {
         FXMLLoader loader = new FXMLLoader();
         loader.setLocation(Main.class.getResource("view/LayoutRoot.fxml"));
@@ -117,10 +118,12 @@ public class Main extends Application {
         showMainPage();
     }
 
+    // method needed to display dialogs
     public Stage getPrimaryStage() {
         return primaryStage;
     }
 
+    // methods used to switch between the different pages
     public void showMainPage() throws IOException {
         FXMLLoader loader = new FXMLLoader();
 
@@ -131,7 +134,6 @@ public class Main extends Application {
         mMainController = loader.getController();
         mMainController.setMainApp(this);
     }
-
     public void showAdminPage() throws IOException {
         FXMLLoader loader = new FXMLLoader();
         loader.setLocation(Main.class.getResource("view/LayoutAdmin.fxml"));
@@ -141,7 +143,6 @@ public class Main extends Application {
         mAdminController = loader.getController();
         mAdminController.setMainApp(this);
     }
-
     public void showDialog(Bar bar, int requestCode) throws IOException {
         FXMLLoader loader = new FXMLLoader();
         loader.setLocation(Main.class.getResource("view/LayoutDialogEdit.fxml"));
@@ -164,7 +165,6 @@ public class Main extends Application {
         // Show the dialog and wait until the user closes it
         dialogStage.showAndWait();
     }
-
     public void showDialogRoute(Bar bar) throws IOException {
         FXMLLoader loader = new FXMLLoader();
         loader.setLocation(Main.class.getResource("view/LayoutDialogRoute.fxml"));
@@ -186,7 +186,6 @@ public class Main extends Application {
         // Show the dialog and wait until the user closes it
         dialogStage.showAndWait();
     }
-
     public void showDialogPassword() throws IOException {
         FXMLLoader loader = new FXMLLoader();
         loader.setLocation(Main.class.getResource("view/LayoutDialogPassword.fxml"));
@@ -207,7 +206,6 @@ public class Main extends Application {
         // Show the dialog and wait until the user closes it
         dialogStage.showAndWait();
     }
-
     public void showDialogMaps(Bar bar, Bar destination) throws IOException {
         FXMLLoader loader = new FXMLLoader();
         loader.setLocation(Main.class.getResource("view/LayoutDialogMaps.fxml"));

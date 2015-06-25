@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<!--Created by Fabian Gmeiner-->
+
 <?import javafx.geometry.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
@@ -10,12 +12,12 @@
         minHeight="0"
         minWidth="0"
         prefHeight="500.0"
-        prefWidth="600.0"
+        prefWidth="700.0"
         xmlns="http://javafx.com/javafx/8"
         fx:controller="MainController">
     <BorderPane
             prefHeight="500.0"
-            prefWidth="600.0"
+            prefWidth="650.0"
             AnchorPane.bottomAnchor="0.0"
             AnchorPane.leftAnchor="0.0"
             AnchorPane.rightAnchor="0.0"
@@ -53,7 +55,7 @@
                         minHeight="0"
                         minWidth="0"
                         prefHeight="25.0"
-                        prefWidth="470"
+                        prefWidth="545"
                         promptText="Suchbegriff eingeben">
                     <HBox.margin>
                         <Insets
@@ -70,7 +72,7 @@
                         minHeight="0"
                         minWidth="0"
                         prefHeight="25.0"
-                        prefWidth="470"
+                        prefWidth="545"
                         promptText="Passwort eingeben">
                     <HBox.margin>
                         <Insets
@@ -86,7 +88,7 @@
                         mnemonicParsing="false"
                         onAction="#handleButtonSearch"
                         prefHeight="25.0"
-                        prefWidth="100"
+                        prefWidth="125.0"
                         text="Suche">
                     <HBox.margin>
                         <Insets
@@ -130,7 +132,7 @@
                             maxWidth="Infinity"
                             onAction="#handleLinkClicked"
                             prefHeight="20.0"
-                            prefWidth="240.0"
+                            prefWidth="250.0"
                             textFill="#3b2d75"/>
                 </VBox>
                 <Separator
@@ -139,7 +141,7 @@
                         fx:id="mAdress"
                         alignment="TOP_LEFT"
                         prefHeight="100.0"
-                        prefWidth="180.0">
+                        prefWidth="250.0">
                     <HBox.margin>
                         <Insets
                                 bottom="5.0"
@@ -153,14 +155,14 @@
                 <VBox
                         alignment="CENTER_RIGHT"
                         prefHeight="100.0"
-                        prefWidth="175.0">
+                        prefWidth="200.0">
                     <Button
                             fx:id="mButtonCalculateRoute"
                             disable="true"
                             mnemonicParsing="false"
                             onAction="#handleButtonRoute"
                             prefHeight="30.0"
-                            prefWidth="150.0"
+                            prefWidth="180.0"
                             text="Distanz Berechnen">
                         <VBox.margin>
                             <Insets
@@ -172,7 +174,7 @@
                             mnemonicParsing="false"
                             onAction="#handleButtonTour"
                             prefHeight="30.0"
-                            prefWidth="150.0"
+                            prefWidth="180.0"
                             text="Tour planen"/>
                 </VBox>
             </HBox>
@@ -180,11 +182,11 @@
         <left>
             <VBox
                     prefHeight="300.0"
-                    prefWidth="100.0"
+                    prefWidth="150.0"
                     BorderPane.alignment="CENTER">
                 <Label
                         prefHeight="30.0"
-                        prefWidth="100.0"
+                        prefWidth="150.0"
                         text="Filter :">
                     <VBox.margin>
                         <Insets
@@ -195,7 +197,7 @@
                 <ChoiceBox
                         fx:id="mFilter1"
                         prefHeight="30.0"
-                        prefWidth="100.0">
+                        prefWidth="150.0">
                     <VBox.margin>
                         <Insets
                                 bottom="10.0"/>
@@ -204,7 +206,7 @@
                 <ChoiceBox
                         fx:id="mFilter2"
                         prefHeight="30.0"
-                        prefWidth="100.0">
+                        prefWidth="150.0">
                     <VBox.margin>
                         <Insets
                                 bottom="10.0"/>
@@ -213,7 +215,7 @@
                 <ChoiceBox
                         fx:id="mFilter3"
                         prefHeight="30.0"
-                        prefWidth="100.0">
+                        prefWidth="165.0">
                     <VBox.margin>
                         <Insets
                                 bottom="10.0"/>
@@ -222,7 +224,7 @@
                 <ChoiceBox
                         fx:id="mFilter4"
                         prefHeight="30.0"
-                        prefWidth="100.0">
+                        prefWidth="150.0">
                     <VBox.margin>
                         <Insets
                                 bottom="10.0"/>
@@ -254,7 +256,7 @@
                         mnemonicParsing="false"
                         onAction="#handleToggleButtonAlphabetic"
                         prefHeight="30.0"
-                        prefWidth="100.0"
+                        prefWidth="125.0"
                         text="Alphabetisch">
                     <VBox.margin>
                         <Insets
@@ -267,7 +269,7 @@
                         mnemonicParsing="false"
                         onAction="#handleToggleButtonPopular"
                         prefHeight="30.0"
-                        prefWidth="100.0"
+                        prefWidth="125.0"
                         text="Beliebtheit">
                     <VBox.margin>
                         <Insets
@@ -280,7 +282,7 @@
                         mnemonicParsing="false"
                         onAction="#handleToggleButtonPrice"
                         prefHeight="30.0"
-                        prefWidth="100.0"
+                        prefWidth="125.0"
                         text="Preis">
                     <VBox.margin>
                         <Insets

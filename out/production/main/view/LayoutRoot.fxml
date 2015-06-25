@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<!--Created by Fabian Gmeiner-->
+
 <?import javafx.scene.layout.BorderPane?>
 <BorderPane
         prefHeight="500.0"
-        prefWidth="600.0"
+        prefWidth="700.0"
         xmlns="http://javafx.com/javafx/8"/>

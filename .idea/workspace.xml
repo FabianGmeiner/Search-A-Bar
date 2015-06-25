@@ -2,66 +2,58 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="89450010-f8a5-4de3-bf30-7ac7a9e9e64b" name="Default" comment="added mask for textfield when entering a password;&#10;moved GraphSer.ser to local directory (in-project) for testing purpose.">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/main/src/password/Password.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/main/src/password/PasswordStore.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/main/src/encryption/XKey.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/main/src/encryption/XKeys.java" />
-      <change type="DELETED" beforePath="E:\Privat\IDEA\GitHub\Search-A-Bar\GraphDefault.ser" afterPath="" />
-      <change type="DELETED" beforePath="E:\Privat\IDEA\GitHub\Search-A-Bar\main\src\dataCollection\DataScan.java" afterPath="" />
-      <change type="DELETED" beforePath="E:\Privat\IDEA\GitHub\Search-A-Bar\main\src\dataCollection\DataScanFirefox.java" afterPath="" />
-      <change type="DELETED" beforePath="E:\Privat\IDEA\GitHub\Search-A-Bar\main\src\generalUtil\OsDetector.java" afterPath="" />
-      <change type="DELETED" beforePath="E:\Privat\IDEA\GitHub\Search-A-Bar\main\src\generalUtil\PathFinder.java" afterPath="" />
-      <change type="DELETED" beforePath="E:\Privat\IDEA\GitHub\Search-A-Bar\main\src\generalUtil\list\AbstractNode.java" afterPath="" />
-      <change type="DELETED" beforePath="E:\Privat\IDEA\GitHub\Search-A-Bar\main\src\generalUtil\list\List.java" afterPath="" />
-      <change type="DELETED" beforePath="E:\Privat\IDEA\GitHub\Search-A-Bar\main\src\generalUtil\list\ListFullException.java" afterPath="" />
-      <change type="DELETED" beforePath="E:\Privat\IDEA\GitHub\Search-A-Bar\main\src\generalUtil\list\ListStore.java" afterPath="" />
-      <change type="DELETED" beforePath="E:\Privat\IDEA\GitHub\Search-A-Bar\main\src\generalUtil\list\Node.java" afterPath="" />
-      <change type="DELETED" beforePath="E:\Privat\IDEA\GitHub\Search-A-Bar\main\src\generalUtil\list\OneList.java" afterPath="" />
-      <change type="DELETED" beforePath="E:\Privat\IDEA\GitHub\Search-A-Bar\main\src\generalUtil\list\Tail.java" afterPath="" />
-      <change type="DELETED" beforePath="E:\Privat\IDEA\GitHub\Search-A-Bar\main\src\generalUtil\logger\Logger.java" afterPath="" />
-      <change type="DELETED" beforePath="E:\Privat\IDEA\GitHub\Search-A-Bar\main\src\generalUtil\serializer\Deserializer.java" afterPath="" />
-      <change type="DELETED" beforePath="E:\Privat\IDEA\GitHub\Search-A-Bar\main\src\generalUtil\serializer\serializer.README.de" afterPath="" />
-      <change type="DELETED" beforePath="E:\Privat\IDEA\GitHub\Search-A-Bar\main\src\generalUtil\stack\Stack.java" afterPath="" />
-      <change type="DELETED" beforePath="E:\Privat\IDEA\GitHub\Search-A-Bar\main\src\generificationUtil\logger\BaseLogger.java" afterPath="" />
-      <change type="DELETED" beforePath="E:\Privat\IDEA\GitHub\Search-A-Bar\main\src\generificationUtil\serializer\Serializer.java" afterPath="" />
-      <change type="DELETED" beforePath="E:\Privat\IDEA\GitHub\Search-A-Bar\main\src\krypt\XKey.java" afterPath="" />
-      <change type="DELETED" beforePath="E:\Privat\IDEA\GitHub\Search-A-Bar\main\src\krypt\XKeys.java" afterPath="" />
-      <change type="DELETED" beforePath="E:\Privat\IDEA\GitHub\Search-A-Bar\main\src\passwd\Passwd.java" afterPath="" />
-      <change type="DELETED" beforePath="E:\Privat\IDEA\GitHub\Search-A-Bar\main\src\passwd\PasswdStore.java" afterPath="" />
-      <change type="DELETED" beforePath="E:\Privat\IDEA\GitHub\Search-A-Bar\out\production\main\DialogController.class" afterPath="" />
-      <change type="DELETED" beforePath="E:\Privat\IDEA\GitHub\Search-A-Bar\out\production\main\dataCollection\DataScan.class" afterPath="" />
-      <change type="DELETED" beforePath="E:\Privat\IDEA\GitHub\Search-A-Bar\out\production\main\dataCollection\DataScanFirefox.class" afterPath="" />
-      <change type="DELETED" beforePath="E:\Privat\IDEA\GitHub\Search-A-Bar\out\production\main\generificationUtil\Test.class" afterPath="" />
-      <change type="DELETED" beforePath="E:\Privat\IDEA\GitHub\Search-A-Bar\out\production\main\view\LayoutDialog.fxml" afterPath="" />
+      <change type="DELETED" beforePath="E:\Privat\IDEA\GitHub\Search-A-Bar\main\src\tests\Test.java" afterPath="" />
+      <change type="DELETED" beforePath="E:\Privat\IDEA\GitHub\Search-A-Bar\main\src\tests\TestSerializer.java" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/main/AdminController.class" afterPath="$PROJECT_DIR$/out/production/main/AdminController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/main/model/Bar.class" afterPath="$PROJECT_DIR$/out/production/main/model/Bar.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/main/DialogMapsController.class" afterPath="$PROJECT_DIR$/out/production/main/DialogMapsController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/main/DialogRouteController.class" afterPath="$PROJECT_DIR$/out/production/main/DialogRouteController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/main/model/Edge.class" afterPath="$PROJECT_DIR$/out/production/main/model/Edge.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/main/utils/GPSService.class" afterPath="$PROJECT_DIR$/out/production/main/utils/GPSService.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/main/model/Graph.class" afterPath="$PROJECT_DIR$/out/production/main/model/Graph.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/main/generificationUtil/list/List.class" afterPath="$PROJECT_DIR$/out/production/main/generificationUtil/list/List.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/main/generificationUtil/logger/Logger.class" afterPath="$PROJECT_DIR$/out/production/main/generificationUtil/logger/Logger.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/main/Main.class" afterPath="$PROJECT_DIR$/out/production/main/Main.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/main/generificationUtil/list/Node.class" afterPath="$PROJECT_DIR$/out/production/main/generificationUtil/list/Node.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/main/generificationUtil/list/OneList.class" afterPath="$PROJECT_DIR$/out/production/main/generificationUtil/list/OneList.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/main/MainController.class" afterPath="$PROJECT_DIR$/out/production/main/MainController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/main/model/Node.class" afterPath="$PROJECT_DIR$/out/production/main/model/Node.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/main/generificationUtil/serializer/Serializer.class" afterPath="$PROJECT_DIR$/out/production/main/generificationUtil/serializer/Serializer.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/main/statics/Statics.class" afterPath="$PROJECT_DIR$/out/production/main/statics/Statics.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/main/WebController.class" afterPath="$PROJECT_DIR$/out/production/main/WebController.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main/src/AdminController.java" afterPath="$PROJECT_DIR$/main/src/AdminController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main/src/model/Bar.java" afterPath="$PROJECT_DIR$/main/src/model/Bar.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main/src/DialogEditController.java" afterPath="$PROJECT_DIR$/main/src/DialogEditController.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main/src/DialogMapsController.java" afterPath="$PROJECT_DIR$/main/src/DialogMapsController.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main/src/DialogPasswordController.java" afterPath="$PROJECT_DIR$/main/src/DialogPasswordController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main/src/DialogRouteController.java" afterPath="$PROJECT_DIR$/main/src/DialogRouteController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main/src/model/Edge.java" afterPath="$PROJECT_DIR$/main/src/model/Edge.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main/src/utils/GPSService.java" afterPath="$PROJECT_DIR$/main/src/utils/GPSService.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main/src/model/Graph.java" afterPath="$PROJECT_DIR$/main/src/model/Graph.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/GraphDefault.ser" afterPath="$PROJECT_DIR$/GraphDefault.ser" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main/src/view/LayoutAdmin.fxml" afterPath="$PROJECT_DIR$/main/src/view/LayoutAdmin.fxml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/main/view/LayoutAdmin.fxml" afterPath="$PROJECT_DIR$/out/production/main/view/LayoutAdmin.fxml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main/src/view/LayoutDialogEdit.fxml" afterPath="$PROJECT_DIR$/main/src/view/LayoutDialogEdit.fxml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main/src/view/LayoutDialogMaps.fxml" afterPath="$PROJECT_DIR$/main/src/view/LayoutDialogMaps.fxml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/main/view/LayoutDialogMaps.fxml" afterPath="$PROJECT_DIR$/out/production/main/view/LayoutDialogMaps.fxml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main/src/view/LayoutDialogPassword.fxml" afterPath="$PROJECT_DIR$/main/src/view/LayoutDialogPassword.fxml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main/src/view/LayoutDialogRoute.fxml" afterPath="$PROJECT_DIR$/main/src/view/LayoutDialogRoute.fxml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/main/view/LayoutDialogRoute.fxml" afterPath="$PROJECT_DIR$/out/production/main/view/LayoutDialogRoute.fxml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main/src/view/LayoutMain.fxml" afterPath="$PROJECT_DIR$/main/src/view/LayoutMain.fxml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/main/view/LayoutMain.fxml" afterPath="$PROJECT_DIR$/out/production/main/view/LayoutMain.fxml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main/src/view/LayoutRoot.fxml" afterPath="$PROJECT_DIR$/main/src/view/LayoutRoot.fxml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/main/view/LayoutRoot.fxml" afterPath="$PROJECT_DIR$/out/production/main/view/LayoutRoot.fxml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main/src/view/LayoutWeb.fxml" afterPath="$PROJECT_DIR$/main/src/view/LayoutWeb.fxml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/main/view/LayoutWeb.fxml" afterPath="$PROJECT_DIR$/out/production/main/view/LayoutWeb.fxml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main/src/generificationUtil/logger/Logger.java" afterPath="$PROJECT_DIR$/main/src/generificationUtil/logger/Logger.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main/src/Main.java" afterPath="$PROJECT_DIR$/main/src/Main.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main/src/MainController.java" afterPath="$PROJECT_DIR$/main/src/MainController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Makefile" afterPath="$PROJECT_DIR$/Makefile" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main/src/model/Node.java" afterPath="$PROJECT_DIR$/main/src/model/Node.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main/src/generificationUtil/PathFinder.java" afterPath="$PROJECT_DIR$/main/src/generificationUtil/PathFinder.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main/src/statics/Statics.java" afterPath="$PROJECT_DIR$/main/src/statics/Statics.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main/src/utils/ValidInputCheck.java" afterPath="$PROJECT_DIR$/main/src/utils/ValidInputCheck.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main/src/WebController.java" afterPath="$PROJECT_DIR$/main/src/WebController.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main/main.iml" afterPath="$PROJECT_DIR$/main/main.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/passwds.ser" afterPath="$PROJECT_DIR$/passwds.ser" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/copyright/profiles_settings.xml" afterPath="$PROJECT_DIR$/.idea/copyright/profiles_settings.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MOVED" beforePath="E:\Privat\IDEA\GitHub\Search-A-Bar\main\src\DialogController.java" afterPath="$PROJECT_DIR$/main/src/DialogEditController.java" />
-      <change type="MOVED" beforePath="E:\Privat\IDEA\GitHub\Search-A-Bar\main\src\generificationUtil\Test.java" afterPath="$PROJECT_DIR$/main/src/tests/Test.java" />
-      <change type="MOVED" beforePath="E:\Privat\IDEA\GitHub\Search-A-Bar\main\src\krypt\XKrypt.README.md" afterPath="$PROJECT_DIR$/main/src/encryption/XKrypt.README.md" />
-      <change type="MOVED" beforePath="E:\Privat\IDEA\GitHub\Search-A-Bar\main\src\krypt\XKrypter.java" afterPath="$PROJECT_DIR$/main/src/encryption/XKrypter.java" />
-      <change type="MOVED" beforePath="E:\Privat\IDEA\GitHub\Search-A-Bar\main\src\utils\ValidCheck.java" afterPath="$PROJECT_DIR$/main/src/utils/ValidInputCheck.java" />
-      <change type="MOVED" beforePath="E:\Privat\IDEA\GitHub\Search-A-Bar\main\src\view\LayoutDialog.fxml" afterPath="$PROJECT_DIR$/main/src/view/LayoutDialogEdit.fxml" />
     </list>
     <ignored path="Search-A-Bar.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -83,49 +75,43 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="Graph.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/main/src/model/Graph.java">
+      <file leaf-file-name="Edge.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/main/src/model/Edge.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="250" column="29" selection-start-line="250" selection-start-column="29" selection-end-line="250" selection-end-column="29" />
+              <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MainController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/main/src/MainController.java">
+      <file leaf-file-name="Bar.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/main/src/model/Bar.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="259" column="35" selection-start-line="247" selection-start-column="7" selection-end-line="259" selection-end-column="35" />
+              <caret line="107" column="5" selection-start-line="107" selection-start-column="5" selection-end-line="107" selection-end-column="5" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DialogMapsController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/main/src/DialogMapsController.java">
+      <file leaf-file-name="Logger.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/main/src/generificationUtil/logger/Logger.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="103" column="41" selection-start-line="103" selection-start-column="41" selection-end-line="103" selection-end-column="41" />
-              <folding>
-                <element signature="e#3714#3715#0" expanded="true" />
-                <element signature="e#3750#3751#0" expanded="true" />
-              </folding>
+            <state vertical-scroll-proportion="1.2257669">
+              <caret line="94" column="33" selection-start-line="94" selection-start-column="33" selection-end-line="94" selection-end-column="33" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="LayoutDialogMaps.fxml" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/main/src/view/LayoutDialogMaps.fxml">
+      <file leaf-file-name="Statics.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/main/src/statics/Statics.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.2777778">
-              <caret line="96" column="19" selection-start-line="96" selection-start-column="19" selection-end-line="96" selection-end-column="19" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="38" column="54" selection-start-line="38" selection-start-column="54" selection-end-line="38" selection-end-column="54" />
               <folding />
             </state>
-          </provider>
-          <provider editor-type-id="JavaFX-Scene-Builder">
-            <state />
           </provider>
         </entry>
       </file>
@@ -162,8 +148,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/main/src/dataElement.java" />
-        <option value="$PROJECT_DIR$/main/src/Bar.java" />
         <option value="$PROJECT_DIR$/main/src/layout_main.fxml" />
         <option value="$PROJECT_DIR$/main/src/Statics.java" />
         <option value="$PROJECT_DIR$/main/src/Controller.java" />
@@ -189,11 +173,8 @@
         <option value="$PROJECT_DIR$/main/src/statics/OsDetector.java" />
         <option value="$PROJECT_DIR$/main/src/tests/TestSerializer.java" />
         <option value="$PROJECT_DIR$/main/src/generificationUtil/serializer/Deserializer.java" />
-        <option value="$PROJECT_DIR$/main/src/model/Bar.java" />
-        <option value="$PROJECT_DIR$/main/src/model/Edge.java" />
         <option value="$PROJECT_DIR$/main/src/utils/ValidCheck.java" />
         <option value="$PROJECT_DIR$/main/src/DialogController.java" />
-        <option value="$PROJECT_DIR$/main/src/model/Node.java" />
         <option value="$PROJECT_DIR$/main/src/view/LayoutAdmin.fxml" />
         <option value="$PROJECT_DIR$/main/src/DialogPasswordController.java" />
         <option value="$PROJECT_DIR$/main/src/passwd/Passwd.java" />
@@ -202,17 +183,22 @@
         <option value="$PROJECT_DIR$/main/src/view/LayoutDialogPassword.fxml" />
         <option value="$PROJECT_DIR$/main/src/view/LayoutMain.fxml" />
         <option value="$PROJECT_DIR$/main/src/krypt/XKrypter.java" />
-        <option value="$PROJECT_DIR$/main/src/generificationUtil/logger/Logger.java" />
         <option value="$PROJECT_DIR$/main/res/strings.xml" />
-        <option value="$PROJECT_DIR$/main/src/generificationUtil/PathFinder.java" />
         <option value="$PROJECT_DIR$/main/src/tests/Test.java" />
         <option value="$PROJECT_DIR$/README.md" />
-        <option value="$PROJECT_DIR$/main/src/statics/Statics.java" />
         <option value="$PROJECT_DIR$/main/src/Main.java" />
-        <option value="$PROJECT_DIR$/main/src/model/Graph.java" />
-        <option value="$PROJECT_DIR$/main/src/MainController.java" />
         <option value="$PROJECT_DIR$/main/src/DialogMapsController.java" />
         <option value="$PROJECT_DIR$/main/src/view/LayoutDialogMaps.fxml" />
+        <option value="$PROJECT_DIR$/main/src/generificationUtil/PathFinder.java" />
+        <option value="$PROJECT_DIR$/main/src/DialogEditController.java" />
+        <option value="$PROJECT_DIR$/main/src/view/LayoutDialogEdit.fxml" />
+        <option value="$PROJECT_DIR$/main/src/model/Edge.java" />
+        <option value="$PROJECT_DIR$/main/src/MainController.java" />
+        <option value="$PROJECT_DIR$/main/src/model/Graph.java" />
+        <option value="$PROJECT_DIR$/main/src/model/Node.java" />
+        <option value="$PROJECT_DIR$/main/src/model/Bar.java" />
+        <option value="$PROJECT_DIR$/main/src/statics/Statics.java" />
+        <option value="$PROJECT_DIR$/main/src/generificationUtil/logger/Logger.java" />
       </list>
     </option>
   </component>
@@ -230,8 +216,10 @@
     <order />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="width" value="1280" />
-    <option name="height" value="1024" />
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="1296" />
+    <option name="height" value="1000" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <OptionsSetting value="true" id="Add" />
@@ -256,9 +244,9 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
-      <pane id="Scratches" />
       <pane id="Scope" />
+      <pane id="Scratches" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -309,72 +297,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Search-A-Bar" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Search-A-Bar" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="view" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Search-A-Bar" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Search-A-Bar" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="statics" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Search-A-Bar" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Search-A-Bar" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="model" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
     </panes>
@@ -418,6 +340,120 @@
       <recent name="E:\Privat\IDEA\Search-A-Bar\main\src\view" />
       <recent name="E:\Privat\IDEA\Search-A-Bar\main\src" />
     </key>
+  </component>
+  <component name="RestoreUpdateTree" date="Moments ago" ActionInfo="_Update">
+    <UpdatedFiles>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Updated from server" />
+        <option name="myStatusName" value="Changed on server" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="CHANGED_ON_SERVER" />
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Updated" />
+          <option name="myStatusName" value="Changed" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="UPDATED" />
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/main/src/generificationUtil/logger/Logger.java</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/main/src/generificationUtil/serializer/Serializer.java</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/main/src/model/Graph.java</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/main/src/statics/Statics.java</PATH>
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Created" />
+          <option name="myStatusName" value="Created" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="CREATED" />
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/.FindABar/GraphDefault.ser</PATH>
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Deleted" />
+          <option name="myStatusName" value="Deleted" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="true" />
+          <option name="myId" value="REMOVED_FROM_REPOSITORY" />
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Restored" />
+          <option name="myStatusName" value="Will be restored" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="RESTORED" />
+        </FILE-GROUP>
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Modified" />
+        <option name="myStatusName" value="Modified" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MODIFIED" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Skipped" />
+        <option name="myStatusName" value="Skipped" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="SKIPPED" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Merged with conflicts" />
+        <option name="myStatusName" value="Will be merged with conflicts" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MERGED_WITH_CONFLICTS" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Merged with tree conflicts" />
+        <option name="myStatusName" value="Merged with tree conflicts" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MERGED_WITH_TREE_CONFLICT" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Merged with property conflicts" />
+        <option name="myStatusName" value="Will be merged with property conflicts" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MERGED_WITH_PROPERTY_CONFLICT" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Merged" />
+        <option name="myStatusName" value="Will be merged" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MERGED" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Not in repository" />
+        <option name="myStatusName" value="Not in repository" />
+        <option name="mySupportsDeletion" value="true" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="UNKNOWN" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Locally added" />
+        <option name="myStatusName" value="Locally added" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="LOCALLY_ADDED" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Locally removed" />
+        <option name="myStatusName" value="Locally removed" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="LOCALLY_REMOVED" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Switched" />
+        <option name="myStatusName" value="Switched" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="SWITCHED" />
+      </FILE-GROUP>
+    </UpdatedFiles>
   </component>
   <component name="RunManager" selected="Application.Unnamed">
     <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
@@ -734,7 +770,13 @@
       <option name="project" value="LOCAL" />
       <updated>1433943712550</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="added mask for textfield when entering a password;&#10;moved GraphSer.ser to local directory (in-project) for testing purpose.">
+      <created>1434532397007</created>
+      <option name="number" value="00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1434532397007</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="TodoView" selected-index="4">
@@ -747,21 +789,21 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="1280" height="1024" extended-state="0" />
-    <editor active="true" />
+    <frame x="-8" y="-8" width="1296" height="1000" extended-state="6" />
+    <editor active="false" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32954547" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32831" sideWeight="0.6688207" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3262159" sideWeight="0.66423947" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3252841" sideWeight="0.50646204" order="12" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3262159" sideWeight="0.3357605" order="12" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32952815" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32386363" sideWeight="0.49353796" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2283737" sideWeight="0.49676898" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32384342" sideWeight="0.49353796" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.27995256" sideWeight="0.49190938" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32886904" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.21393442" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.21116506" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24961948" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -839,6 +881,77 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/main/src/model/Edge.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main/src/model/Bar.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main/src/DialogEditController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main/src/generificationUtil/PathFinder.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="92" column="36" selection-start-line="92" selection-start-column="36" selection-end-line="92" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main/src/model/Graph.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="269" column="5" selection-start-line="269" selection-start-column="5" selection-end-line="269" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main/src/MainController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="258" column="35" selection-start-line="247" selection-start-column="7" selection-end-line="258" selection-end-column="35" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main/src/DialogMapsController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="103" column="41" selection-start-line="103" selection-start-column="41" selection-end-line="103" selection-end-column="41" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main/src/view/LayoutDialogMaps.fxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="JavaFX-Scene-Builder">
+        <state />
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/main/src/model/Graph.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -877,46 +990,29 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/main/src/view/LayoutRoot.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder">
-        <state />
-      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.15532544">
           <caret line="7" column="38" selection-start-line="7" selection-start-column="38" selection-end-line="7" selection-end-column="38" />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/main/src/view/LayoutWeb.fxml">
       <provider editor-type-id="JavaFX-Scene-Builder">
         <state />
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main/src/view/LayoutWeb.fxml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.110946745">
           <caret line="5" column="42" selection-start-line="5" selection-start-column="42" selection-end-line="5" selection-end-column="42" />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/main/src/view/LayoutDialogEdit.fxml">
       <provider editor-type-id="JavaFX-Scene-Builder">
         <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="4" column="33" selection-start-line="4" selection-start-column="33" selection-end-line="4" selection-end-column="33" />
-        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/main/main.iml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="1" column="39" selection-start-line="1" selection-start-column="39" selection-end-line="1" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/main/src/model/Bar.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="6" column="17" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="17" />
         </state>
       </provider>
     </entry>
@@ -934,14 +1030,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/main/src/DialogEditController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.9251534">
-          <caret line="103" column="41" selection-start-line="103" selection-start-column="41" selection-end-line="103" selection-end-column="41" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/main/src/utils/GPSService.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.4573991">
@@ -949,31 +1037,24 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/main/src/tests/TestSerializer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/main/src/view/LayoutAdmin.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder">
-        <state />
-      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="49" column="21" selection-start-line="36" selection-start-column="12" selection-end-line="49" selection-end-column="21" />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/main/src/view/LayoutDialogRoute.fxml">
       <provider editor-type-id="JavaFX-Scene-Builder">
         <state />
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main/src/view/LayoutDialogRoute.fxml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="17" column="25" selection-start-line="17" selection-start-column="25" selection-end-line="17" selection-end-column="25" />
         </state>
+      </provider>
+      <provider editor-type-id="JavaFX-Scene-Builder">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/main/src/DialogPasswordController.java">
@@ -983,21 +1064,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/main/src/view/LayoutDialogPassword.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="3.4191177">
-          <caret line="124" column="16" selection-start-line="124" selection-start-column="16" selection-end-line="124" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/main/src/AdminController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.6617647">
           <caret line="47" column="5" selection-start-line="47" selection-start-column="5" selection-end-line="47" selection-end-column="5" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1019,13 +1089,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="24" column="4" selection-start-line="24" selection-start-column="4" selection-end-line="24" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/main/src/tests/Test.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
         </state>
       </provider>
     </entry>
@@ -1057,32 +1120,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/main/src/model/Edge.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="7" column="18" selection-start-line="7" selection-start-column="18" selection-end-line="7" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/passwds.ser">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/main/src/model/Node.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.33962265">
-          <caret line="26" column="0" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/main/src/statics/Statics.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.76353276">
-          <caret line="73" column="74" selection-start-line="73" selection-start-column="74" selection-end-line="73" selection-end-column="74" />
         </state>
       </provider>
     </entry>
@@ -1094,66 +1135,144 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/main/src/view/LayoutMain.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder">
-        <state />
-      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-2.027523">
           <caret line="50" column="38" selection-start-line="50" selection-start-column="38" selection-end-line="50" selection-end-column="38" />
           <folding />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/main/src/model/Graph.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="250" column="29" selection-start-line="250" selection-start-column="29" selection-end-line="250" selection-end-column="29" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/main/src/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-1.75039">
-          <caret line="91" column="4" selection-start-line="91" selection-start-column="4" selection-end-line="91" selection-end-column="4" />
-          <folding />
-        </state>
+      <provider editor-type-id="JavaFX-Scene-Builder">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/main/src/DialogRouteController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="48" column="5" selection-start-line="48" selection-start-column="5" selection-end-line="48" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main/src/view/LayoutDialogMaps.fxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.30389908">
+          <caret line="92" column="27" selection-start-line="92" selection-start-column="27" selection-end-line="92" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="JavaFX-Scene-Builder">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main/src/DialogMapsController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.6981132">
+          <caret line="103" column="41" selection-start-line="103" selection-start-column="41" selection-end-line="103" selection-end-column="41" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main/src/generificationUtil/PathFinder.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="80" column="16" selection-start-line="80" selection-start-column="16" selection-end-line="80" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main/src/view/LayoutDialogPassword.fxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="3.3249211">
+          <caret line="124" column="16" selection-start-line="124" selection-start-column="16" selection-end-line="124" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="JavaFX-Scene-Builder">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main/src/view/LayoutDialogEdit.fxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="2.340694">
+          <caret line="249" column="15" selection-start-line="249" selection-start-column="15" selection-end-line="249" selection-end-column="15" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="JavaFX-Scene-Builder">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main/src/DialogEditController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.7948718">
+          <caret line="169" column="0" selection-start-line="169" selection-start-column="0" selection-end-line="169" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main/src/model/Node.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.37546012">
+          <caret line="26" column="26" selection-start-line="26" selection-start-column="26" selection-end-line="26" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main/src/model/Graph.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-1.8429447">
+          <caret line="157" column="63" selection-start-line="157" selection-start-column="63" selection-end-line="157" selection-end-column="63" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/main/src/MainController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="259" column="35" selection-start-line="247" selection-start-column="7" selection-end-line="259" selection-end-column="35" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/main/src/DialogMapsController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="103" column="41" selection-start-line="103" selection-start-column="41" selection-end-line="103" selection-end-column="41" />
+        <state vertical-scroll-proportion="0.10306749">
+          <caret line="280" column="111" selection-start-line="280" selection-start-column="111" selection-end-line="280" selection-end-column="111" />
           <folding>
-            <element signature="e#3714#3715#0" expanded="true" />
-            <element signature="e#3750#3751#0" expanded="true" />
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/main/src/view/LayoutDialogMaps.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder">
-        <state />
-      </provider>
+    <entry file="file://$PROJECT_DIR$/main/src/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.2777778">
-          <caret line="96" column="19" selection-start-line="96" selection-start-column="19" selection-end-line="96" selection-end-column="19" />
+        <state vertical-scroll-proportion="-2.0662577">
+          <caret line="91" column="4" selection-start-line="91" selection-start-column="4" selection-end-line="91" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main/src/model/Edge.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main/src/model/Bar.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="107" column="5" selection-start-line="107" selection-start-column="5" selection-end-line="107" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main/src/statics/Statics.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="38" column="54" selection-start-line="38" selection-start-column="54" selection-end-line="38" selection-end-column="54" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main/src/generificationUtil/logger/Logger.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="1.2257669">
+          <caret line="94" column="33" selection-start-line="94" selection-start-column="33" selection-end-line="94" selection-end-column="33" />
           <folding />
         </state>
       </provider>

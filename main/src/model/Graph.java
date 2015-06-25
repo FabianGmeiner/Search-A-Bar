@@ -1,4 +1,5 @@
-//Created by Fabian on 22.05.15.
+//Created by Fabian Gmeiner on 22.05.15.
+
 package model;
 
 import statics.Statics;
@@ -7,21 +8,31 @@ import utils.GPSService;
 import java.io.Serializable;
 import java.util.Vector;
 
+//This graph is based on Vectors for the list of nodes and edges,
+//thus allowing a dynamic size
+
 public class Graph implements Serializable {
 
     public Vector<Node> mNodes = new Vector<>();
     public Vector<Edge> mEdges = new Vector<>();
-    public int mSortMode = Statics.SORT_CODE_ALPHABETICAL;
-    public Vector<Bar> mSearchResult = new Vector<>();
-    public Vector<Bar> mBars = new Vector<>();
-    private boolean done = false;
-    private double[][] adjazencyMatrix = null;
 
+    // code used to determine how the list should be sorted
+    public int mSortMode = Statics.SORT_CODE_ALPHABETICAL;
+    // list of all the bars in the graph
+    public Vector<Bar> mBars = new Vector<>();
+    // the result of the depth-search
+    public Vector<Bar> mSearchResult = new Vector<>();
+    // indicating whether or not the destination is reached
+    private boolean mDone = false;
+    // result of getAdjacenyMatrix()-method
+    private double[][] mAdjazencyMatrix = null;
+
+    // method to set the sortMode according to user preferences
     public void setSortMode(int sortCode) {
         mSortMode = sortCode;
     }
 
-    @SuppressWarnings("unused")
+    // method that creates an adjacency-matrix
     public double[][] getAdjacencyMatrix() {
         double[][] adjMatrix = new double[mNodes.size()][mNodes.size()];
 
@@ -44,10 +55,11 @@ public class Graph implements Serializable {
                 }
             }
         }
-        System.out.println(adjMatrix);
+        mAdjazencyMatrix = adjMatrix;
         return adjMatrix;
     }
 
+    // method that return the index of an element (if present)
     public int indexOf(Node a) {
         for (int i = 0; i < mNodes.size(); i++)
             if (mNodes.elementAt(i).getContent().equals(a.getContent()))
@@ -55,10 +67,12 @@ public class Graph implements Serializable {
         return -1;
     }
 
+    // method that returns the node based on its index
     public Node getNodeAt(int i) {
         return mNodes.elementAt(i);
     }
 
+    // method to add a node; automatically adds an edge to the closest bar
     public int addNode(Node a) {
         if (!mNodes.isEmpty()) {
             Bar barToAdd = (Bar) a.getContent();
@@ -91,6 +105,7 @@ public class Graph implements Serializable {
         return mNodes.size() - 1;
     }
 
+    // method to remove a certain bar
     public void removeNode(Bar bar) {
         Node node = new Node(bar);
         int index = indexOf(node);
@@ -105,18 +120,15 @@ public class Graph implements Serializable {
         }
     }
 
-    public void addEdge(Edge edge) {
-        mEdges.add(edge);
-    }
-
+    // methods used to print the contents of the graph -> for testing
     public void printNodes() {
         System.out.println(mNodes);
     }
-
     public void printEdges() {
         System.out.println(mEdges);
     }
 
+    // returns all bars currently contained in the graph
     public Vector<Bar> getAllBars() {
         Vector<Bar> result = new Vector<>();
         for (int i = 0; i < mNodes.size(); i++) {
@@ -125,6 +137,7 @@ public class Graph implements Serializable {
         return result;
     }
 
+    // returns all edges
     public Vector<Edge> getAllEdges() {
         Vector<Edge> res = new Vector<>();
         for (int i = 0; i < mEdges.size(); i++) {
@@ -133,6 +146,7 @@ public class Graph implements Serializable {
         return res;
     }
 
+    // returns all nodes
     public Vector<Node> getAllNodes() {
         Vector<Node> result = new Vector<>();
         for (int i = 0; i < mNodes.size(); i++) {
@@ -142,7 +156,7 @@ public class Graph implements Serializable {
 
     }
 
-
+    // methods to react tu user input in the search-field
     public Vector<Bar> getBarsFilteredByStringSearch(String search) {
         Vector<Bar> result = new Vector<>();
         for (int i = 0; i < mNodes.size(); i++) {
@@ -157,7 +171,6 @@ public class Graph implements Serializable {
         }
         return result;
     }
-
     public Vector<Bar> getBarsFilteredByNumericalSearch(double search) {
         Vector<Bar> result = new Vector<>();
         for (int i = 0; i < mNodes.size(); i++) {
@@ -172,6 +185,7 @@ public class Graph implements Serializable {
         return result;
     }
 
+    // method that returns a list of bars based on the filters chosen by the user
     public Vector<Bar> getBarsFiltered(int[] filters) {
         Vector<Bar> bars = sortListBy(getAllBars());
         Vector<Bar> result = new Vector<>();
@@ -214,6 +228,7 @@ public class Graph implements Serializable {
         return result;
     }
 
+    // method that returns a list of bars sorted by the sortMode the user chose
     public Vector<Bar> sortListBy(Vector<Bar> list) {
         Bar buffer;
         Vector<Bar> result = new Vector<>();
@@ -254,11 +269,13 @@ public class Graph implements Serializable {
         return result;
     }
 
+    // methods to perform a depth-search through the graph in order to calculate a route/tour
     public Vector<Bar> depthSearch(Bar start) {
         mNodes.elementAt(mBars.indexOf(start)).setCheckmark(true);
         mSearchResult.add(start);
         for (int i = 0; i < mNodes.size(); i++) {
-            if ((adjazencyMatrix[mBars.indexOf(start)][i] != Double.POSITIVE_INFINITY || adjazencyMatrix[i][mBars.indexOf(start)] != Double.POSITIVE_INFINITY)
+            if ((mAdjazencyMatrix[mBars.indexOf(start)][i] != Double.POSITIVE_INFINITY
+                    || mAdjazencyMatrix[i][mBars.indexOf(start)] != Double.POSITIVE_INFINITY)
                     && !mNodes.elementAt(i).getCheckmark()) {
                 depthSearch(mBars.elementAt(i));
             }
@@ -266,34 +283,34 @@ public class Graph implements Serializable {
         mSearchResult.add(start);
         return mSearchResult;
     }
-
     public Vector<Bar> depthSearchDestination(Bar start, Bar end) {
         mNodes.elementAt(mBars.indexOf(start)).setCheckmark(true);
         mSearchResult.add(start);
         if (!start.equals(end)) {
             for (int i = 0; i < mNodes.size(); i++) {
-                if ((adjazencyMatrix[mBars.indexOf(start)][i] != Double.POSITIVE_INFINITY
-                        || adjazencyMatrix[i][mBars.indexOf(start)] != Double.POSITIVE_INFINITY)
+                if ((mAdjazencyMatrix[mBars.indexOf(start)][i] != Double.POSITIVE_INFINITY
+                        || mAdjazencyMatrix[i][mBars.indexOf(start)] != Double.POSITIVE_INFINITY)
                         && !mNodes.elementAt(i).getCheckmark()) {
-                    if (!done) {
+                    if (!mDone) {
                         depthSearchDestination(mBars.elementAt(i), end);
                     }
                 }
             }
         } else {
-            done = true;
+            mDone = true;
         }
         mSearchResult.add(start);
         return mSearchResult;
     }
 
+    // method to initialize all the nodes
     public void initialiseGraph() {
-        done = false;
+        mDone = false;
         mSearchResult = new Vector<>();
         for (int i = 0; i < mNodes.size(); i++) {
             mNodes.elementAt(i).initialiseDepthSearch();
         }
-        adjazencyMatrix = getAdjacencyMatrix();
+        mAdjazencyMatrix = getAdjacencyMatrix();
         mBars = getAllBars();
     }
 

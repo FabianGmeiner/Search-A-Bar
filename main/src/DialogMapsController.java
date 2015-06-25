@@ -1,4 +1,4 @@
-//Created by Fabian on 31.05.15.
+//Created by Fabian Gmeiner on 31.05.15.
 
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -23,27 +23,25 @@ public class DialogMapsController implements Initializable {
     private Main mMain;
     private Stage mDialogStage;
 
-    @Override
+    @Override // method called after the constructor
     public void initialize(URL location, ResourceBundle resources) {
     }
 
     public void setMain(Main main) {
         mMain = main;
     }
-
     public void setDialogStage(Stage dialogStage) {
         mDialogStage = dialogStage;
     }
-
     public void setBar(Bar bar) {
         mBar = bar;
     }
-
     public void setDestination(Bar bar) {
         mDestination = bar;
         if (mBar != null && mDestination != null) {
             double distance = GPSService.getDistanceFromGPS(
-                    mBar.getmGpsLatitude(), mBar.getmGpsLongitude(), mDestination.getmGpsLatitude(), mDestination.getmGpsLongitude());
+                    mBar.getmGpsLatitude(), mBar.getmGpsLongitude(), mDestination.getmGpsLatitude(),
+                    mDestination.getmGpsLongitude());
             if (distance > 1000.0) {
                 mDialogResultLabel.setText((Math.round(distance / 1000)) + "");
                 mDialogResultScaleLabel.setText("km");
@@ -54,18 +52,12 @@ public class DialogMapsController implements Initializable {
         }
     }
 
+    // methods to handle the buttons
     @FXML
     private void handleButtonOK() {
-        /*
-        String lat1 = mBar.getmGpsLatitude() + "";
-        String long1 = mBar.getmGpsLongitude() + "";
-        String lat2 = mDestination.getmGpsLatitude() + "";
-        String long2 = mDestination.getmGpsLongitude() + "";
-        String googleMapsUrl = "google.de/maps/dir/" + lat1 + "," + long1 + "/" + lat2 + "," + long2;
-        */
 
-        mMain.mGraph.initialiseGraph();
-        Vector<Bar> dirtyResult = mMain.mGraph.depthSearchDestination(mBar, mDestination);
+        Main.mGraph.initialiseGraph();
+        Vector<Bar> dirtyResult = Main.mGraph.depthSearchDestination(mBar, mDestination);
         Vector<Bar> result = new Vector<>();
         for (int i = 0; i < dirtyResult.size(); i++) {
             if (!result.contains(dirtyResult.elementAt(i))) {
@@ -76,9 +68,11 @@ public class DialogMapsController implements Initializable {
         sb.append("www.google.de/maps/dir/");
         for (int i = 0; i < result.size(); i++) {
             if (i == result.size() - 1) {
-                sb.append(result.elementAt(i).getmGpsLatitude() + "," + result.elementAt(i).getmGpsLongitude() + "/");
+                sb.append(result.elementAt(i).getmGpsLatitude()).append(",")
+                        .append(result.elementAt(i).getmGpsLongitude()).append("/");
             } else if (!result.elementAt(i).equals(result.elementAt(i + 1))) {
-                sb.append(result.elementAt(i).getmGpsLatitude() + "," + result.elementAt(i).getmGpsLongitude() + "/");
+                sb.append(result.elementAt(i).getmGpsLatitude()).append(",")
+                        .append(result.elementAt(i).getmGpsLongitude()).append("/");
             }
         }
         String url = sb.toString();
@@ -89,7 +83,6 @@ public class DialogMapsController implements Initializable {
         controller.openLink(url);
         mDialogStage.close();
     }
-
     @FXML
     private void handleButtonDirect() {
 
@@ -104,7 +97,6 @@ public class DialogMapsController implements Initializable {
         controller.openLink(googleMapsUrl);
         mDialogStage.close();
     }
-
     @FXML
     private void handleButtonCancel() {
         mDialogStage.close();

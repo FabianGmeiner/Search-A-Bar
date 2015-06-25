@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<!--Created by Fabian Gmeiner-->
 
 <?import javafx.geometry.*?>
 <?import javafx.scene.control.*?>
@@ -12,7 +13,7 @@
         minHeight="0"
         minWidth="0"
         prefHeight="500.0"
-        prefWidth="600.0"
+        prefWidth="700.0"
         xmlns="http://javafx.com/javafx/8">
     <VBox
             alignment="TOP_RIGHT"

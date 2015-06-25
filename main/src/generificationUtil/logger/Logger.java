@@ -87,10 +87,10 @@ public class Logger {
                 new FileOutputStream(msgFile).getChannel().truncate(0).close();
                 new FileOutputStream(debugFile).getChannel().truncate(0).close();
             } else {
-                new PrintStream(new FileOutputStream(errFile)).print("\n\n#################\n\n\n");
-                new PrintStream(new FileOutputStream(warnFile)).print("\n\n#################\n\n\n");
-                new PrintStream(new FileOutputStream(msgFile)).print("\n\n#################\n\n\n");
-                new PrintStream(new FileOutputStream(debugFile)).print("\n\n#################\n\n\n");
+                new PrintStream(new FileOutputStream(errFile, true)).print("\n\n#################\n\n\n");
+                new PrintStream(new FileOutputStream(warnFile, true)).print("\n\n#################\n\n\n");
+                new PrintStream(new FileOutputStream(msgFile, true)).print("\n\n#################\n\n\n");
+                new PrintStream(new FileOutputStream(debugFile, true)).print("\n\n#################\n\n\n");
             }
         } catch (IOException e) {
             System.err.println(e.toString());
