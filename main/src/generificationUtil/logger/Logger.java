@@ -1,5 +1,7 @@
 package generificationUtil.logger;
 
+import statics.Statics;
+
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.PrintStream;
@@ -79,10 +81,17 @@ public class Logger {
             String warnFile = getPrettyName(_warnFile);
             String msgFile = getPrettyName(_msgFile);
             String debugFile = getPrettyName(_debugFile);
-            new FileOutputStream(errFile).getChannel().truncate(0).close();
-            new FileOutputStream(warnFile).getChannel().truncate(0).close();
-            new FileOutputStream(msgFile).getChannel().truncate(0).close();
-            new FileOutputStream(debugFile).getChannel().truncate(0).close();
+            if (Statics.truncateFiles) {
+                new FileOutputStream(errFile).getChannel().truncate(0).close();
+                new FileOutputStream(warnFile).getChannel().truncate(0).close();
+                new FileOutputStream(msgFile).getChannel().truncate(0).close();
+                new FileOutputStream(debugFile).getChannel().truncate(0).close();
+            } else {
+                new PrintStream(new FileOutputStream(errFile)).print("\n\n#################\n\n\n");
+                new PrintStream(new FileOutputStream(warnFile)).print("\n\n#################\n\n\n");
+                new PrintStream(new FileOutputStream(msgFile)).print("\n\n#################\n\n\n");
+                new PrintStream(new FileOutputStream(debugFile)).print("\n\n#################\n\n\n");
+            }
         } catch (IOException e) {
             System.err.println(e.toString());
         }

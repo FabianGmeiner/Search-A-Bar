@@ -11,6 +11,7 @@ import java.io.IOException;
 public class Statics {
     // all statics are stored here
     public static final String ADMIN_CODE = "#Admin#";
+    /* Only used if it is not saved */
     public static final String ADMIN_PASSWORD = "1234";
 
     public static final String defaultSave = "GraphDefault.ser";
@@ -18,6 +19,7 @@ public class Statics {
     public static final boolean __DEBUG = true;
     /*  edit by Daniel Knuettel: added useExternHome*/
     public static final boolean useExternHome = false;
+    public static final boolean truncateFiles = false;
 
 
     public static final int DIALOG_CODE_EDIT = 0;

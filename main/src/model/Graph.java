@@ -143,8 +143,6 @@ public class Graph implements Serializable {
     }
 
 
-}
-
     public Vector<Bar> getBarsFilteredByStringSearch(String search) {
         Vector<Bar> result = new Vector<>();
         for (int i = 0; i < mNodes.size(); i++) {
