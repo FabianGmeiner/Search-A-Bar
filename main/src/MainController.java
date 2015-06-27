@@ -1,4 +1,4 @@
-//Created by Fabian on 18.05.15.
+//Created by Fabian Gmeiner on 18.05.15.
 
 import javafx.beans.value.ObservableValue;
 import javafx.collections.FXCollections;
@@ -14,8 +14,6 @@ import java.net.URL;
 import java.util.ResourceBundle;
 import java.util.Vector;
 
-
-@SuppressWarnings({"SpellCheckingInspection", "unchecked", "SuspiciousMethodCalls"})
 public class MainController implements Initializable {
 
     ObservableList<String> mFilterCategory = FXCollections.observableArrayList();
@@ -66,7 +64,7 @@ public class MainController implements Initializable {
     public MainController() {
     }
 
-    @Override
+    @Override // method called after the constructor
     public void initialize(URL location, ResourceBundle resources) {
         setListItems(Main.mGraph.sortListBy(Main.mGraph.getAllBars()));
         mFilterCategory.addAll(Statics.CATEGORYS);
@@ -94,30 +92,29 @@ public class MainController implements Initializable {
         mToggleButtonPrice.setSelected(false);
     }
 
+    // methods to filter the bars for certain values
     private void filterBarsPrice(Object newValue) {
         int index = mFilterPrice.indexOf(newValue);
         mFilters[3] = index;
         setListItems(Main.mGraph.getBarsFiltered(mFilters));
     }
-
     private void filterBarsAverage(Object newValue) {
         int index = mFilterAvgAge.indexOf(newValue);
         mFilters[2] = index;
         setListItems(Main.mGraph.getBarsFiltered(mFilters));
     }
-
     private void filterBarsRestriction(Object newValue) {
         int index = mFilterAgeRestriction.indexOf(newValue);
         mFilters[1] = index;
         setListItems(Main.mGraph.getBarsFiltered(mFilters));
     }
-
     private void filterBarsCategory(Object newValue) {
         int index = mFilterCategory.indexOf(newValue);
         mFilters[0] = index;
         setListItems(Main.mGraph.getBarsFiltered(mFilters));
     }
 
+    // method to display details in the lower section
     private void showBarDetails(Object newValue) {
         if (newValue != null) {
             if (mMain.mGraph.mNodes.size() > 1) {
@@ -146,6 +143,7 @@ public class MainController implements Initializable {
         mTextFieldSearch.requestFocus();
     }
 
+    // methods to handle the JavaFX control-elements
     @FXML
     private void handleButtonSearch() throws IOException {
         if (!mPasswordMode) {
@@ -229,24 +227,21 @@ public class MainController implements Initializable {
             }
         }
     }
-
     @FXML
     private void handleLinkClicked() {
         WebController controller = new WebController();
         controller.setMainApp(mMain);
         controller.openLink(mUrl.getText());
     }
-
     @FXML
     private void handleButtonRoute() throws IOException {
         mMain.showDialogRoute(mSelectedBar);
     }
-
     @FXML
     private void handleButtonTour() {
         Bar selectedBar = (Bar) mScrollPane.getSelectionModel().getSelectedItem();
-        mMain.mGraph.initialiseGraph();
-        Vector<Bar> result = mMain.mGraph.depthSearch(selectedBar);
+        Main.mGraph.initialiseGraph();
+        Vector<Bar> result = Main.mGraph.depthSearch(selectedBar);
         StringBuilder sb = new StringBuilder();
         sb.append("www.google.de/maps/dir/");
         for (int i = 0; i < result.size(); i++) {
@@ -263,6 +258,37 @@ public class MainController implements Initializable {
         controller.openLink(url);
     }
 
+    @FXML
+    private void handleToggleButtonAlphabetic() throws IOException {
+        mSortMode = Statics.SORT_CODE_ALPHABETICAL;
+        Main.mGraph.setSortMode(mSortMode);
+        mToggleButtonAlphabet.setSelected(true);
+        mToggleButtonPopular.setSelected(false);
+        mToggleButtonPrice.setSelected(false);
+        setListItems(Main.mGraph.sortListBy(mCurrentList));
+    }
+
+    @FXML
+    private void handleToggleButtonPopular() throws IOException {
+        mSortMode = Statics.SORT_CODE_POPULAR;
+        Main.mGraph.setSortMode(mSortMode);
+        mToggleButtonAlphabet.setSelected(false);
+        mToggleButtonPopular.setSelected(true);
+        mToggleButtonPrice.setSelected(false);
+        setListItems(Main.mGraph.sortListBy(mCurrentList));
+    }
+
+    @FXML
+    private void handleToggleButtonPrice() throws IOException {
+        mSortMode = Statics.SORT_CODE_PRICE;
+        Main.mGraph.setSortMode(mSortMode);
+        mToggleButtonAlphabet.setSelected(false);
+        mToggleButtonPopular.setSelected(false);
+        mToggleButtonPrice.setSelected(true);
+        setListItems(Main.mGraph.sortListBy(mCurrentList));
+    }
+
+    // method to refresh the listView
     private void setListItems(Vector<Bar> items) {
         mCurrentList = items;
         showBarDetails(null);
@@ -282,36 +308,10 @@ public class MainController implements Initializable {
         }
     }
 
+    //updates the popularity of the bars
     public void updatePopularity(Vector<Bar> bars) {
         for (int i = 0; i < bars.size(); i++) {
             bars.elementAt(i).increasePopularity();
         }
-    }
-
-    public void handleToggleButtonAlphabetic() throws IOException {
-        mSortMode = Statics.SORT_CODE_ALPHABETICAL;
-        Main.mGraph.setSortMode(mSortMode);
-        mToggleButtonAlphabet.setSelected(true);
-        mToggleButtonPopular.setSelected(false);
-        mToggleButtonPrice.setSelected(false);
-        setListItems(Main.mGraph.sortListBy(mCurrentList));
-    }
-
-    public void handleToggleButtonPopular() throws IOException {
-        mSortMode = Statics.SORT_CODE_POPULAR;
-        Main.mGraph.setSortMode(mSortMode);
-        mToggleButtonAlphabet.setSelected(false);
-        mToggleButtonPopular.setSelected(true);
-        mToggleButtonPrice.setSelected(false);
-        setListItems(Main.mGraph.sortListBy(mCurrentList));
-    }
-
-    public void handleToggleButtonPrice() throws IOException {
-        mSortMode = Statics.SORT_CODE_PRICE;
-        Main.mGraph.setSortMode(mSortMode);
-        mToggleButtonAlphabet.setSelected(false);
-        mToggleButtonPopular.setSelected(false);
-        mToggleButtonPrice.setSelected(true);
-        setListItems(Main.mGraph.sortListBy(mCurrentList));
     }
 }

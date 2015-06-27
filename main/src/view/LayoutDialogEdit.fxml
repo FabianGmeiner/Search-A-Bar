@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<!--Created by Fabian Gmeiner-->
 
 <?import javafx.geometry.*?>
 <?import javafx.scene.control.*?>
@@ -243,6 +244,10 @@
                     fx:id="mDialogTextFieldLong"
                     maxWidth="150.0"
                     promptText="Breitengrad"/>
+            <VBox.margin>
+                <Insets
+                        bottom="5.0"/>
+            </VBox.margin>
         </HBox>
         <HBox
                 alignment="BOTTOM_RIGHT"

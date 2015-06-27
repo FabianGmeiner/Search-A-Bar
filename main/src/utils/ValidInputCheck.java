@@ -1,10 +1,12 @@
-//Created by Fabian on 07.06.15.
+//Created by Fabian Gmeiner on 07.06.15.
+
 package utils;
 
 import statics.Statics;
 
 public class ValidInputCheck {
 
+    // method to check whether or not user input is valid
     public static boolean isValidInput(String input, int code) {
         boolean valid = true;
         switch (code) {

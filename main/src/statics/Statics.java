@@ -1,4 +1,5 @@
-//Created by Fabian on 19.05.15.
+//Created by Fabian Gmeiner on 19.05.15.
+
 package statics;
 
 import generificationUtil.PathFinder;
@@ -9,15 +10,15 @@ import java.io.FileInputStream;
 import java.io.IOException;
 
 public class Statics {
-    // all statics are stored here
+
     public static final String ADMIN_CODE = "#Admin#";
     public static final String ADMIN_PASSWORD = "1234";
 
+    // edits by Daniel Knuettel
     public static final String defaultSave = "GraphDefault.ser";
-    /* edit by Daniel Knuettel: added __DEBUG*/
     public static final boolean __DEBUG = true;
-    /*  edit by Daniel Knuettel: added useExternHome*/
     public static final boolean useExternHome = false;
+    // end of edits
 
 
     public static final int DIALOG_CODE_EDIT = 0;
@@ -35,8 +36,10 @@ public class Statics {
     public static final int VALID_CODE_INT = 5;
     public static final int VALID_CODE_DOUBLE = 6;
 
+    public static final boolean truncateFiles = false;
 
-    // This is a list of Bars used to test the application. Will be replaced by xml-file
+
+    // This is a list of Bars used when the graph cannot be loaded from the file
     public static Node node1 = new Node(new Bar("Alte Filmbühne",
             "Hippe Bar mit \ndurchgestylten Räumen.\nWochenendes meist gerammelt\nvoll. Wenige \nSitzgelegenheiten.",
             "filmbuehne.com", "Alte Filmbühne \nTaubengäßchen 3\n93047 Regensburg", 1,

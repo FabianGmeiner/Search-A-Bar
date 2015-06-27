@@ -2,22 +2,22 @@ com=javac
 
 CLPATH=.:lib/commons-net-3.3/commons-net-3.3.jar:/usr/local/Java/jdk1.5.0_07/lib:lib/:main/src/
 
-all:stats generificationUtil/logger generificationUtil/list generificationUtil/stack
+all:stats generalUtil/logger generalUtil/list generalUtil/stack
 
 stats:
 	$(com) -cp $(CLPATH) main/src/statics/*.java
-generificationUtil/list:stats generificationUtil/logger
-	$(com) -cp $(CLPATH) main/src/generificationUtil/list/*.java
-generificationUtil/logger:stats generificationUtil/PathFinder
-	$(com) -cp $(CLPATH) main/src/generificationUtil/logger/*.java
-generificationUtil/stack:generificationUtil/list
-	$(com) -cp $(CLPATH) main/src/generificationUtil/stack/*.java
-generificationUtil/PathFinder:stats generificationUtil/OsDetector
-	$(com) -cp $(CLPATH) main/src/generificationUtil/PathFinder.java
-generificationUtil/OsDetector:
-	$(com) -cp $(CLPATH) main/src/generificationUtil/OsDetector.java
-generificationUtil/serializer:generificationUtil/logger
-	$(com) -cp $(CLPATH) main/src/generificationUtil/serializer/*.java
+generalUtil/list:stats generalUtil/logger
+	$(com) -cp $(CLPATH) main/src/generalUtil/list/*.java
+generalUtil/logger:stats generalUtil/PathFinder
+	$(com) -cp $(CLPATH) main/src/generalUtil/logger/*.java
+generalUtil/stack:generalUtil/list
+	$(com) -cp $(CLPATH) main/src/generalUtil/stack/*.java
+generalUtil/PathFinder:stats generalUtil/OsDetector
+	$(com) -cp $(CLPATH) main/src/generalUtil/PathFinder.java
+generalUtil/OsDetector:
+	$(com) -cp $(CLPATH) main/src/generalUtil/OsDetector.java
+generalUtil/serializer:generalUtil/logger
+	$(com) -cp $(CLPATH) main/src/generalUtil/serializer/*.java
 encryption:
 	$(com) -cp $(CLPATH) main/src/encryption/*.java
 password:encryption

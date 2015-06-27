@@ -1,4 +1,5 @@
-//Created by Fabian on 22.05.15.
+//Created by Fabian Gmeiner on 22.05.15.
+
 package utils;
 
 public class GPSService {
@@ -16,7 +17,7 @@ public class GPSService {
                 Math.cos(alpha1) * Math.cos(alpha2) *
                         Math.sin(deltaBeta / 2) * Math.sin(deltaBeta / 2);
         double c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
-        int earthRadius = 6371000;
+        int earthRadius = 6371000;      // in meters
         double d = earthRadius * c;
 
         return (Math.round(d));
