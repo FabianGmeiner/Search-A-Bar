@@ -31,9 +31,10 @@ public class Main extends Application {
     public static DialogPasswordController mDialogPasswordController;
     public static Graph mGraph;
     public static String mPassword = Statics.ADMIN_PASSWORD;
-    protected BorderPane rootLayout;
-    private Stage primaryStage;
-    private boolean graphPresent = false;
+    protected BorderPane mBorderPane;
+    private Stage mPrimaryStage;
+    // added by Knuettel
+    private boolean mGraphPresent = false;
 
     public static void main(String[] args) {
         launch(args);
@@ -45,8 +46,8 @@ public class Main extends Application {
         Logger.log(Logger.MSG, "Main:start() running\n");
 
 
-        this.primaryStage = primaryStage;
-        this.primaryStage.setTitle("Search-A-Bar");
+        this.mPrimaryStage = primaryStage;
+        this.mPrimaryStage.setTitle("Search-A-Bar");
 
         /**Save/Load added by Daniel Knuettel*/
         if (Statics.isGraphSafed()) {
@@ -54,7 +55,7 @@ public class Main extends Application {
             Deserializer deser = new Deserializer(PathFinder.getPrettyName(Statics.defaultSave));
             deser.readObjs();
             mGraph = (Graph) deser.getObject();
-            graphPresent = true;
+            mGraphPresent = true;
 
             if (mGraph == null) {
                 Logger.log(Logger.WARN, "Main:start(): graph is safed :but cannot loaded from file: using hard coded version \n");
@@ -80,7 +81,7 @@ public class Main extends Application {
         }
 
 
-        if (graphPresent) {
+        if (mGraphPresent) {
             DijkstraHelperGraph g = new DijkstraHelperGraph();
             g.build(mGraph);
             g.dijkstraSearch("Bar1", "Maxis Club");
@@ -107,16 +108,16 @@ public class Main extends Application {
     private void initialiseRootLayout() throws IOException {
         FXMLLoader loader = new FXMLLoader();
         loader.setLocation(Main.class.getResource("view/LayoutRoot.fxml"));
-        rootLayout = loader.load();
+        mBorderPane = loader.load();
 
-        Scene scene = new Scene(rootLayout);
-        primaryStage.setScene(scene);
-        primaryStage.show();
+        Scene scene = new Scene(mBorderPane);
+        mPrimaryStage.setScene(scene);
+        mPrimaryStage.show();
         showMainPage();
     }
 
     public Stage getPrimaryStage() {
-        return primaryStage;
+        return mPrimaryStage;
     }
 
     public void showMainPage() throws IOException {
@@ -125,7 +126,7 @@ public class Main extends Application {
         loader.setLocation(Main.class.getResource("view/LayoutMain.fxml"));
         AnchorPane mainPage = loader.load();
 
-        rootLayout.setCenter(mainPage);
+        mBorderPane.setCenter(mainPage);
         mMainController = loader.getController();
         mMainController.setMainApp(this);
     }
@@ -135,7 +136,7 @@ public class Main extends Application {
         loader.setLocation(Main.class.getResource("view/LayoutAdmin.fxml"));
         AnchorPane adminPage = loader.load();
 
-        rootLayout.setCenter(adminPage);
+        mBorderPane.setCenter(adminPage);
         mAdminController = loader.getController();
         mAdminController.setMainApp(this);
     }
@@ -148,7 +149,7 @@ public class Main extends Application {
         // creating the dialog stage
         Stage dialogStage = new Stage();
         dialogStage.initModality(Modality.WINDOW_MODAL);
-        dialogStage.initOwner(primaryStage);
+        dialogStage.initOwner(mPrimaryStage);
         Scene scene = new Scene(dialog);
         dialogStage.setScene(scene);
         dialogStage.setTitle("Search-A-Bar");
@@ -171,7 +172,7 @@ public class Main extends Application {
         // creating the dialog stage
         Stage dialogStage = new Stage();
         dialogStage.initModality(Modality.WINDOW_MODAL);
-        dialogStage.initOwner(primaryStage);
+        dialogStage.initOwner(mPrimaryStage);
         Scene scene = new Scene(dialog);
         dialogStage.setScene(scene);
         dialogStage.setTitle("Search-A-Bar");
@@ -193,7 +194,7 @@ public class Main extends Application {
         // creating the dialog stage
         Stage dialogStage = new Stage();
         dialogStage.initModality(Modality.WINDOW_MODAL);
-        dialogStage.initOwner(primaryStage);
+        dialogStage.initOwner(mPrimaryStage);
         Scene scene = new Scene(dialog);
         dialogStage.setScene(scene);
         dialogStage.setTitle("Search-A-Bar");
@@ -214,7 +215,7 @@ public class Main extends Application {
         // creating the dialog stage
         Stage dialogStage = new Stage();
         dialogStage.initModality(Modality.WINDOW_MODAL);
-        dialogStage.initOwner(primaryStage);
+        dialogStage.initOwner(mPrimaryStage);
         Scene scene = new Scene(dialog);
         dialogStage.setScene(scene);
         dialogStage.setTitle("Search-A-Bar");

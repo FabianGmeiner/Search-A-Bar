@@ -240,8 +240,8 @@ public class MainController implements Initializable {
     @FXML
     private void handleButtonTour() {
         Bar selectedBar = (Bar) mScrollPane.getSelectionModel().getSelectedItem();
-        mMain.mGraph.initialiseGraph();
-        Vector<Bar> result = mMain.mGraph.depthSearch(selectedBar);
+        Main.mGraph.initialiseGraph();
+        Vector<Bar> result = Main.mGraph.depthSearch(selectedBar);
         StringBuilder sb = new StringBuilder();
         sb.append("www.google.de/maps/dir/");
         for (int i = 0; i < result.size(); i++) {
