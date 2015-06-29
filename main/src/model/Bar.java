@@ -5,6 +5,7 @@ package model;
 import java.io.Serializable;
 
 public class Bar implements Serializable {
+
     private String mName;           // the name of the bar
     private String mDescription;    // short description
     private String mUrl;            // web-url for the bar's website

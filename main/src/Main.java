@@ -1,4 +1,4 @@
-//Created by Fabian on 18.05.15.
+//Created by Fabian Gmeiner on 18.05.15.
 
 import dijkstra.DijkstraHelperGraph;
 import generificationUtil.PathFinder;

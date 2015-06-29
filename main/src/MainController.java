@@ -16,10 +16,10 @@ import java.util.Vector;
 
 public class MainController implements Initializable {
 
-    ObservableList<String> mFilterCategory = FXCollections.observableArrayList();
-    ObservableList<String> mFilterAgeRestriction = FXCollections.observableArrayList();
-    ObservableList<String> mFilterAvgAge = FXCollections.observableArrayList();
-    ObservableList<String> mFilterPrice = FXCollections.observableArrayList();
+    private ObservableList<String> mFilterCategory = FXCollections.observableArrayList();
+    private ObservableList<String> mFilterAgeRestriction = FXCollections.observableArrayList();
+    private ObservableList<String> mFilterAvgAge = FXCollections.observableArrayList();
+    private ObservableList<String> mFilterPrice = FXCollections.observableArrayList();
     // the FXML-Annotation allows JavaFX to inject the views based on their fx:id
     @FXML
     private TextField mTextFieldSearch;
@@ -42,7 +42,7 @@ public class MainController implements Initializable {
     @FXML
     private Hyperlink mUrl;
     @FXML
-    private Label mAdress;
+    private Label mAddress;
     @FXML
     private Button mButtonCalculateRoute;
     @FXML
@@ -117,23 +117,23 @@ public class MainController implements Initializable {
     // method to display details in the lower section
     private void showBarDetails(Object newValue) {
         if (newValue != null) {
-            if (mMain.mGraph.mNodes.size() > 1) {
+            if (Main.mGraph.mNodes.size() > 1) {
                 mButtonCalculateRoute.setDisable(false);
             }
             mSelectedBar = (Bar) newValue;
             Bar selectedBar = (Bar) newValue;
             String description = selectedBar.getmDescription();
             String url = selectedBar.getmUrl();
-            String adress = selectedBar.getmAdress();
+            String address = selectedBar.getmAdress();
             mDescription.setText(description);
             mUrl.setText(url);
-            mAdress.setText(adress);
+            mAddress.setText(address);
         } else {
             mSelectedBar = null;
             mButtonCalculateRoute.setDisable(true);
             mDescription.setText("");
             mUrl.setText("");
-            mAdress.setText("");
+            mAddress.setText("");
         }
     }
 
@@ -207,7 +207,7 @@ public class MainController implements Initializable {
                 }
             }
         } else {
-            if (mTextFieldPassword.getText().equals(mMain.mPassword)) {
+            if (mTextFieldPassword.getText().equals(Main.mPassword)) {
                 mPasswordMode = false;
                 mTextFieldSearch.setManaged(true);
                 mTextFieldSearch.setVisible(true);
@@ -216,7 +216,7 @@ public class MainController implements Initializable {
                 mTextFieldPassword.clear();
                 mButtonSearch.setText("Suche");
                 mMain.showAdminPage();
-            } else if (!mTextFieldPassword.getText().equals(mMain.mPassword)) {
+            } else if (!mTextFieldPassword.getText().equals(Main.mPassword)) {
                 mPasswordMode = false;
                 mTextFieldSearch.setManaged(true);
                 mTextFieldSearch.setVisible(true);
@@ -246,9 +246,9 @@ public class MainController implements Initializable {
         sb.append("www.google.de/maps/dir/");
         for (int i = 0; i < result.size(); i++) {
             if (i == result.size() - 1) {
-                sb.append(result.elementAt(i).getmGpsLatitude() + "," + result.elementAt(i).getmGpsLongitude() + "/");
+                sb.append(result.elementAt(i).getmGpsLatitude()).append(",").append(result.elementAt(i).getmGpsLongitude()).append("/");
             } else if (!result.elementAt(i).equals(result.elementAt(i + 1))) {
-                sb.append(result.elementAt(i).getmGpsLatitude() + "," + result.elementAt(i).getmGpsLongitude() + "/");
+                sb.append(result.elementAt(i).getmGpsLatitude()).append(",").append(result.elementAt(i).getmGpsLongitude()).append("/");
             }
         }
         String url = sb.toString();

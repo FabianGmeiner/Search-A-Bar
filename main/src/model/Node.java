@@ -25,5 +25,6 @@ public class Node implements Serializable {
     }
 
     public void initialiseDepthSearch() {
+        setCheckmark(false);
     }
 }

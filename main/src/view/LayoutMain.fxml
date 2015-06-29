@@ -138,7 +138,7 @@
                 <Separator
                         orientation="VERTICAL"/>
                 <Label
-                        fx:id="mAdress"
+                        fx:id="mAddress"
                         alignment="TOP_LEFT"
                         prefHeight="100.0"
                         prefWidth="250.0">

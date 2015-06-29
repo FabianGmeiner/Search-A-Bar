@@ -56,13 +56,6 @@ public class DialogMapsController implements Initializable {
 
     @FXML
     private void handleButtonOK() {
-        /*
-        String lat1 = mBar.getmGpsLatitude() + "";
-        String long1 = mBar.getmGpsLongitude() + "";
-        String lat2 = mDestination.getmGpsLatitude() + "";
-        String long2 = mDestination.getmGpsLongitude() + "";
-        String googleMapsUrl = "google.de/maps/dir/" + lat1 + "," + long1 + "/" + lat2 + "," + long2;
-        */
 
         mMain.mGraph.initialiseGraph();
         Vector<Bar> dirtyResult = mMain.mGraph.depthSearchDestination(mBar, mDestination);
