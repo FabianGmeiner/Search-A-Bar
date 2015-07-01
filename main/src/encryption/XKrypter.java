@@ -23,10 +23,14 @@ public class XKrypter {
         for (int j = 0; j < _bytes.length; j++) {
             buffer = _bytes[j];
             for (int i = 0; i < 8; i++) {
+                /* use the current byte of the key, select one bit of the byte ...
+				   */
                 /* key [0] is the mask */
                 mask = (byte) (((byte) (1 << positions[i])) & key[0][i]);
+				/* Turn the "wheel", as we are on the next byte soon */
                 /* key [1] is the speed */
                 positions[i] = XKey.increment(positions[i], key[1][i]);
+				/*... and modify the byte of the input */
                 buffer ^= mask;
             }
             krypted[j] = buffer;
@@ -45,8 +49,10 @@ public class XKrypter {
         for (int j = 0; j < _bytes.length; j++) {
             buffer = _bytes[j];
             for (int i = 0; i < 8; i++) {
+				/* use the current byte of the key, select one bit of the byte  */
                 /* key [0] is the mask */
                 mask = (byte) (((byte) (1 << positions[i])) & key[0][i]);
+				/* Turn the "wheel", as we are on the next byte soon */
 				/* key [1] is the speed */
                 positions[i] = XKey.increment(positions[i], key[1][i]);
                 buffer ^= mask;

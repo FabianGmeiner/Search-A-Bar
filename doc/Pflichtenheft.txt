@@ -1,0 +1,41 @@
+﻿Pflichtenheft
+#############
+GUI
+	- Umsetzung der Gui mit java FX8
+	- Nutzung von XML Layouts aufgrund besserer Lesbarkeit
+	- Nutzung eines einzigen Fensters
+	
+Datensicherung
+	- Speicherung von Daten
+	- Erstellung eines Moduls "serializer" zum Speichern/Laden von Daten 
+	- Speicherung an einheitlichem Ort
+		-> Klasse PathFinder zur automatischen Umsetzung
+		-> Möglichkeit der Speicherung am Rechner und im Projekt
+
+Passwörter
+	- Aufgrund eines Admin-Bereiches müssen Passwörter nutzbar sein
+	- Erstellung eines Moduls "password" zur Verwaltung von Passwörtern
+	- Benutzung des Moduls "serializer" zur Speicherung
+	- Verschlüsselung notwendig
+		-> Modul "encryption"
+		
+Verschlüsselung
+	- Notwendigkeit zur Verschlüsselung
+	- Nutzung eines erweiterten XOR-Algorhithmuses
+	- Verschlüsselung von Bytefeldern möglich
+		ABER: nicht 100 % sicher
+	- halbwegs sichere Verschlüsselung aufgrund des erweiterten Algorhithmuses
+	- leichte Verständlichkeit aufgrund der Einfachheit
+	
+Listen
+	- Verwaltung von Daten in Listen sehr komfortabel
+	- Erstellung der Module "list" und "stack"
+	- Nutzung einer einfach verketteten Liste mit dem Entwurfsmuster Kompositum
+	- Klassen "List", "ListStore" und "OneList" für unterschiedliche Zwecke
+Dijkstra
+	- Nutzung des Dijkstra zum finden des kürzesten Wegs zwischen 2 Bars
+	- Implementierung mithilfe einer rekursiven Adjazenzmatrix
+	- aufgrund der Richtung des Graphs ist nicht immer ein Ergebnis vorhanden
+	
+	
+	

@@ -1,6 +1,5 @@
 //Created by Fabian Gmeiner on 18.05.15.
 
-import dijkstra.DijkstraHelperGraph;
 import generificationUtil.PathFinder;
 import generificationUtil.logger.Logger;
 import generificationUtil.serializer.Deserializer;
@@ -95,11 +94,6 @@ public class Main extends Application {
         }
 
 
-        if (mGraphPresent) {
-            DijkstraHelperGraph g = new DijkstraHelperGraph();
-            g.build(mGraph);
-            g.dijkstraSearch("Bar1", "Maxis Club");
-        }
         initialiseRootLayout();
 
     }

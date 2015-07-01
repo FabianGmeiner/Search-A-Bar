@@ -30,7 +30,7 @@ public class OsDetector {
     public static final String Solaris = "Solaris";
 
     /**
-     * As there is no javaimplementation on microkernels (mach) only a few osses are recognized
+     * As there is no java implementation on microkernels (mach) only a few osses are recognized
      */
     public static String detect(int mode) {
         String os = System.getProperty("os.name");
