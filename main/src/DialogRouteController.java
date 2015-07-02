@@ -7,6 +7,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.ListView;
+import javafx.scene.image.Image;
 import javafx.stage.Stage;
 import model.Bar;
 
@@ -37,6 +38,7 @@ public class DialogRouteController implements Initializable {
     }
     public void setDialogStage(Stage dialogStage) {
         mDialogStage = dialogStage;
+        mDialogStage.getIcons().add(new Image("file:resources/images/ic_search_black_48dp.png"));
     }
     public void setBar(Bar bar) {
         mBar = bar;

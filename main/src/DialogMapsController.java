@@ -1,5 +1,6 @@
 //Created by Fabian on 31.05.15.
 
+import dijkstra.DijkstraHelperGraph;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Label;
@@ -42,8 +43,16 @@ public class DialogMapsController implements Initializable {
     public void setDestination(Bar bar) {
         mDestination = bar;
         if (mBar != null && mDestination != null) {
-            double distance = GPSService.getDistanceFromGPS(
-                    mBar.getmGpsLatitude(), mBar.getmGpsLongitude(), mDestination.getmGpsLatitude(), mDestination.getmGpsLongitude());
+            DijkstraHelperGraph graph = new DijkstraHelperGraph();
+            graph.build(Main.mGraph);
+            graph.dijkstraInit();
+
+            double distance = graph.dijkstraSearch(mBar.getmName(), mDestination.getmName());
+            if (distance == -1) {
+                distance = GPSService.getDistanceFromGPS(
+                        mBar.getmGpsLatitude(), mBar.getmGpsLongitude(), mDestination.getmGpsLatitude(), mDestination.getmGpsLongitude());
+            }
+
             if (distance > 1000.0) {
                 mDialogResultLabel.setText((Math.round(distance / 1000)) + "");
                 mDialogResultScaleLabel.setText("km");

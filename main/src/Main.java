@@ -1,6 +1,5 @@
 //Created by Fabian Gmeiner on 18.05.15.
 
-import dijkstra.DijkstraHelperGraph;
 import generificationUtil.PathFinder;
 import generificationUtil.logger.Logger;
 import generificationUtil.serializer.Deserializer;
@@ -8,6 +7,7 @@ import generificationUtil.serializer.Serializer;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
+import javafx.scene.image.Image;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.BorderPane;
 import javafx.stage.Modality;
@@ -48,6 +48,7 @@ public class Main extends Application {
 
         this.mPrimaryStage = primaryStage;
         this.mPrimaryStage.setTitle("Search-A-Bar");
+        this.getPrimaryStage().getIcons().add(new Image("file:resources/images/ic_search_black_48dp.png"));
 
         /**Save/Load added by Daniel Knuettel*/
         if (Statics.isGraphSafed()) {
@@ -94,12 +95,6 @@ public class Main extends Application {
             Logger.log(Logger.MSG, "Exception in Application-Start: password could not be loaded." + e.toString() + "\n");
         }
 
-
-        if (mGraphPresent) {
-            DijkstraHelperGraph g = new DijkstraHelperGraph();
-            g.build(mGraph);
-            g.dijkstraSearch("Bar1", "Maxis Club");
-        }
         initialiseRootLayout();
 
     }

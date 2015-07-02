@@ -5,6 +5,7 @@ import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.*;
+import javafx.scene.image.Image;
 import javafx.stage.Stage;
 import model.Bar;
 import model.Node;
@@ -58,6 +59,7 @@ public class DialogEditController implements Initializable {
 
     public void setDialogStage(Stage dialogStage) {
         this.mDialogStage = dialogStage;
+        mDialogStage.getIcons().add(new Image("file:resources/images/ic_search_black_48dp.png"));
     }
 
     public void setRequestCode(int requestCode) {

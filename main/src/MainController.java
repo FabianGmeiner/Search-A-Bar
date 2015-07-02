@@ -119,6 +119,7 @@ public class MainController implements Initializable {
         if (newValue != null) {
             if (Main.mGraph.mNodes.size() > 1) {
                 mButtonCalculateRoute.setDisable(false);
+                mButtonPlanTour.setDisable(false);
             }
             mSelectedBar = (Bar) newValue;
             Bar selectedBar = (Bar) newValue;
@@ -131,6 +132,7 @@ public class MainController implements Initializable {
         } else {
             mSelectedBar = null;
             mButtonCalculateRoute.setDisable(true);
+            mButtonPlanTour.setDisable(true);
             mDescription.setText("");
             mUrl.setText("");
             mAddress.setText("");

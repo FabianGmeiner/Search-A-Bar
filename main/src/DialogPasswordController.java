@@ -6,6 +6,7 @@ import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.Dialog;
 import javafx.scene.control.PasswordField;
+import javafx.scene.image.Image;
 import javafx.stage.Stage;
 
 import java.net.URL;
@@ -37,6 +38,7 @@ public class DialogPasswordController implements Initializable {
     }
     public void setDialogStage(Stage dialogStage) {
         mDialogStage = dialogStage;
+        mDialogStage.getIcons().add(new Image("file:resources/images/ic_search_black_48dp.png"));
     }
 
     // methods to handle the buttons
