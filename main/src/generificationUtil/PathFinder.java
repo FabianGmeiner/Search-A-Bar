@@ -11,9 +11,9 @@ import java.io.File;
 
 public class PathFinder {
 
-    public static final String stdpathUnix = ".FindABar";
-    public static final String stdpathDOS = "_FindABar";
-    public static final String stdpathMAC = "_FindABar";
+    public static final String stdpathUnix = ".files";
+    public static final String stdpathDOS = "_files";
+    public static final String stdpathMAC = "files";
 
 
     /**

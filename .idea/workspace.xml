@@ -7,24 +7,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="89450010-f8a5-4de3-bf30-7ac7a9e9e64b" name="Default" comment="doc added">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/artifacts/Search_A_Bar.xml" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.FindABar/GraphDefault.ser" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/GraphDefault.ser" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/SerializedObjects/GraphDefault.ser" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/SerializedObjects/passwds.ser" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/_FindABar/GraphDefault.ser" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/main/model/Bar.class" afterPath="$PROJECT_DIR$/out/production/main/model/Bar.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/main/DialogMapsController.class" afterPath="$PROJECT_DIR$/out/production/main/DialogMapsController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/main/DialogRouteController.class" afterPath="$PROJECT_DIR$/out/production/main/DialogRouteController.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/main/Main.class" afterPath="$PROJECT_DIR$/out/production/main/Main.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/main/MainController.class" afterPath="$PROJECT_DIR$/out/production/main/MainController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/main/model/Node.class" afterPath="$PROJECT_DIR$/out/production/main/model/Node.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main/src/DialogEditController.java" afterPath="$PROJECT_DIR$/main/src/DialogEditController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main/src/DialogMapsController.java" afterPath="$PROJECT_DIR$/main/src/DialogMapsController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main/src/DialogPasswordController.java" afterPath="$PROJECT_DIR$/main/src/DialogPasswordController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main/src/DialogRouteController.java" afterPath="$PROJECT_DIR$/main/src/DialogRouteController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main/src/Main.java" afterPath="$PROJECT_DIR$/main/src/Main.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main/src/MainController.java" afterPath="$PROJECT_DIR$/main/src/MainController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main/src/generificationUtil/PathFinder.java" afterPath="$PROJECT_DIR$/main/src/generificationUtil/PathFinder.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Search-A-Bar.iws" />
@@ -97,7 +82,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MainController.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="MainController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/main/src/MainController.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
@@ -107,12 +92,24 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="PathFinder.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/main/src/generificationUtil/PathFinder.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.45546558">
+              <caret line="18" column="7" selection-start-line="18" selection-start-column="7" selection-end-line="18" selection-end-column="7" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/main/src/Main.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="97" column="0" selection-start-line="97" selection-start-column="0" selection-end-line="97" selection-end-column="0" />
-              <folding />
+              <caret line="96" column="0" selection-start-line="96" selection-start-column="0" selection-end-line="96" selection-end-column="0" />
+              <folding>
+                <element signature="imports" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -208,6 +205,7 @@
         <option value="$PROJECT_DIR$/main/src/DialogRouteController.java" />
         <option value="$PROJECT_DIR$/main/src/DialogMapsController.java" />
         <option value="$PROJECT_DIR$/main/src/Main.java" />
+        <option value="$PROJECT_DIR$/main/src/generificationUtil/PathFinder.java" />
       </list>
     </option>
   </component>
@@ -300,6 +298,28 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Search-A-Bar" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Search-A-Bar" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="generificationUtil" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -720,7 +740,13 @@
       <option name="project" value="LOCAL" />
       <updated>1435606618306</updated>
     </task>
-    <option name="localTasksCounter" value="29" />
+    <task id="LOCAL-00029" summary="doc added">
+      <created>1435866320481</created>
+      <option name="number" value="00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1435866320481</updated>
+    </task>
+    <option name="localTasksCounter" value="30" />
     <servers />
   </component>
   <component name="TodoView" selected-index="4">
@@ -923,13 +949,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="39" column="0" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/main/src/generificationUtil/PathFinder.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7627416">
-          <caret line="85" column="5" selection-start-line="85" selection-start-column="5" selection-end-line="85" selection-end-column="5" />
         </state>
       </provider>
     </entry>
@@ -1137,8 +1156,10 @@
     <entry file="file://$PROJECT_DIR$/main/src/Main.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="97" column="0" selection-start-line="97" selection-start-column="0" selection-end-line="97" selection-end-column="0" />
-          <folding />
+          <caret line="96" column="0" selection-start-line="96" selection-start-column="0" selection-end-line="96" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1164,6 +1185,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="134" column="43" selection-start-line="134" selection-start-column="43" selection-end-line="134" selection-end-column="43" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main/src/generificationUtil/PathFinder.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.45546558">
+          <caret line="18" column="7" selection-start-line="18" selection-start-column="7" selection-end-line="18" selection-end-column="7" />
           <folding />
         </state>
       </provider>
