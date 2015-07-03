@@ -5,7 +5,9 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
+import javafx.scene.control.Dialog;
 import javafx.scene.control.ListView;
 import model.Bar;
 import statics.Statics;
@@ -59,6 +61,11 @@ public class AdminController implements Initializable {
     @FXML
     private void handleButtonDelete() throws IOException {
         Main.mGraph.removeNode(mSelectedBar);
+        Dialog dialog = new Alert(Alert.AlertType.INFORMATION);
+        dialog.setHeaderText("Löschen");
+        dialog.setContentText("Der gewählte Eintrag wurde gelöscht !");
+        dialog.setOnCloseRequest(event -> dialog.close());
+        dialog.show();
         setListItems();
     }
 

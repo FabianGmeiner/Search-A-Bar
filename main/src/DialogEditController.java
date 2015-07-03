@@ -175,5 +175,10 @@ public class DialogEditController implements Initializable {
                 mDialogStage.close();
             }
         }
+        Dialog dialogInfo = new Alert(Alert.AlertType.INFORMATION);
+        dialogInfo.setHeaderText("Eintrag");
+        dialogInfo.setContentText("Ihre Änderungen wurden gespeichert !");
+        dialogInfo.setOnCloseRequest(event -> dialogInfo.close());
+        dialogInfo.show();
     }
 }
