@@ -8,6 +8,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.*;
 import model.Bar;
 import statics.Statics;
+import utils.GPSService;
 
 import java.io.IOException;
 import java.net.URL;
@@ -20,6 +21,8 @@ public class MainController implements Initializable {
     private ObservableList<String> mFilterAgeRestriction = FXCollections.observableArrayList();
     private ObservableList<String> mFilterAvgAge = FXCollections.observableArrayList();
     private ObservableList<String> mFilterPrice = FXCollections.observableArrayList();
+    private ObservableList<String> mDistances = FXCollections.observableArrayList();
+
     // the FXML-Annotation allows JavaFX to inject the views based on their fx:id
     @FXML
     private TextField mTextFieldSearch;
@@ -38,6 +41,8 @@ public class MainController implements Initializable {
     @FXML
     private ChoiceBox mFilter4;
     @FXML
+    private ChoiceBox mChoiceBoxDistance;
+    @FXML
     private Label mDescription;
     @FXML
     private Hyperlink mUrl;
@@ -47,6 +52,8 @@ public class MainController implements Initializable {
     private Button mButtonCalculateRoute;
     @FXML
     private Button mButtonPlanTour;
+    @FXML
+    private Button mButtonNearest;
     @FXML
     private ToggleButton mToggleButtonAlphabet;
     @FXML
@@ -66,6 +73,11 @@ public class MainController implements Initializable {
 
     @Override // method called after the constructor
     public void initialize(URL location, ResourceBundle resources) {
+
+        mDistances.addAll("0,5 km", "1 km", "2 km", "5 km");
+        mChoiceBoxDistance.setItems(mDistances);
+        mChoiceBoxDistance.getSelectionModel().selectFirst();
+
         setListItems(Main.mGraph.sortListBy(Main.mGraph.getAllBars()));
         mFilterCategory.addAll(Statics.CATEGORYS);
         mFilter1.setItems(mFilterCategory);
@@ -120,6 +132,8 @@ public class MainController implements Initializable {
             if (Main.mGraph.mNodes.size() > 1) {
                 mButtonCalculateRoute.setDisable(false);
                 mButtonPlanTour.setDisable(false);
+                mButtonNearest.setDisable(false);
+                mChoiceBoxDistance.setDisable(false);
             }
             mSelectedBar = (Bar) newValue;
             Bar selectedBar = (Bar) newValue;
@@ -133,6 +147,8 @@ public class MainController implements Initializable {
             mSelectedBar = null;
             mButtonCalculateRoute.setDisable(true);
             mButtonPlanTour.setDisable(true);
+            mButtonNearest.setDisable(true);
+            mChoiceBoxDistance.setDisable(true);
             mDescription.setText("");
             mUrl.setText("");
             mAddress.setText("");
@@ -238,6 +254,60 @@ public class MainController implements Initializable {
     @FXML
     private void handleButtonRoute() throws IOException {
         mMain.showDialogRoute(mSelectedBar);
+    }
+
+    @FXML
+    private void handleButtonNearest() {
+        showNearestBars();
+    }
+
+    private void showNearestBars() {
+        String distance = (String) mChoiceBoxDistance.getSelectionModel().getSelectedItem();
+        Vector<Bar> result = new Vector<>();
+        switch (distance) {
+            case "500m":
+                result.clear();
+                for (int i = 0; i < Main.mGraph.getAllBars().size(); i++) {
+                    Bar bar = Main.mGraph.getAllBars().elementAt(i);
+                    if (GPSService.getDistanceFromGPS(mSelectedBar.getmGpsLatitude(), mSelectedBar.getmGpsLongitude(),
+                            bar.getmGpsLatitude(), bar.getmGpsLongitude()) <= 500) {
+                        result.add(bar);
+                    }
+                }
+                break;
+            case "1 km":
+                result.clear();
+                for (int i = 0; i < Main.mGraph.mNodes.size(); i++) {
+                    Bar bar = Main.mGraph.getAllBars().elementAt(i);
+                    if (GPSService.getDistanceFromGPS(mSelectedBar.getmGpsLatitude(), mSelectedBar.getmGpsLongitude(),
+                            bar.getmGpsLatitude(), bar.getmGpsLongitude()) <= 1000) {
+                        result.add(bar);
+                    }
+                }
+                break;
+            case "2 km":
+                result.clear();
+                for (int i = 0; i < Main.mGraph.mNodes.size(); i++) {
+                    Bar bar = Main.mGraph.getAllBars().elementAt(i);
+                    if (GPSService.getDistanceFromGPS(mSelectedBar.getmGpsLatitude(), mSelectedBar.getmGpsLongitude(),
+                            bar.getmGpsLatitude(), bar.getmGpsLongitude()) <= 2000) {
+                        result.add(bar);
+                    }
+                }
+                break;
+            case "5 km":
+                result.clear();
+                for (int i = 0; i < Main.mGraph.mNodes.size(); i++) {
+                    Bar bar = Main.mGraph.getAllBars().elementAt(i);
+                    if (GPSService.getDistanceFromGPS(mSelectedBar.getmGpsLatitude(), mSelectedBar.getmGpsLongitude(),
+                            bar.getmGpsLatitude(), bar.getmGpsLongitude()) <= 5000) {
+                        result.add(bar);
+                    }
+                }
+                break;
+        }
+        mTextFieldSearch.setText("Bars im Umkreis von " + distance + ":");
+        setListItems(result);
     }
     @FXML
     private void handleButtonTour() {

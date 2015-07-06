@@ -156,24 +156,49 @@
                         alignment="CENTER_RIGHT"
                         prefHeight="100.0"
                         prefWidth="200.0">
+                    <HBox
+                            prefWidth="100"
+                            prefHeight="25"
+                            alignment="CENTER">
+                        <Button
+                                fx:id="mButtonNearest"
+                                mnemonicParsing="false"
+                                onAction="#handleButtonNearest"
+                                prefHeight="25.0"
+                                prefWidth="120.0"
+                                text="Bars im Umkreis">
+                            <HBox.margin>
+                                <Insets
+                                        right="3"/>
+                            </HBox.margin>
+                        </Button>
+                        <ChoiceBox
+                                fx:id="mChoiceBoxDistance"
+                                prefWidth="57"
+                                prefHeight="25"/>
+                        <VBox.margin>
+                            <Insets
+                                    bottom="8.0"/>
+                        </VBox.margin>
+                    </HBox>
                     <Button
                             fx:id="mButtonCalculateRoute"
                             disable="true"
                             mnemonicParsing="false"
                             onAction="#handleButtonRoute"
-                            prefHeight="30.0"
+                            prefHeight="25.0"
                             prefWidth="180.0"
                             text="Distanz Berechnen">
                         <VBox.margin>
                             <Insets
-                                    bottom="10.0"/>
+                                    bottom="8.0"/>
                         </VBox.margin>
                     </Button>
                     <Button
                             fx:id="mButtonPlanTour"
                             mnemonicParsing="false"
                             onAction="#handleButtonTour"
-                            prefHeight="30.0"
+                            prefHeight="25.0"
                             prefWidth="180.0"
                             text="Tour planen"/>
                 </VBox>
