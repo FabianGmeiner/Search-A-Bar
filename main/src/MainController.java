@@ -306,7 +306,7 @@ public class MainController implements Initializable {
                 }
                 break;
         }
-        mTextFieldSearch.setText("Bars im Umkreis von " + distance + ":");
+        mTextFieldSearch.setText("Bars im Umkreis von " + distance + " um \"" + mSelectedBar.getmName() + "\":");
         setListItems(result);
     }
     @FXML
