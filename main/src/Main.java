@@ -68,8 +68,8 @@ public class Main extends Application {
                 mGraph.addNode(Statics.node5);
                 mGraph.addNode(Statics.node6);
                 mGraph.addNode(Statics.node7);
-                mGraph.printNodes();
-                mGraph.printEdges();
+               // mGraph.printNodes();
+                //mGraph.printEdges();
 
             }
 
@@ -83,8 +83,8 @@ public class Main extends Application {
             mGraph.addNode(Statics.node5);
             mGraph.addNode(Statics.node6);
             mGraph.addNode(Statics.node7);
-            mGraph.printNodes();
-            mGraph.printEdges();
+            //mGraph.printNodes();
+            //mGraph.printEdges();
         }
 
         try {
