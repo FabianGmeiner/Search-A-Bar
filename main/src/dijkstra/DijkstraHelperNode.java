@@ -1,11 +1,10 @@
 package dijkstra;
 
 import generificationUtil.logger.Logger;
-import model.Node;
-import model.*;
+import model.Bar;
 
 /**
- * Created by kn�ttel.daniel on 16.06.2015.
+ * Created by knuettel.daniel on 16.06.2015.
  */
 class DijkstraHelperNode
     extends DijkstraHelperAbstractNode

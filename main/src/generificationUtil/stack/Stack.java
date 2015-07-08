@@ -1,4 +1,6 @@
 package generificationUtil.stack;
+/**Written by Daniel Knuettel
+ */
 
 import generificationUtil.list.List;
 

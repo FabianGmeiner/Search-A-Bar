@@ -9,8 +9,6 @@ import java.io.Serializable;
 
 /**
  * written by Daniel Knuettel
- * TODO:test
- * status: UNTESTED
  */
 public class Password
         implements Serializable {
